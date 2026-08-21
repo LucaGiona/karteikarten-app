@@ -10,22 +10,46 @@
     <main class="app">
         <h1>Anatomie – Latein / Deutsch</h1>
         <div class="info">Leitner-Karteikarten mit 5 Boxen</div>
-      
+        <fieldset class="direction-selector">
+            <legend>Abfragerichtung</legend>
+            <label>
+                <input
+                    type="radio"
+                    name="direction"
+                    value="latin-german"
+                    checked
+                />
+                Latein → Deutsch
+            </label>
+            <label>
+                <input
+                    type="radio"
+                    name="direction"
+                    value="german-latin"
+                />
+                Deutsch → Latein
+            </label>
+        </fieldset>
+
         <section class="card">
-            <div class="direction">Latein → Deutsch</div>
+            <div class="direction" id="direction"></div>
             <div class="question" id="question"></div>
+            <input
+                class="answer-input"
+                id="answerInput"
+                type="text"
+                placeholder="Antwort eingeben"
+                autocomplete="off"
+            />
+            <div class="answer-feedback" id="answerFeedback"></div>
             <div class="answer" id="answer"></div>
-            <button id="showAnswerBtn">Antwort anzeigen</button>
-            <div class="rating-buttons" id="ratingButtons">
-                <button class="wrong" id="wrongBtn">Falsch</button>
-                <button class="correct" id="correctBtn">Richtig</button>
-            </div>
+            <button id="showAnswerBtn">Antwort prüfen</button>
         </section>
         <div class="status" id="status"></div>
 
         <br>
         <div class="boxes" id="boxes"></div>
     </main>
-    <script src="script.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>

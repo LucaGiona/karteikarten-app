@@ -21,8 +21,41 @@ h1 {
 
 .info {
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     color: #666;
+}
+
+.direction-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 25px;
+    padding: 0;
+    border: 0;
+}
+
+.direction-selector legend {
+    width: 100%;
+    margin-bottom: 10px;
+    color: #555;
+    text-align: center;
+}
+
+.direction-selector label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #555;
+    cursor: pointer;
+}
+
+.direction-selector input {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    accent-color: #222;
+    cursor: pointer;
 }
 
 .boxes {
@@ -63,7 +96,44 @@ h1 {
 .question {
     font-size: 34px;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.answer-input {
+    width: min(320px, 100%);
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 12px 14px;
+    font: inherit;
+    text-align: center;
+}
+
+.answer-input:focus {
+    border-color: #555;
+    outline: none;
+}
+
+.answer-input.is-correct {
+    border-color: #2e7d32;
+}
+
+.answer-input.is-wrong {
+    border-color: #c62828;
+}
+
+.answer-feedback {
+    min-height: 20px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.answer-feedback.correct-feedback {
+    color: #2e7d32;
+}
+
+.answer-feedback.wrong-feedback {
+    color: #c62828;
 }
 
 .answer {
@@ -82,20 +152,6 @@ button {
 
 #showAnswerBtn {
     background: #333;
-    color: white;
-}
-
-.rating-buttons {
-    display: none;
-    gap: 12px;
-}
-
-.wrong {
-    background: #ddd;
-}
-
-.correct {
-    background: #222;
     color: white;
 }
 

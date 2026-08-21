@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f3f3;
+    color: #222;
+}
+
+.app {
+    width: min(600px, 90%);
+    margin: 50px auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.info {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #666;
+}
+
+.boxes {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.box {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+.card {
+    min-height: 260px;
+    background: white;
+    border-radius: 14px;
+    padding: 35px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.direction {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.question {
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.answer {
+    display: none;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#showAnswerBtn {
+    background: #333;
+    color: white;
+}
+
+.rating-buttons {
+    display: none;
+    gap: 12px;
+}
+
+.wrong {
+    background: #ddd;
+}
+
+.correct {
+    background: #222;
+    color: white;
+}
+
+.status {
+    margin-top: 20px;
+    text-align: center;
+    color: #555;
+}

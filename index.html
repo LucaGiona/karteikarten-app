@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anatomie Karteikarten</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <main class="app">
+        <h1>Anatomie – Latein / Deutsch</h1>
+        <div class="info">Leitner-Karteikarten mit 5 Boxen</div>
+        <div class="boxes" id="boxes"></div>
+        <section class="card">
+            <div class="direction">Latein → Deutsch</div>
+            <div class="question" id="question"></div>
+            <div class="answer" id="answer"></div>
+            <button id="showAnswerBtn">Antwort anzeigen</button>
+            <div class="rating-buttons" id="ratingButtons">
+                <button class="wrong" id="wrongBtn">Falsch</button>
+                <button class="correct" id="correctBtn">Richtig</button>
+            </div>
+        </section>
+        <div class="status" id="status"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

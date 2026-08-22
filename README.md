@@ -41,19 +41,15 @@ Die Auswertung berücksichtigt bei lateinischen Antworten Groß- und Kleinschrei
 
 ### Leitner-System
 
-Alle Karten beginnen in Box 1. Eine richtige Antwort verschiebt die aktuelle Karte um eine Box nach vorne. Eine falsche Antwort legt sie zurück in Box 1. Die Anwendung wählt zufällig eine Karte aus der niedrigsten noch aktiven Box aus. Karten in Box 5 gelten als gemeistert und werden nicht mehr abgefragt.
+Eine Erklärung des Leitner-Prinzips (Boxen, Wiederholungslogik, pädagogischer Hintergrund) findet sich in [Leitner-Lernsystem](Leitner-LearningSystem.md).
 
-Dies gilt jeweils separat für **Freies Lernen** (oberer Bereich) und **Wochenmodus** (unterer Bereich) – jede Karte hat in jedem der beiden Systeme ihre eigene Box-Nummer.
+In dieser Anwendung wählt die Auswahl zufällig eine Karte aus der niedrigsten noch aktiven Box. Karten in Box 5 gelten als gemeistert und werden nicht mehr abgefragt. Dies gilt jeweils separat für **Freies Lernen** (oberer Bereich) und **Wochenmodus** (unterer Bereich) – jede Karte hat in jedem der beiden Systeme ihre eigene Box-Nummer.
 
 Eine technische Beschreibung der dreidimensionalen Boxen befindet sich in [Boxen im 3D-Design: Probleme und Lösungen](boxen-3d-design-problems-solution.md).
 
 ### Wochenmodus
 
-Im Wochenmodus richtet sich die Fälligkeit einer Karte nach dem aktuellen Wochentag statt nach freier Auswahl:
-
-- **Täglich** (Mo, Mi, Fr): nur Karten in Box 1
-- **Di + Do**: Karten in Box 1 bis 4
-- **Wochenende** (Sa, So): Karten in Box 1 sowie bereits gemeisterte Karten in Box 5
+Die Fälligkeitsregeln je Wochentag (Täglich/Di+Do/Wochenende) entsprechen dem Wochenmodell aus [Leitner-Lernsystem](Leitner-LearningSystem.md#wochenmodell).
 
 Die Kacheln über dem Reset-Button zeigen die Anzahl der für die jeweilige Gruppe noch fälligen Karten, die aktuelle Gruppe ist hervorgehoben. Eine in dieser Sitzung bereits richtig beantwortete Karte gilt für den Rest des Tages als erledigt, auch wenn sie laut Fälligkeitsregel weiterhin fällig wäre.
 
@@ -94,7 +90,8 @@ Karteikarten_System/
 │   ├── state.js       # Anwendungszustand
 │   └── storage.js     # Speicherung im Browser
 ├── boxen-3d-design-problems-solution.md  # 3D-Boxen-Dokumentation (Deutsch)
-└── boxes-3d-design-problems-solution.md  # 3D box documentation (Englisch)
+├── boxes-3d-design-problems-solution.md  # 3D box documentation (Englisch)
+└── Leitner-LearningSystem.md              # Erklärung des Leitner-Prinzips (DE/EN)
 ```
 
 ### Mitwirkende
@@ -140,19 +137,15 @@ Latin answers are checked without case sensitivity but with accent sensitivity. 
 
 ### Leitner system
 
-All cards start in Box 1. A correct answer advances the current card by one box, while an incorrect answer returns it to Box 1. The application randomly selects a card from the lowest box that still contains unfinished cards. Cards in Box 5 are considered mastered and are no longer included in the quiz.
+For an explanation of the Leitner principle (boxes, review logic, educational background), see [Leitner Learning System](Leitner-LearningSystem.md#leitner-learning-system).
 
-This applies separately to **free learning** (top section) and **week mode** (bottom section) – each card has its own box number in each of the two systems.
+In this app, selection randomly picks a card from the lowest box that still contains unfinished cards. Cards in Box 5 are considered mastered and are no longer included in the quiz. This applies separately to **free learning** (top section) and **week mode** (bottom section) – each card has its own box number in each of the two systems.
 
 For a technical explanation of the three-dimensional boxes, see [Boxes in 3D Design: Problems and Solutions](boxes-3d-design-problems-solution.md).
 
 ### Week mode
 
-In week mode, whether a card is due depends on the current weekday instead of free selection:
-
-- **Daily** (Mon, Wed, Fri): only cards in Box 1
-- **Tue + Thu**: cards in Box 1 through 4
-- **Weekend** (Sat, Sun): cards in Box 1 as well as already mastered cards in Box 5
+The per-weekday due rules (daily/Tue+Thu/weekend) match the weekly model described in [Leitner Learning System](Leitner-LearningSystem.md#weekly-model).
 
 The tiles above the reset button show how many cards are still due for each group, with the current group highlighted. A card answered correctly during the session counts as done for the rest of the day, even if the due rule would otherwise still consider it due.
 
@@ -193,7 +186,8 @@ Karteikarten_System/
 │   ├── state.js       # Application state
 │   └── storage.js     # Browser persistence
 ├── boxen-3d-design-problems-solution.md  # 3D box documentation (German)
-└── boxes-3d-design-problems-solution.md  # 3D box documentation (English)
+├── boxes-3d-design-problems-solution.md  # 3D box documentation (English)
+└── Leitner-LearningSystem.md              # Explanation of the Leitner principle (DE/EN)
 ```
 
 ### Contributors

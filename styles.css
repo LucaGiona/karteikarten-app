@@ -248,9 +248,53 @@ button {
     cursor: pointer;
 }
 
-#showAnswerBtn {
+#showAnswerBtn,
+#weeklyShowAnswerBtn {
     background: #333;
     color: white;
+}
+
+.section-divider {
+    border: none;
+    border-top: 2px solid #ddd;
+    margin: 45px 0 30px;
+}
+
+.group-tiles {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 12px auto 25px;
+}
+
+.group-tile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 110px;
+    min-height: 78px;
+    background: #37474f;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #f2f2f2;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.group-tile--today {
+    background: #00695c;
+    outline: 2px solid #004d40;
+    outline-offset: -2px;
+}
+
+.group-tile-count {
+    font-size: 18px;
 }
 
 .reset-controls {
@@ -259,14 +303,14 @@ button {
     margin-top: 20px;
 }
 
-#resetProgressBtn {
+.reset-progress-btn {
     border: 2px solid #222;
     background: #d6d6d6;
     color: #222;
 }
 
-#resetProgressBtn:hover,
-#resetProgressBtn:focus-visible {
+.reset-progress-btn:hover,
+.reset-progress-btn:focus-visible {
     background: #222;
     color: #fff;
 }

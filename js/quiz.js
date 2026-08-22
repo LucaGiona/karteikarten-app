@@ -1,7 +1,14 @@
-import { cards, state, persist } from "./state.js";
+import { cards, state, weeklyState, persist } from "./state.js";
 import * as dom from "./dom.js";
-import { renderCard, renderBoxes, statusText } from "./render.js";
-import { pickCardIndex } from "./leitner.js";
+import {
+    renderCard,
+    renderBoxes,
+    statusText,
+    renderWeeklyCard,
+    renderWeeklyGroups,
+    weeklyStatusText,
+} from "./render.js";
+import { pickCardIndex, pickDueCardIndex } from "./leitner.js";
 
 export function showAnswer() {
     if (state.answerWasChecked) {
@@ -50,4 +57,65 @@ export function showAnswer() {
 export function nextCard() {
     state.currentIndex = pickCardIndex(cards, state.currentIndex);
     renderCard();
+}
+
+export function showWeeklyAnswer() {
+    if (weeklyState.answerWasChecked) {
+        nextWeeklyCard();
+        return;
+    }
+
+    const card = cards[weeklyState.currentIndex];
+    const expectedAnswer = weeklyState.resolvedDirection === "latin-german"
+        ? card.german
+        : card.latin;
+    const enteredAnswer = dom.weeklyAnswerInput.value.trim();
+    const isLatinAnswer = weeklyState.resolvedDirection === "german-latin";
+    const isCorrect = isLatinAnswer
+        ? enteredAnswer.localeCompare(
+            expectedAnswer,
+            "de",
+            { sensitivity: "accent" }
+        ) === 0
+        : enteredAnswer === expectedAnswer;
+
+    dom.weeklyAnswerInput.classList.add(isCorrect ? "is-correct" : "is-wrong");
+    dom.weeklyAnswerFeedback.classList.add(
+        isCorrect ? "correct-feedback" : "wrong-feedback"
+    );
+    dom.weeklyAnswerFeedback.textContent = isCorrect
+        ? "Richtig!"
+        : "Nicht ganz – die richtige Antwort lautet:";
+
+    if (isCorrect) {
+        // Karte gilt für die heutige Wochen-Session als erledigt, auch wenn
+        // sie (z.B. aus Box 5 am Wochenende) laut isCardDueInGroup weiterhin
+        // "fällig" wäre – sonst könnte sie in derselben Sitzung endlos
+        // wieder ausgewählt werden.
+        weeklyState.completedThisSession.add(card.latin);
+        if (card.box < 5) {
+            card.box++;
+        }
+    } else {
+        card.box = 1;
+    }
+    persist();
+
+    weeklyState.answerWasChecked = true;
+    dom.weeklyAnswerInput.disabled = true;
+    dom.weeklyAnswer.style.display = "block";
+    dom.weeklyShowAnswerBtn.textContent = "Nächste Karte";
+    dom.weeklyStatus.textContent = weeklyStatusText(card);
+    renderWeeklyGroups();
+    dom.weeklyShowAnswerBtn.focus();
+}
+
+export function nextWeeklyCard() {
+    weeklyState.currentIndex = pickDueCardIndex(
+        cards,
+        weeklyState.todayGroup,
+        weeklyState.completedThisSession,
+        weeklyState.currentIndex
+    );
+    renderWeeklyCard();
 }

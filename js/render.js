@@ -1,6 +1,12 @@
-import { cards, state, resolveDirection } from "./state.js";
+import { cards, state, weeklyState, resolveDirection, resolveWeeklyDirection } from "./state.js";
 import * as dom from "./dom.js";
-import { MASTERED_BOX } from "./leitner.js";
+import { MASTERED_BOX, DAY_GROUPS, isCardDueInGroup } from "./leitner.js";
+
+const GROUP_TILES = [
+    { key: DAY_GROUPS.DAILY, label: "Täglich" },
+    { key: DAY_GROUPS.MIDWEEK, label: "Di + Do" },
+    { key: DAY_GROUPS.WEEKEND, label: "Wochenende" },
+];
 
 export function statusText(card) {
     const masteredCount = cards.filter(c => c.box === MASTERED_BOX).length;
@@ -56,6 +62,91 @@ function renderFinished() {
         `${cards.length}/${cards.length} in Box ${MASTERED_BOX} gemeistert`;
 
     renderBoxes();
+}
+
+export function weeklyStatusText(card) {
+    const remaining = cards.filter(
+        c =>
+            isCardDueInGroup(c, weeklyState.todayGroup) &&
+            !weeklyState.completedThisSession.has(c.latin)
+    ).length;
+    return `Box ${card.box} · noch ${remaining} heute fällig`;
+}
+
+export function renderWeeklyCard() {
+    if (weeklyState.currentIndex === -1) {
+        renderWeeklyFinished();
+        return;
+    }
+
+    const card = cards[weeklyState.currentIndex];
+    const isLatinToGerman = resolveWeeklyDirection() === "latin-german";
+
+    dom.weeklyDirection.textContent = isLatinToGerman
+        ? "Latein → Deutsch"
+        : "Deutsch → Latein";
+    dom.weeklyQuestion.textContent = isLatinToGerman ? card.latin : card.german;
+    dom.weeklyAnswer.textContent = isLatinToGerman ? card.german : card.latin;
+    dom.weeklyAnswerInput.style.display = "block";
+    dom.weeklyAnswerInput.value = "";
+    dom.weeklyAnswerInput.disabled = false;
+    dom.weeklyAnswerInput.classList.remove("is-correct", "is-wrong");
+    dom.weeklyAnswerFeedback.textContent = "";
+    dom.weeklyAnswerFeedback.classList.remove(
+        "correct-feedback",
+        "wrong-feedback"
+    );
+    weeklyState.answerWasChecked = false;
+    dom.weeklyAnswer.style.display = "none";
+    dom.weeklyShowAnswerBtn.style.display = "block";
+    dom.weeklyShowAnswerBtn.textContent = "Antwort prüfen";
+    dom.weeklyStatus.textContent = weeklyStatusText(card);
+
+    renderWeeklyGroups();
+    dom.weeklyAnswerInput.focus();
+}
+
+function renderWeeklyFinished() {
+    dom.weeklyDirection.textContent = "";
+    dom.weeklyQuestion.textContent = "Für heute bist du fertig! 🎉";
+    dom.weeklyAnswer.textContent = "";
+    dom.weeklyAnswer.style.display = "none";
+    dom.weeklyAnswerInput.style.display = "none";
+    dom.weeklyAnswerFeedback.textContent = "";
+    dom.weeklyAnswerFeedback.classList.remove(
+        "correct-feedback",
+        "wrong-feedback"
+    );
+    dom.weeklyShowAnswerBtn.style.display = "none";
+    dom.weeklyStatus.textContent = "Alle heute fälligen Karten geschafft.";
+
+    renderWeeklyGroups();
+}
+
+export function renderWeeklyGroups() {
+    dom.weeklyGroups.innerHTML = "";
+
+    GROUP_TILES.forEach(({ key, label }) => {
+        const count = cards.filter(
+            card =>
+                isCardDueInGroup(card, key) &&
+                !weeklyState.completedThisSession.has(card.latin)
+        ).length;
+        const tileElement = document.createElement("div");
+
+        tileElement.classList.add("group-tile");
+        if (key === weeklyState.todayGroup) {
+            tileElement.classList.add("group-tile--today");
+        }
+        tileElement.textContent = label;
+
+        const countLabel = document.createElement("span");
+        countLabel.classList.add("group-tile-count");
+        countLabel.textContent = count;
+        tileElement.appendChild(countLabel);
+
+        dom.weeklyGroups.appendChild(tileElement);
+    });
 }
 
 export function renderBoxes() {

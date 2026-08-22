@@ -12,7 +12,7 @@ Eine kleine, responsive Karteikarten-Anwendung zum Lernen anatomischer Begriffe 
 
 ### Funktionen
 
-- Abfrage in beide Richtungen: Latein → Deutsch und Deutsch → Latein
+- Drei Abfragemodi: Latein → Deutsch, Deutsch → Latein und Gemischt (zufällig)
 - Fünf Lernboxen nach dem Leitner-Prinzip
 - Richtige Antworten verschieben eine Karte in die nächste Box
 - Falsche Antworten setzen eine Karte zurück in Box 1
@@ -43,7 +43,7 @@ Alternativ kann jeder andere lokale Webserver verwendet werden, zum Beispiel die
 
 ### Bedienung
 
-1. Gewünschte Abfragerichtung auswählen.
+1. Gewünschte Abfragerichtung auswählen. Im Modus **Gemischt (zufällig)** wird die Richtung für jede neue Karte zufällig bestimmt.
 2. Übersetzung in das Eingabefeld schreiben.
 3. Mit **Antwort prüfen** oder der Eingabetaste bestätigen.
 4. Nach der Auswertung mit **Nächste Karte** oder erneut mit der Eingabetaste fortfahren.
@@ -106,7 +106,7 @@ A small, responsive flashcard application for learning anatomical terms in Latin
 
 ### Features
 
-- Quiz directions: Latin → German and German → Latin
+- Three quiz modes: Latin → German, German → Latin, and mixed random direction
 - Five learning boxes based on the Leitner method
 - Correct answers move a card to the next box
 - Incorrect answers return a card to Box 1
@@ -137,7 +137,7 @@ Any other local web server can be used as well, such as the Live Server extensio
 
 ### Usage
 
-1. Select the preferred quiz direction.
+1. Select the preferred quiz direction. In **Gemischt (zufällig)** mode, the direction is chosen randomly for every new card.
 2. Enter the translation in the input field.
 3. Submit it with **Antwort prüfen** or the Enter key.
 4. After checking the answer, continue with **Nächste Karte** or press Enter again.

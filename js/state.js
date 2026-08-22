@@ -22,3 +22,12 @@ export function persist() {
     });
     saveProgress({ boxes, direction: state.selectedDirection });
 }
+
+export function resetProgress() {
+    cards.forEach(card => {
+        card.box = 1;
+    });
+    state.currentIndex = pickCardIndex(cards);
+    state.answerWasChecked = false;
+    persist();
+}

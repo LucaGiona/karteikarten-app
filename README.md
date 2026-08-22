@@ -19,6 +19,7 @@ Eine kleine, responsive Karteikarten-Anwendung zum Lernen anatomischer Begriffe 
 - Bevorzugte Wiederholung der Karten aus der niedrigsten noch nicht abgeschlossenen Box
 - Fortschrittsanzeige für jede Box
 - Automatische Speicherung von Lernstand und Abfragerichtung in `localStorage`
+- Reset-Button, der alle Karten wieder in Box 1 legt
 - Bedienung per Schaltfläche oder Eingabetaste
 - Responsives Layout für Desktop, Tablet und Smartphone
 - Keine externen Bibliotheken und kein Build-Schritt
@@ -74,7 +75,7 @@ Der Lernstand liegt im `localStorage` des Browsers unter dem Schlüssel:
 anatomie-karteikarten-progress
 ```
 
-Zum vollständigen Neustart kann dieser Eintrag über die Entwicklerwerkzeuge des Browsers oder durch Löschen der Websitedaten entfernt werden.
+Mit **Lernfortschritt zurücksetzen** unterhalb der Boxen werden alle Karten wieder in Box 1 gelegt. Die ausgewählte Abfragerichtung bleibt dabei erhalten. Alternativ kann der Eintrag über die Entwicklerwerkzeuge des Browsers oder durch Löschen der Websitedaten entfernt werden.
 
 ### Projektstruktur
 
@@ -112,6 +113,7 @@ A small, responsive flashcard application for learning anatomical terms in Latin
 - Cards from the lowest unfinished box are reviewed first
 - Progress count for every box
 - Automatic persistence of progress and quiz direction in `localStorage`
+- Reset button that returns every card to Box 1
 - Keyboard and button controls
 - Responsive layout for desktop, tablet, and mobile devices
 - No external libraries or build step
@@ -167,7 +169,7 @@ Learning progress is stored in browser `localStorage` under this key:
 anatomie-karteikarten-progress
 ```
 
-To start over completely, remove that entry through the browser developer tools or clear the website data.
+Use **Lernfortschritt zurücksetzen** below the boxes to return every card to Box 1. The selected quiz direction is preserved. Alternatively, remove the entry through the browser developer tools or clear the website data.
 
 ### Project structure
 

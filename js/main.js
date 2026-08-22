@@ -1,4 +1,4 @@
-import { state, persist } from "./state.js";
+import { state, persist, resetProgress } from "./state.js";
 import * as dom from "./dom.js";
 import { renderCard } from "./render.js";
 import { showAnswer, nextCard } from "./quiz.js";
@@ -8,6 +8,10 @@ dom.directionOptions.forEach(option => {
 });
 
 dom.showAnswerBtn.addEventListener("click", showAnswer);
+dom.resetProgressBtn.addEventListener("click", () => {
+    resetProgress();
+    renderCard();
+});
 dom.answerInput.addEventListener("keydown", event => {
     if (event.key === "Enter") {
         event.preventDefault();

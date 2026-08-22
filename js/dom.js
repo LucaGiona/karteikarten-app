@@ -9,3 +9,4 @@ export const directionOptions = document.querySelectorAll(
 export const showAnswerBtn = document.querySelector("#showAnswerBtn");
 export const boxes = document.querySelector("#boxes");
 export const status = document.querySelector("#status");
+export const resetProgressBtn = document.querySelector("#resetProgressBtn");

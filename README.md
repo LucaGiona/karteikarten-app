@@ -26,20 +26,7 @@ Eine kleine, responsive Karteikarten-Anwendung zum Lernen anatomischer Begriffe 
 
 ### Anwendung starten
 
-Da das Projekt JavaScript-Module verwendet, sollte es über einen lokalen Webserver geöffnet werden.
-
-```bash
-cd Karteikarten_System
-python3 -m http.server 8000
-```
-
-Danach im Browser öffnen:
-
-```text
-http://localhost:8000
-```
-
-Alternativ kann jeder andere lokale Webserver verwendet werden, zum Beispiel die Live-Server-Erweiterung für Visual Studio Code.
+Da das Projekt JavaScript-Module verwendet, sollte es über einen lokalen Webserver geöffnet werden, zum Beispiel mit der Live-Server-Erweiterung für Visual Studio Code. Ein eigener Python-Server ist nicht mehr nötig.
 
 ### Bedienung
 
@@ -124,20 +111,7 @@ A small, responsive flashcard application for learning anatomical terms in Latin
 
 ### Run the application
 
-Because the project uses JavaScript modules, it should be served through a local web server.
-
-```bash
-cd Karteikarten_System
-python3 -m http.server 8000
-```
-
-Then open the following address in a browser:
-
-```text
-http://localhost:8000
-```
-
-Any other local web server can be used as well, such as the Live Server extension for Visual Studio Code.
+Because the project uses JavaScript modules, it should be served through a local web server, such as the Live Server extension for Visual Studio Code. A dedicated Python server is no longer required.
 
 ### Usage
 

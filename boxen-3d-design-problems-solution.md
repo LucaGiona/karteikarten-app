@@ -2,7 +2,7 @@
 
 *[English](boxes-3d-design-problems-solution.md)*
 
-Erklärung zu [styles.css](styles.css#L61-L115), wie die 3D-Optik der fünf Lernboxen umgesetzt ist.
+Erklärung zu [styles.css](css/styles.css#L61-L115), wie die 3D-Optik der fünf Lernboxen umgesetzt ist.
 
 ## 1. Der Grundgedanke: ein Würfel aus 3 Flächen
 
@@ -35,7 +35,7 @@ Für die **Seitenfläche** gilt dasselbe, nur um 90° gedreht: `60px` breit (`= 
 
 ## 3. Wie das SVG funktioniert
 
-Das ist der Kern der Technik. Beispiel obere Fläche ([styles.css:100](styles.css#L100)):
+Das ist der Kern der Technik. Beispiel obere Fläche ([styles.css:100](css/styles.css#L100)):
 
 ```html
 <svg viewBox="0 0 138 45">
@@ -72,7 +72,7 @@ Das ganze SVG-Markup ist URL-encodiert (`%3C` = `<`, `%3E` = `>`, `%23` = `#`) u
 
 ## 5. Layout: immer 3 oben, 2 unten
 
-[styles.css:61-69](styles.css#L61-L69) sorgt zusätzlich dafür, dass die 5 Boxen nie unausgewogen umbrechen (z.B. 4 oben + 1 einsam unten):
+[styles.css:61-69](css/styles.css#L61-L69) sorgt zusätzlich dafür, dass die 5 Boxen nie unausgewogen umbrechen (z.B. 4 oben + 1 einsam unten):
 
 ```css
 .boxes {

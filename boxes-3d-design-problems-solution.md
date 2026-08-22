@@ -2,7 +2,7 @@
 
 *[Deutsch](boxen-3d-design-problems-solution.md)*
 
-Explanation of [styles.css](styles.css#L61-L115) and how the 3D look of the five learning boxes is implemented.
+Explanation of [styles.css](css/styles.css#L61-L115) and how the 3D look of the five learning boxes is implemented.
 
 ## 1. The Basic Idea: a Cube Made of 3 Faces
 
@@ -35,7 +35,7 @@ The same applies to the **side face**, just rotated 90°: `60px` wide (`= dx`), 
 
 ## 3. How the SVG Works
 
-This is the core of the technique. Example: the top face ([styles.css:100](styles.css#L100)):
+This is the core of the technique. Example: the top face ([styles.css:100](css/styles.css#L100)):
 
 ```html
 <svg viewBox="0 0 138 45">
@@ -72,7 +72,7 @@ The entire SVG markup is URL-encoded (`%3C` = `<`, `%3E` = `>`, `%23` = `#`) and
 
 ## 5. Layout: Always 3 on Top, 2 on the Bottom
 
-[styles.css:61-69](styles.css#L61-L69) additionally ensures that the 5 boxes never wrap unevenly (e.g. 4 on top + 1 alone at the bottom):
+[styles.css:61-69](css/styles.css#L61-L69) additionally ensures that the 5 boxes never wrap unevenly (e.g. 4 on top + 1 alone at the bottom):
 
 ```css
 .boxes {

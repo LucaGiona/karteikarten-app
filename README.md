@@ -82,7 +82,8 @@ Freies Lernen und Wochenmodus haben je einen eigenen **Lernfortschritt zurückse
 ```text
 Karteikarten_System/
 ├── index.html          # Benutzeroberfläche
-├── styles.css         # Layout und Gestaltung der 3D-Boxen
+├── css/
+│   └── styles.css     # Layout und Gestaltung der 3D-Boxen
 ├── js/
 │   ├── cards.js       # Kartendaten
 │   ├── dom.js         # Referenzen auf DOM-Elemente
@@ -180,7 +181,8 @@ Free learning and week mode each have their own **Lernfortschritt zurücksetzen*
 ```text
 Karteikarten_System/
 ├── index.html          # User interface
-├── styles.css         # Layout and 3D box styling
+├── css/
+│   └── styles.css     # Layout and 3D box styling
 ├── js/
 │   ├── cards.js       # Flashcard data
 │   ├── dom.js         # DOM element references

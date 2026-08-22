@@ -1,8 +1,8 @@
-# Die Leitner-Boxen: Aufbau und Technik
+# Boxen im 3D-Design: Probleme und Lösungen
 
-*[English](boxes.en.md)*
+*[English](boxes-3d-design-problems-solution.md)*
 
-Erklärung zu [styles.css](styles.css#L61-L115), wie die 3D-Boxen-Optik der 5 Leitner-Boxen umgesetzt ist.
+Erklärung zu [styles.css](styles.css#L61-L115), wie die 3D-Optik der fünf Lernboxen umgesetzt ist.
 
 ## 1. Der Grundgedanke: ein Würfel aus 3 Flächen
 

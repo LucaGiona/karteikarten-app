@@ -1,8 +1,8 @@
-# The Leitner Boxes: Structure and Technique
+# Boxes in 3D Design: Problems and Solutions
 
-*[Deutsch](boxes.md)*
+*[Deutsch](boxen-3d-design-problems-solution.md)*
 
-Explanation of [styles.css](styles.css#L61-L115) and how the 3D box look of the 5 Leitner boxes is implemented.
+Explanation of [styles.css](styles.css#L61-L115) and how the 3D look of the five learning boxes is implemented.
 
 ## 1. The Basic Idea: a Cube Made of 3 Faces
 

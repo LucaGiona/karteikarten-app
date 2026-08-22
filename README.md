@@ -55,7 +55,7 @@ Die Auswertung berücksichtigt bei lateinischen Antworten Groß- und Kleinschrei
 
 Alle Karten beginnen in Box 1. Eine richtige Antwort verschiebt die aktuelle Karte um eine Box nach vorne. Eine falsche Antwort legt sie zurück in Box 1. Die Anwendung wählt zufällig eine Karte aus der niedrigsten noch aktiven Box aus. Karten in Box 5 gelten als gemeistert und werden nicht mehr abgefragt.
 
-Eine technische Beschreibung der dreidimensionalen Boxen befindet sich in [boxes.md](boxes.md).
+Eine technische Beschreibung der dreidimensionalen Boxen befindet sich in [Boxen im 3D-Design: Probleme und Lösungen](boxen-3d-design-problems-solution.md).
 
 ### Eigene Karten hinzufügen
 
@@ -92,9 +92,13 @@ Karteikarten_System/
 │   ├── render.js      # Darstellung von Karten und Lernstand
 │   ├── state.js       # Anwendungszustand
 │   └── storage.js     # Speicherung im Browser
-├── boxes.md           # Technische Erklärung der Boxen (Deutsch)
-└── boxes.en.md        # Technische Erklärung der Boxen (Englisch)
+├── boxen-3d-design-problems-solution.md  # 3D-Boxen-Dokumentation (Deutsch)
+└── boxes-3d-design-problems-solution.md  # 3D box documentation (Englisch)
 ```
+
+### Mitwirkende
+
+Dieses Projekt wurde mit Unterstützung von **OpenAI Codex** entwickelt und dokumentiert.
 
 ---
 
@@ -149,7 +153,7 @@ Latin answers are checked without case sensitivity but with accent sensitivity. 
 
 All cards start in Box 1. A correct answer advances the current card by one box, while an incorrect answer returns it to Box 1. The application randomly selects a card from the lowest box that still contains unfinished cards. Cards in Box 5 are considered mastered and are no longer included in the quiz.
 
-For a technical explanation of the three-dimensional boxes, see [boxes.en.md](boxes.en.md).
+For a technical explanation of the three-dimensional boxes, see [Boxes in 3D Design: Problems and Solutions](boxes-3d-design-problems-solution.md).
 
 ### Add custom cards
 
@@ -186,6 +190,10 @@ Karteikarten_System/
 │   ├── render.js      # Card and progress rendering
 │   ├── state.js       # Application state
 │   └── storage.js     # Browser persistence
-├── boxes.md           # Box implementation notes (German)
-└── boxes.en.md        # Box implementation notes (English)
+├── boxen-3d-design-problems-solution.md  # 3D box documentation (German)
+└── boxes-3d-design-problems-solution.md  # 3D box documentation (English)
 ```
+
+### Contributors
+
+This project was developed and documented with support from **OpenAI Codex**.

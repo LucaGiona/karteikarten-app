@@ -10,11 +10,11 @@ export function showAnswer() {
     }
 
     const card = cards[state.currentIndex];
-    const expectedAnswer = state.selectedDirection === "latin-german"
+    const expectedAnswer = state.resolvedDirection === "latin-german"
         ? card.german
         : card.latin;
     const enteredAnswer = dom.answerInput.value.trim();
-    const isLatinAnswer = state.selectedDirection === "german-latin";
+    const isLatinAnswer = state.resolvedDirection === "german-latin";
     const isCorrect = isLatinAnswer
         ? enteredAnswer.localeCompare(
             expectedAnswer,

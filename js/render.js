@@ -1,4 +1,4 @@
-import { cards, state } from "./state.js";
+import { cards, state, resolveDirection } from "./state.js";
 import * as dom from "./dom.js";
 import { MASTERED_BOX } from "./leitner.js";
 
@@ -14,7 +14,7 @@ export function renderCard() {
     }
 
     const card = cards[state.currentIndex];
-    const isLatinToGerman = state.selectedDirection === "latin-german";
+    const isLatinToGerman = resolveDirection() === "latin-german";
 
     dom.direction.textContent = isLatinToGerman
         ? "Latein → Deutsch"

@@ -12,8 +12,16 @@ export const cards = defaultCards.map(card => ({
 export const state = {
     currentIndex: pickCardIndex(cards),
     selectedDirection: progress?.direction ?? "latin-german",
+    resolvedDirection: progress?.direction ?? "latin-german",
     answerWasChecked: false,
 };
+
+export function resolveDirection() {
+    state.resolvedDirection = state.selectedDirection === "random"
+        ? (Math.random() < 0.5 ? "latin-german" : "german-latin")
+        : state.selectedDirection;
+    return state.resolvedDirection;
+}
 
 export function persist() {
     const boxes = {};

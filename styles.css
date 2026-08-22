@@ -132,6 +132,19 @@ h1 {
     background: #2e7d32;
 }
 
+/* card count, projected onto the top face's parallelogram; (69px, -22.5px)
+   relative to .box is the centroid of the top face's four SVG points */
+.box-count {
+    position: absolute;
+    left: 69px;
+    top: -22.5px;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    font-weight: bold;
+    color: #222;
+    pointer-events: none;
+}
+
 /* top face: parallelogram sharing the front face's top edge, receding up-right by (60px, 45px) */
 .box::before {
     content: "";
@@ -259,6 +272,24 @@ button {
 #showAnswerBtn {
     background: #333;
     color: white;
+}
+
+.reset-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#resetProgressBtn {
+    border: 2px solid #222;
+    background: transparent;
+    color: #222;
+}
+
+#resetProgressBtn:hover,
+#resetProgressBtn:focus-visible {
+    background: #222;
+    color: #fff;
 }
 
 .status {

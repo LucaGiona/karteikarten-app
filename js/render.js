@@ -67,7 +67,13 @@ export function renderBoxes() {
 
         boxElement.classList.add("box");
         boxElement.dataset.box = boxNumber;
-        boxElement.textContent = `Box ${boxNumber}: ${count}`;
+        boxElement.textContent = `Box ${boxNumber}`;
+
+        const countLabel = document.createElement("span");
+        countLabel.classList.add("box-count");
+        countLabel.textContent = count;
+        boxElement.appendChild(countLabel);
+
         dom.boxes.appendChild(boxElement);
     }
 }

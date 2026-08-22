@@ -60,12 +60,35 @@ h1 {
 
 .boxes {
     display: flex;
-    gap: 66px;
+    gap: 20px;
     justify-content: center;
-    max-width: 460px;
+    max-width: 760px;
     margin: 12px auto 25px;
     padding: 52px 68px 6px 4px;
     flex-wrap: wrap;
+}
+
+/* below this, 5 boxes no longer fit in one row: switch to a fixed 3-column
+   grid so it always breaks 3-then-2 instead of an uneven flex-wrap.
+   padding-right stays 68px on every tier below: the box's 3D right face
+   (::after) is a fixed 60px-wide graphic that pokes out past the box edge
+   and needs that space regardless of screen size. */
+@media (max-width: 600px) {
+    .boxes {
+        display: grid;
+        grid-template-columns: repeat(3, 78px);
+        justify-content: center;
+        gap: 56px 16px;
+        padding: 52px 68px 6px 4px;
+    }
+}
+
+/* narrow phones: 3 columns no longer fit alongside that fixed 68px face
+   allowance, so drop to 2 columns (2 + 2 + 1) instead of shrinking the gap */
+@media (max-width: 380px) {
+    .boxes {
+        grid-template-columns: repeat(2, 78px);
+    }
 }
 
 .box {

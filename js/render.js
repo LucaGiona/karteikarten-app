@@ -16,7 +16,6 @@ export function renderCard() {
     const card = cards[state.currentIndex];
     const isLatinToGerman = state.selectedDirection === "latin-german";
 
-    dom.card.dataset.box = card.box;
     dom.direction.textContent = isLatinToGerman
         ? "Latein → Deutsch"
         : "Deutsch → Latein";
@@ -42,7 +41,6 @@ export function renderCard() {
 }
 
 function renderFinished() {
-    dom.card.dataset.box = MASTERED_BOX;
     dom.direction.textContent = "";
     dom.question.textContent = "Alle Karten gelernt! 🎉";
     dom.answer.textContent = "";
@@ -68,6 +66,7 @@ export function renderBoxes() {
         const boxElement = document.createElement("div");
 
         boxElement.classList.add("box");
+        boxElement.dataset.box = boxNumber;
         boxElement.textContent = `Box ${boxNumber}: ${count}`;
         dom.boxes.appendChild(boxElement);
     }

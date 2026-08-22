@@ -7,6 +7,5 @@ export const directionOptions = document.querySelectorAll(
     'input[name="direction"]'
 );
 export const showAnswerBtn = document.querySelector("#showAnswerBtn");
-export const card = document.querySelector(".card");
 export const boxes = document.querySelector("#boxes");
 export const status = document.querySelector("#status");

@@ -109,6 +109,27 @@ h1 {
     color: #f2f2f2;
     text-align: center;
     box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.18);
+    transition: background-color 0.3s ease;
+}
+
+.box[data-box="1"] {
+    background: #c62828;
+}
+
+.box[data-box="2"] {
+    background: #ef6c00;
+}
+
+.box[data-box="3"] {
+    background: #f57f17;
+}
+
+.box[data-box="4"] {
+    background: #689f38;
+}
+
+.box[data-box="5"] {
+    background: #2e7d32;
 }
 
 /* top face: parallelogram sharing the front face's top edge, receding up-right by (60px, 45px) */

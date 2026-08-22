@@ -41,7 +41,15 @@
             </label>
         </fieldset>
         <hr class="section-divider" />
-        <h1 class="centered-heading">Freies Lernen</h1>
+        <div class="mode-heading">
+            <h1 class="centered-heading">Freies Lernen</h1>
+            <button
+                class="info-button"
+                id="freeModeInfoBtn"
+                type="button"
+                aria-label="Erklärung zum freien Lernen öffnen"
+            >i</button>
+        </div>
         <div class="info">
             Übe deine Karteikarten in deinem eigenen Tempo.
             <br>
@@ -75,7 +83,15 @@
 
         <hr class="section-divider" />
 
-        <h1 class="centered-heading">Wochenmodus</h1>
+        <div class="mode-heading">
+            <h1 class="centered-heading">Wochenmodus</h1>
+            <button
+                class="info-button"
+                id="weeklyModeInfoBtn"
+                type="button"
+                aria-label="Erklärung zum Wochenmodus öffnen"
+            >i</button>
+        </div>
         <div class="info">
             Fällige Karten nach Wochentag: 
             <br>
@@ -107,6 +123,18 @@
             </button>
         </div>
     </main>
+    <dialog class="info-dialog" id="infoDialog" aria-labelledby="infoDialogTitle">
+        <div class="info-dialog-header">
+            <h2 class="info-dialog-title" id="infoDialogTitle"></h2>
+            <button
+                class="info-dialog-close"
+                id="infoDialogCloseBtn"
+                type="button"
+                aria-label="Erklärung schließen"
+            >×</button>
+        </div>
+        <div class="info-dialog-content" id="infoDialogContent"></div>
+    </dialog>
     <script type="module" src="js/main.js"></script>
 </body>
 </html>

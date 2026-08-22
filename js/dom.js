@@ -10,6 +10,7 @@ export const showAnswerBtn = document.querySelector("#showAnswerBtn");
 export const boxes = document.querySelector("#boxes");
 export const status = document.querySelector("#status");
 export const resetProgressBtn = document.querySelector("#resetProgressBtn");
+export const freeModeInfoBtn = document.querySelector("#freeModeInfoBtn");
 
 export const weeklyDirection = document.querySelector("#weeklyDirection");
 export const weeklyQuestion = document.querySelector("#weeklyQuestion");
@@ -26,3 +27,9 @@ export const weeklyGroups = document.querySelector("#weeklyGroups");
 export const weeklyResetProgressBtn = document.querySelector(
     "#weeklyResetProgressBtn"
 );
+export const weeklyModeInfoBtn = document.querySelector("#weeklyModeInfoBtn");
+
+export const infoDialog = document.querySelector("#infoDialog");
+export const infoDialogTitle = document.querySelector("#infoDialogTitle");
+export const infoDialogContent = document.querySelector("#infoDialogContent");
+export const infoDialogCloseBtn = document.querySelector("#infoDialogCloseBtn");

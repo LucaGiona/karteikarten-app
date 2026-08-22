@@ -2,6 +2,7 @@ import { state, weeklyState, persist, resetFreeProgress, resetWeeklyProgress } f
 import * as dom from "./dom.js";
 import { renderCard, renderWeeklyCard } from "./render.js";
 import { showAnswer, nextCard, showWeeklyAnswer, nextWeeklyCard } from "./quiz.js";
+import { initializeInfoDialog } from "./info-dialog.js";
 
 dom.directionOptions.forEach(option => {
     option.checked = option.value === state.selectedDirection;
@@ -51,6 +52,8 @@ document.addEventListener("keydown", event => {
         nextWeeklyCard();
     }
 });
+
+initializeInfoDialog();
 
 renderCard();
 renderWeeklyCard();

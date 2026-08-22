@@ -19,6 +19,92 @@ body {
     margin-bottom: 10px;
 }
 
+.mode-heading {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.info-button {
+    position: absolute;
+    top: 4px;
+    right: 0;
+    width: 28px;
+    height: 28px;
+    border: 2px solid #555;
+    border-radius: 50%;
+    padding: 0;
+    background: transparent;
+    color: #555;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.info-button:hover,
+.info-button:focus-visible {
+    background: #555;
+    color: #fff;
+}
+
+.info-dialog {
+    width: min(520px, calc(100% - 32px));
+    border: 0;
+    border-radius: 14px;
+    padding: 28px;
+    color: #222;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+.info-dialog::backdrop {
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.info-dialog-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.info-dialog-title {
+    margin: 0;
+    font-size: 24px;
+}
+
+.info-dialog-close {
+    flex: 0 0 auto;
+    padding: 0 4px;
+    background: transparent;
+    color: #555;
+    font-size: 28px;
+    line-height: 1;
+}
+
+.info-dialog-close:hover,
+.info-dialog-close:focus-visible {
+    color: #000;
+}
+
+.info-dialog-content {
+    margin-top: 20px;
+    line-height: 1.55;
+}
+
+.info-dialog-content p:first-child {
+    margin-top: 0;
+}
+
+.info-dialog-content p:last-child {
+    margin-bottom: 0;
+}
+
+.info-dialog-content li + li {
+    margin-top: 8px;
+}
+
 .info {
     text-align: center;
     margin-bottom: 15px;

@@ -8,18 +8,19 @@
 
 ## Deutsch
 
-Eine kleine, responsive Karteikarten-Anwendung zum Lernen anatomischer Begriffe auf Latein und Deutsch. Die Karten werden nach dem Leitner-System auf fünf Lernboxen verteilt und der Lernfortschritt wird automatisch im Browser gespeichert.
+Eine kleine, responsive Karteikarten-Anwendung zum Lernen anatomischer Begriffe auf Latein und Deutsch. Die Anwendung enthält zwei unabhängige Leitner-Systeme – **Freies Lernen** und **Wochenmodus** –, die sich zwar dieselben Karteninhalte teilen, aber jeweils ihren eigenen Lernfortschritt (Boxenzuordnung) und Reset besitzen.
 
 ### Funktionen
 
+- Zwei unabhängige Leitner-Systeme: Freies Lernen und Wochenmodus, jeweils mit eigenem Fortschritt
 - Drei Abfragemodi: Latein → Deutsch, Deutsch → Latein und Gemischt (zufällig)
-- Fünf Lernboxen nach dem Leitner-Prinzip
+- Fünf Lernboxen nach dem Leitner-Prinzip je System
 - Richtige Antworten verschieben eine Karte in die nächste Box
 - Falsche Antworten setzen eine Karte zurück in Box 1
 - Bevorzugte Wiederholung der Karten aus der niedrigsten noch nicht abgeschlossenen Box
 - Fortschrittsanzeige für jede Box
 - Automatische Speicherung von Lernstand und Abfragerichtung in `localStorage`
-- Reset-Button, der alle Karten wieder in Box 1 legt
+- Eigener Reset-Button je System, der nur dessen Karten wieder in Box 1 legt
 - Bedienung per Schaltfläche oder Eingabetaste
 - Responsives Layout für Desktop, Tablet und Smartphone
 - Keine externen Bibliotheken und kein Build-Schritt
@@ -42,7 +43,19 @@ Die Auswertung berücksichtigt bei lateinischen Antworten Groß- und Kleinschrei
 
 Alle Karten beginnen in Box 1. Eine richtige Antwort verschiebt die aktuelle Karte um eine Box nach vorne. Eine falsche Antwort legt sie zurück in Box 1. Die Anwendung wählt zufällig eine Karte aus der niedrigsten noch aktiven Box aus. Karten in Box 5 gelten als gemeistert und werden nicht mehr abgefragt.
 
+Dies gilt jeweils separat für **Freies Lernen** (oberer Bereich) und **Wochenmodus** (unterer Bereich) – jede Karte hat in jedem der beiden Systeme ihre eigene Box-Nummer.
+
 Eine technische Beschreibung der dreidimensionalen Boxen befindet sich in [Boxen im 3D-Design: Probleme und Lösungen](boxen-3d-design-problems-solution.md).
+
+### Wochenmodus
+
+Im Wochenmodus richtet sich die Fälligkeit einer Karte nach dem aktuellen Wochentag statt nach freier Auswahl:
+
+- **Täglich** (Mo, Mi, Fr): nur Karten in Box 1
+- **Di + Do**: Karten in Box 1 bis 4
+- **Wochenende** (Sa, So): Karten in Box 1 sowie bereits gemeisterte Karten in Box 5
+
+Die Kacheln über dem Reset-Button zeigen die Anzahl der für die jeweilige Gruppe noch fälligen Karten, die aktuelle Gruppe ist hervorgehoben. Eine in dieser Sitzung bereits richtig beantwortete Karte gilt für den Rest des Tages als erledigt, auch wenn sie laut Fälligkeitsregel weiterhin fällig wäre.
 
 ### Eigene Karten hinzufügen
 
@@ -62,7 +75,7 @@ Der Lernstand liegt im `localStorage` des Browsers unter dem Schlüssel:
 anatomie-karteikarten-progress
 ```
 
-Mit **Lernfortschritt zurücksetzen** unterhalb der Boxen werden alle Karten wieder in Box 1 gelegt. Die ausgewählte Abfragerichtung bleibt dabei erhalten. Alternativ kann der Eintrag über die Entwicklerwerkzeuge des Browsers oder durch Löschen der Websitedaten entfernt werden.
+Freies Lernen und Wochenmodus haben je einen eigenen **Lernfortschritt zurücksetzen**-Button. Jeder Button setzt ausschliesslich die Karten des zugehörigen Systems wieder auf Box 1 zurück – das jeweils andere System bleibt unberührt. Die ausgewählte Abfragerichtung gilt für beide Systeme und bleibt bei einem Reset erhalten. Alternativ kann der gesamte Eintrag über die Entwicklerwerkzeuge des Browsers oder durch Löschen der Websitedaten entfernt werden.
 
 ### Projektstruktur
 
@@ -93,18 +106,19 @@ Dieses Projekt wurde mit Unterstützung von **OpenAI Codex** entwickelt und doku
 
 ## English
 
-A small, responsive flashcard application for learning anatomical terms in Latin and German. Cards move through five learning boxes based on the Leitner system, and progress is saved automatically in the browser.
+A small, responsive flashcard application for learning anatomical terms in Latin and German. The app contains two independent Leitner systems – **free learning** and **week mode** – which share the same card content but each keep their own progress (box assignment) and reset.
 
 ### Features
 
+- Two independent Leitner systems: free learning and week mode, each with its own progress
 - Three quiz modes: Latin → German, German → Latin, and mixed random direction
-- Five learning boxes based on the Leitner method
+- Five learning boxes based on the Leitner method, per system
 - Correct answers move a card to the next box
 - Incorrect answers return a card to Box 1
 - Cards from the lowest unfinished box are reviewed first
 - Progress count for every box
 - Automatic persistence of progress and quiz direction in `localStorage`
-- Reset button that returns every card to Box 1
+- Separate reset button per system that only returns that system's cards to Box 1
 - Keyboard and button controls
 - Responsive layout for desktop, tablet, and mobile devices
 - No external libraries or build step
@@ -127,7 +141,19 @@ Latin answers are checked without case sensitivity but with accent sensitivity. 
 
 All cards start in Box 1. A correct answer advances the current card by one box, while an incorrect answer returns it to Box 1. The application randomly selects a card from the lowest box that still contains unfinished cards. Cards in Box 5 are considered mastered and are no longer included in the quiz.
 
+This applies separately to **free learning** (top section) and **week mode** (bottom section) – each card has its own box number in each of the two systems.
+
 For a technical explanation of the three-dimensional boxes, see [Boxes in 3D Design: Problems and Solutions](boxes-3d-design-problems-solution.md).
+
+### Week mode
+
+In week mode, whether a card is due depends on the current weekday instead of free selection:
+
+- **Daily** (Mon, Wed, Fri): only cards in Box 1
+- **Tue + Thu**: cards in Box 1 through 4
+- **Weekend** (Sat, Sun): cards in Box 1 as well as already mastered cards in Box 5
+
+The tiles above the reset button show how many cards are still due for each group, with the current group highlighted. A card answered correctly during the session counts as done for the rest of the day, even if the due rule would otherwise still consider it due.
 
 ### Add custom cards
 
@@ -147,7 +173,7 @@ Learning progress is stored in browser `localStorage` under this key:
 anatomie-karteikarten-progress
 ```
 
-Use **Lernfortschritt zurücksetzen** below the boxes to return every card to Box 1. The selected quiz direction is preserved. Alternatively, remove the entry through the browser developer tools or clear the website data.
+Free learning and week mode each have their own **Lernfortschritt zurücksetzen** button. Each button only resets the cards of its own system back to Box 1 – the other system is left untouched. The selected quiz direction applies to both systems and is preserved on reset. Alternatively, remove the entire entry through the browser developer tools or clear the website data.
 
 ### Project structure
 

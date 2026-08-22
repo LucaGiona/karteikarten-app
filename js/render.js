@@ -1,4 +1,4 @@
-import { cards, state, weeklyState, resolveDirection, resolveWeeklyDirection } from "./state.js";
+import { freeCards, weeklyCards, state, weeklyState, resolveDirection, resolveWeeklyDirection } from "./state.js";
 import * as dom from "./dom.js";
 import { MASTERED_BOX, DAY_GROUPS, isCardDueInGroup } from "./leitner.js";
 
@@ -9,8 +9,8 @@ const GROUP_TILES = [
 ];
 
 export function statusText(card) {
-    const masteredCount = cards.filter(c => c.box === MASTERED_BOX).length;
-    return `Box ${card.box} · ${masteredCount}/${cards.length} gemeistert`;
+    const masteredCount = freeCards.filter(c => c.box === MASTERED_BOX).length;
+    return `Box ${card.box} · ${masteredCount}/${freeCards.length} gemeistert`;
 }
 
 export function renderCard() {
@@ -19,7 +19,7 @@ export function renderCard() {
         return;
     }
 
-    const card = cards[state.currentIndex];
+    const card = freeCards[state.currentIndex];
     const isLatinToGerman = resolveDirection() === "latin-german";
 
     dom.direction.textContent = isLatinToGerman
@@ -59,13 +59,13 @@ function renderFinished() {
     );
     dom.showAnswerBtn.style.display = "none";
     dom.status.textContent =
-        `${cards.length}/${cards.length} in Box ${MASTERED_BOX} gemeistert`;
+        `${freeCards.length}/${freeCards.length} in Box ${MASTERED_BOX} gemeistert`;
 
     renderBoxes();
 }
 
 export function weeklyStatusText(card) {
-    const remaining = cards.filter(
+    const remaining = weeklyCards.filter(
         c =>
             isCardDueInGroup(c, weeklyState.todayGroup) &&
             !weeklyState.completedThisSession.has(c.latin)
@@ -79,7 +79,7 @@ export function renderWeeklyCard() {
         return;
     }
 
-    const card = cards[weeklyState.currentIndex];
+    const card = weeklyCards[weeklyState.currentIndex];
     const isLatinToGerman = resolveWeeklyDirection() === "latin-german";
 
     dom.weeklyDirection.textContent = isLatinToGerman
@@ -127,7 +127,7 @@ export function renderWeeklyGroups() {
     dom.weeklyGroups.innerHTML = "";
 
     GROUP_TILES.forEach(({ key, label }) => {
-        const count = cards.filter(
+        const count = weeklyCards.filter(
             card =>
                 isCardDueInGroup(card, key) &&
                 !weeklyState.completedThisSession.has(card.latin)
@@ -153,7 +153,7 @@ export function renderBoxes() {
     dom.boxes.innerHTML = "";
 
     for (let boxNumber = 1; boxNumber <= 5; boxNumber++) {
-        const count = cards.filter(card => card.box === boxNumber).length;
+        const count = freeCards.filter(card => card.box === boxNumber).length;
         const boxElement = document.createElement("div");
 
         boxElement.classList.add("box");

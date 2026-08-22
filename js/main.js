@@ -1,4 +1,4 @@
-import { state, weeklyState, persist, resetProgress } from "./state.js";
+import { state, weeklyState, persist, resetFreeProgress, resetWeeklyProgress } from "./state.js";
 import * as dom from "./dom.js";
 import { renderCard, renderWeeklyCard } from "./render.js";
 import { showAnswer, nextCard, showWeeklyAnswer, nextWeeklyCard } from "./quiz.js";
@@ -9,9 +9,8 @@ dom.directionOptions.forEach(option => {
 
 dom.showAnswerBtn.addEventListener("click", showAnswer);
 dom.resetProgressBtn.addEventListener("click", () => {
-    resetProgress();
+    resetFreeProgress();
     renderCard();
-    renderWeeklyCard();
 });
 dom.answerInput.addEventListener("keydown", event => {
     if (event.key === "Enter") {
@@ -36,8 +35,7 @@ dom.directionOptions.forEach(option => {
 
 dom.weeklyShowAnswerBtn.addEventListener("click", showWeeklyAnswer);
 dom.weeklyResetProgressBtn.addEventListener("click", () => {
-    resetProgress();
-    renderCard();
+    resetWeeklyProgress();
     renderWeeklyCard();
 });
 dom.weeklyAnswerInput.addEventListener("keydown", event => {

@@ -103,7 +103,6 @@ export function renderWeeklyCard() {
     dom.weeklyStatus.textContent = weeklyStatusText(card);
 
     renderWeeklyGroups();
-    dom.weeklyAnswerInput.focus();
 }
 
 function renderWeeklyFinished() {

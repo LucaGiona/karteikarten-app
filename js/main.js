@@ -10,6 +10,13 @@ dom.directionOptions.forEach(option => {
 
 dom.showAnswerBtn.addEventListener("click", showAnswer);
 dom.resetProgressBtn.addEventListener("click", () => {
+    const shouldReset = window.confirm(
+        "Möchtest du den Lernfortschritt im freien Lernen wirklich zurücksetzen?"
+    );
+    if (!shouldReset) {
+        return;
+    }
+
     resetFreeProgress();
     renderCard();
 });
@@ -36,6 +43,13 @@ dom.directionOptions.forEach(option => {
 
 dom.weeklyShowAnswerBtn.addEventListener("click", showWeeklyAnswer);
 dom.weeklyResetProgressBtn.addEventListener("click", () => {
+    const shouldReset = window.confirm(
+        "Möchtest du den Lernfortschritt im Wochenmodus wirklich zurücksetzen?"
+    );
+    if (!shouldReset) {
+        return;
+    }
+
     resetWeeklyProgress();
     renderWeeklyCard();
 });

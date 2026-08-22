@@ -1,6 +1,18 @@
 import * as dom from "./dom.js";
 
 const MODE_INFO = {
+    leitner: {
+        title: "Das Leitner-Lernsystem",
+        content: `
+            <p>Das Leitner-System ist eine Lernmethode mit Karteikarten. Alle neuen Karten beginnen in Box 1 und werden abhängig davon eingeordnet, wie sicher du die Antwort kennst.</p>
+            <ul>
+                <li>Eine richtige Antwort verschiebt die Karte eine Box weiter.</li>
+                <li>Eine falsche Antwort setzt die Karte zurück in Box 1.</li>
+                <li>Unsichere Karten werden häufiger, sichere Karten seltener wiederholt.</li>
+            </ul>
+            <p>So konzentrierst du dich stärker auf schwierige Inhalte. Aktives Erinnern und verteilte Wiederholungen helfen dabei, Wissen langfristig zu behalten.</p>
+        `,
+    },
     free: {
         title: "So funktioniert das freie Lernen",
         content: `
@@ -35,6 +47,9 @@ function openInfoDialog(mode) {
 }
 
 export function initializeInfoDialog() {
+    dom.leitnerInfoBtn.addEventListener("click", () => {
+        openInfoDialog("leitner");
+    });
     dom.freeModeInfoBtn.addEventListener("click", () => {
         openInfoDialog("free");
     });

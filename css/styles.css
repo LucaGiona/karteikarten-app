@@ -27,6 +27,10 @@ body {
     gap: 10px;
 }
 
+.info-row {
+    position: relative;
+}
+
 .info-button {
     position: absolute;
     top: 4px;
@@ -41,6 +45,10 @@ body {
     font-size: 17px;
     font-weight: bold;
     line-height: 1;
+}
+
+.info-button--overview {
+    top: -6px;
 }
 
 .info-button:hover,

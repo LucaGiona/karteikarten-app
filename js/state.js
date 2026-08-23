@@ -23,11 +23,42 @@ export const state = {
     currentIndex: pickCardIndex(freeCards),
     selectedDirection: progress?.direction ?? "latin-german",
     resolvedDirection: progress?.direction ?? "latin-german",
-    // Themen-Filter wird bewusst nicht persistiert: "Alle" soll nach jedem
-    // Neuladen wieder aktiv sein, unabhängig von der zuletzt gewählten Karte.
+    // Themen-/Kategorie-Filter werden bewusst nicht persistiert: "Alle" soll
+    // nach jedem Neuladen wieder aktiv sein, unabhängig von der zuletzt
+    // gewählten Karte.
     selectedTopic: "all",
+    selectedCategory: "all",
     answerWasChecked: false,
 };
+
+function matchesFilters(card) {
+    const topicMatches = state.selectedTopic === "all"
+        || card.bereich === state.selectedTopic;
+    const categoryMatches = state.selectedCategory === "all"
+        || card.typ === state.selectedCategory;
+    return topicMatches && categoryMatches;
+}
+
+export function getVisibleFreeCards() {
+    return freeCards.filter(matchesFilters);
+}
+
+export function getVisibleWeeklyCards() {
+    return weeklyCards.filter(matchesFilters);
+}
+
+// Nach einem Wechsel von Themen-/Kategorie-Filter neu einsortieren: die alten
+// Indizes zeigen sonst auf Karten aus der vorherigen, ungefilterten Auswahl.
+export function applyCardFilters() {
+    state.currentIndex = pickCardIndex(getVisibleFreeCards());
+    state.answerWasChecked = false;
+    weeklyState.currentIndex = pickDueCardIndex(
+        getVisibleWeeklyCards(),
+        weeklyState.todayGroup,
+        weeklyState.completedThisSession
+    );
+    weeklyState.answerWasChecked = false;
+}
 
 export function resolveDirection() {
     state.resolvedDirection = state.selectedDirection === "random"
@@ -76,7 +107,7 @@ export function resetFreeProgress() {
     freeCards.forEach(card => {
         card.box = 1;
     });
-    state.currentIndex = pickCardIndex(freeCards);
+    state.currentIndex = pickCardIndex(getVisibleFreeCards());
     state.answerWasChecked = false;
     persist();
 }
@@ -87,7 +118,7 @@ export function resetWeeklyProgress() {
     });
     weeklyState.completedThisSession.clear();
     weeklyState.currentIndex = pickDueCardIndex(
-        weeklyCards,
+        getVisibleWeeklyCards(),
         weeklyState.todayGroup,
         weeklyState.completedThisSession
     );

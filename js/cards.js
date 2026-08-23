@@ -1,4 +1,4 @@
-const DATA_FILES = ["organe.json"];
+const DATA_FILES = ["organe.json", "ohr.json"];
 
 const responses = await Promise.all(
     DATA_FILES.map(file => fetch(new URL(`../db/${file}`, import.meta.url)))

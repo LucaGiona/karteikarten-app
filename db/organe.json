@@ -3,88 +3,187 @@
         "id": "cor",
         "bereich": "organe",
         "kategorie": "herz-kreislauf",
-        "terms": { "de": "Herz", "la": "Cor", "en": "Heart" },
-        "alternativen": { "de": [], "la": [], "en": [] },
-        "erklaerung": "Muskuläres Hohlorgan, das das Blut durch den Kreislauf pumpt."
+        "terms": {
+            "de": "Herz",
+            "la": "Cor",
+            "en": "Heart"
+        },
+        "alternativen": {
+            "de": [],
+            "la": [],
+            "en": []
+        },
+        "erklaerung": "Muskuläres Hohlorgan, das das Blut durch den Kreislauf pumpt.",
+        "typ": "anatomie"
     },
     {
         "id": "pulmo",
         "bereich": "organe",
         "kategorie": "atmung",
-        "terms": { "de": "Lunge", "la": "Pulmo", "en": "Lung" },
-        "alternativen": { "de": [], "la": [], "en": [] },
-        "erklaerung": "Paariges Organ des Atmungssystems, zuständig für den Gasaustausch von Sauerstoff und Kohlendioxid."
+        "terms": {
+            "de": "Lunge",
+            "la": "Pulmo",
+            "en": "Lung"
+        },
+        "alternativen": {
+            "de": [],
+            "la": [],
+            "en": []
+        },
+        "erklaerung": "Paariges Organ des Atmungssystems, zuständig für den Gasaustausch von Sauerstoff und Kohlendioxid.",
+        "typ": "anatomie"
     },
     {
         "id": "hepar",
         "bereich": "organe",
         "kategorie": "verdauung",
-        "terms": { "de": "Leber", "la": "Hepar", "en": "Liver" },
-        "alternativen": { "de": [], "la": [], "en": [] },
-        "erklaerung": "Größte Drüse des Körpers, zentral für Stoffwechsel, Entgiftung und Gallenproduktion."
+        "terms": {
+            "de": "Leber",
+            "la": "Hepar",
+            "en": "Liver"
+        },
+        "alternativen": {
+            "de": [],
+            "la": [],
+            "en": []
+        },
+        "erklaerung": "Größte Drüse des Körpers, zentral für Stoffwechsel, Entgiftung und Gallenproduktion.",
+        "typ": "anatomie"
     },
     {
         "id": "ren",
         "bereich": "organe",
         "kategorie": "harnsystem",
-        "terms": { "de": "Niere", "la": "Ren", "en": "Kidney" },
-        "alternativen": { "de": [], "la": [], "en": [] },
-        "erklaerung": "Paariges Organ, das Blut filtert und Urin zur Ausscheidung von Abfallstoffen bildet."
+        "terms": {
+            "de": "Niere",
+            "la": "Ren",
+            "en": "Kidney"
+        },
+        "alternativen": {
+            "de": [],
+            "la": [],
+            "en": []
+        },
+        "erklaerung": "Paariges Organ, das Blut filtert und Urin zur Ausscheidung von Abfallstoffen bildet.",
+        "typ": "anatomie"
     },
     {
         "id": "ventriculus",
         "bereich": "organe",
         "kategorie": "verdauung",
-        "terms": { "de": "Magen", "la": "Ventriculus", "en": "Stomach" },
-        "alternativen": { "de": [], "la": [], "en": [] },
-        "erklaerung": "Muskulöses Hohlorgan des Verdauungstrakts, in dem Nahrung mit Magensäure zersetzt wird."
+        "terms": {
+            "de": "Magen",
+            "la": "Ventriculus",
+            "en": "Stomach"
+        },
+        "alternativen": {
+            "de": [],
+            "la": [],
+            "en": []
+        },
+        "erklaerung": "Muskulöses Hohlorgan des Verdauungstrakts, in dem Nahrung mit Magensäure zersetzt wird.",
+        "typ": "anatomie"
     },
     {
         "id": "cerebrum",
         "bereich": "organe",
         "kategorie": "nervensystem",
-        "terms": { "de": "Gehirn", "la": "Cerebrum", "en": "Brain" },
-        "alternativen": { "de": [], "la": [], "en": [] },
-        "erklaerung": "Steuerzentrale des Nervensystems, verantwortlich für Denken, Bewegungssteuerung und Sinnesverarbeitung."
+        "terms": {
+            "de": "Gehirn",
+            "la": "Cerebrum",
+            "en": "Brain"
+        },
+        "alternativen": {
+            "de": [],
+            "la": [],
+            "en": []
+        },
+        "erklaerung": "Steuerzentrale des Nervensystems, verantwortlich für Denken, Bewegungssteuerung und Sinnesverarbeitung.",
+        "typ": "anatomie"
     },
     {
         "id": "lien",
         "bereich": "organe",
         "kategorie": "lymphsystem",
-        "terms": { "de": "Milz", "la": "Lien", "en": "Spleen" },
-        "alternativen": { "de": [], "la": [], "en": [] },
-        "erklaerung": "Lymphatisches Organ, das Blut filtert und eine Rolle im Immunsystem spielt."
+        "terms": {
+            "de": "Milz",
+            "la": "Lien",
+            "en": "Spleen"
+        },
+        "alternativen": {
+            "de": [],
+            "la": [],
+            "en": []
+        },
+        "erklaerung": "Lymphatisches Organ, das Blut filtert und eine Rolle im Immunsystem spielt.",
+        "typ": "anatomie"
     },
     {
         "id": "pankreas",
         "bereich": "organe",
         "kategorie": "verdauung",
-        "terms": { "de": "Bauchspeicheldrüse", "la": "Pancreas", "en": "Pancreas" },
-        "alternativen": { "de": [], "la": [], "en": [] },
-        "erklaerung": "Drüse, die Verdauungsenzyme sowie die Hormone Insulin und Glukagon produziert."
+        "terms": {
+            "de": "Bauchspeicheldrüse",
+            "la": "Pancreas",
+            "en": "Pancreas"
+        },
+        "alternativen": {
+            "de": [],
+            "la": [],
+            "en": []
+        },
+        "erklaerung": "Drüse, die Verdauungsenzyme sowie die Hormone Insulin und Glukagon produziert.",
+        "typ": "anatomie"
     },
     {
         "id": "vesica-biliaris",
         "bereich": "organe",
         "kategorie": "verdauung",
-        "terms": { "de": "Gallenblase", "la": "Vesica biliaris", "en": "Gallbladder" },
-        "alternativen": { "de": [], "la": [], "en": [] },
-        "erklaerung": "Speichert und konzentriert die von der Leber gebildete Galle."
+        "terms": {
+            "de": "Gallenblase",
+            "la": "Vesica biliaris",
+            "en": "Gallbladder"
+        },
+        "alternativen": {
+            "de": [],
+            "la": [],
+            "en": []
+        },
+        "erklaerung": "Speichert und konzentriert die von der Leber gebildete Galle.",
+        "typ": "anatomie"
     },
     {
         "id": "vesica-urinaria",
         "bereich": "organe",
         "kategorie": "harnsystem",
-        "terms": { "de": "Harnblase", "la": "Vesica urinaria", "en": "Urinary bladder" },
-        "alternativen": { "de": [], "la": [], "en": [] },
-        "erklaerung": "Muskulöses Hohlorgan, das Urin bis zur Ausscheidung sammelt."
+        "terms": {
+            "de": "Harnblase",
+            "la": "Vesica urinaria",
+            "en": "Urinary bladder"
+        },
+        "alternativen": {
+            "de": [],
+            "la": [],
+            "en": []
+        },
+        "erklaerung": "Muskulöses Hohlorgan, das Urin bis zur Ausscheidung sammelt.",
+        "typ": "anatomie"
     },
     {
         "id": "glandula-thyroidea",
         "bereich": "organe",
         "kategorie": "hormonsystem",
-        "terms": { "de": "Schilddrüse", "la": "Glandula thyroidea", "en": "Thyroid gland" },
-        "alternativen": { "de": [], "la": [], "en": [] },
-        "erklaerung": "Hormondrüse am Hals, die den Stoffwechsel über Schilddrüsenhormone reguliert."
+        "terms": {
+            "de": "Schilddrüse",
+            "la": "Glandula thyroidea",
+            "en": "Thyroid gland"
+        },
+        "alternativen": {
+            "de": [],
+            "la": [],
+            "en": []
+        },
+        "erklaerung": "Hormondrüse am Hals, die den Stoffwechsel über Schilddrüsenhormone reguliert.",
+        "typ": "anatomie"
     }
 ]

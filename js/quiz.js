@@ -1,4 +1,10 @@
-import { freeCards, weeklyCards, state, weeklyState, persist } from "./state.js";
+import {
+    state,
+    weeklyState,
+    persist,
+    getVisibleFreeCards,
+    getVisibleWeeklyCards,
+} from "./state.js";
 import { cardKey } from "./cards.js";
 import * as dom from "./dom.js";
 import {
@@ -17,7 +23,7 @@ export function showAnswer() {
         return;
     }
 
-    const card = freeCards[state.currentIndex];
+    const card = getVisibleFreeCards()[state.currentIndex];
     const expectedAnswer = state.resolvedDirection === "latin-german"
         ? card.terms.de
         : card.terms.la;
@@ -60,7 +66,7 @@ export function showAnswer() {
 }
 
 export function nextCard() {
-    state.currentIndex = pickCardIndex(freeCards, state.currentIndex);
+    state.currentIndex = pickCardIndex(getVisibleFreeCards(), state.currentIndex);
     renderCard();
 }
 
@@ -70,7 +76,7 @@ export function showWeeklyAnswer() {
         return;
     }
 
-    const card = weeklyCards[weeklyState.currentIndex];
+    const card = getVisibleWeeklyCards()[weeklyState.currentIndex];
     const expectedAnswer = weeklyState.resolvedDirection === "latin-german"
         ? card.terms.de
         : card.terms.la;
@@ -121,7 +127,7 @@ export function showWeeklyAnswer() {
 
 export function nextWeeklyCard() {
     weeklyState.currentIndex = pickDueCardIndex(
-        weeklyCards,
+        getVisibleWeeklyCards(),
         weeklyState.todayGroup,
         weeklyState.completedThisSession,
         weeklyState.currentIndex

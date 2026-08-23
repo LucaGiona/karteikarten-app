@@ -1,0 +1,463 @@
+[
+  {
+    "id": "auricula",
+    "bereich": "ohr",
+    "terms": {
+      "de": "Ohrmuschel",
+      "la": "Auricula",
+      "en": ""
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Der sichtbare, überwiegend knorpelige Teil des äußeren Ohres.",
+    "typ": "anatomie"
+  },
+  {
+    "id": "meatus-acusticus-externus",
+    "bereich": "ohr",
+    "terms": {
+      "de": "äußerer Gehörgang",
+      "la": "Meatus acusticus externus",
+      "en": ""
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Leitet den Schall von der Ohrmuschel zum Trommelfell.",
+    "typ": "anatomie"
+  },
+  {
+    "id": "cerumen",
+    "bereich": "ohr",
+    "terms": {
+      "de": "Ohrenschmalz",
+      "la": "Cerumen",
+      "en": ""
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Sekret im Gehörgang mit schützender Funktion.",
+    "typ": "anatomie"
+  },
+  {
+    "id": "membrana-tympanica",
+    "bereich": "ohr",
+    "terms": {
+      "de": "Trommelfell",
+      "la": "Membrana tympanica",
+      "en": ""
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Grenze zwischen äußerem Ohr und Mittelohr.",
+    "typ": "anatomie"
+  },
+  {
+    "id": "cavitas-tympani",
+    "bereich": "ohr",
+    "terms": {
+      "de": "Paukenhöhle",
+      "la": "Cavitas tympani",
+      "en": ""
+    },
+    "alternativen": {
+      "de": [],
+      "la": [
+        "Cavum tympani"
+      ],
+      "en": []
+    },
+    "erklaerung": "Luftgefüllter Raum des Mittelohrs.",
+    "typ": "anatomie"
+  },
+  {
+    "id": "malleus",
+    "bereich": "ohr",
+    "terms": {
+      "de": "Hammer",
+      "la": "Malleus",
+      "en": ""
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Erstes Gehörknöchelchen, liegt am Trommelfell an.",
+    "typ": "anatomie"
+  },
+  {
+    "id": "incus",
+    "bereich": "ohr",
+    "terms": {
+      "de": "Amboss",
+      "la": "Incus",
+      "en": ""
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Zweites Gehörknöchelchen im Mittelohr.",
+    "typ": "anatomie"
+  },
+  {
+    "id": "stapes",
+    "bereich": "ohr",
+    "terms": {
+      "de": "Steigbügel",
+      "la": "Stapes",
+      "en": ""
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Drittes Gehörknöchelchen, liegt am ovalen Fenster.",
+    "typ": "anatomie"
+  },
+  {
+    "id": "tuba-auditiva",
+    "bereich": "ohr",
+    "terms": {
+      "de": "Ohrtrompete",
+      "la": "Tuba auditiva",
+      "en": ""
+    },
+    "alternativen": {
+      "de": [
+        "Eustachische Röhre"
+      ],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Verbindet die Paukenhöhle mit dem Rachen und dient dem Druckausgleich.",
+    "typ": "anatomie"
+  },
+  {
+    "id": "fenestra-vestibuli",
+    "bereich": "ohr",
+    "terms": {
+      "de": "ovales Fenster",
+      "la": "Fenestra vestibuli",
+      "en": ""
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Übergang vom Mittelohr zum Innenohr.",
+    "typ": "anatomie"
+  },
+  {
+    "id": "cochlea",
+    "bereich": "ohr",
+    "terms": {
+      "de": "Hörschnecke",
+      "la": "Cochlea",
+      "en": ""
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Schneckenförmiges Hörorgan des Innenohrs.",
+    "typ": "anatomie"
+  },
+  {
+    "id": "organum-spirale",
+    "bereich": "ohr",
+    "terms": {
+      "de": "Corti-Organ",
+      "la": "Organum spirale",
+      "en": ""
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Eigentliches Hörorgan mit den Sinneszellen.",
+    "typ": "anatomie"
+  },
+  {
+    "id": "cellulae-ciliatae",
+    "bereich": "ohr",
+    "terms": {
+      "de": "Haarzellen",
+      "la": "Cellulae ciliatae",
+      "en": ""
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Sinneszellen, die Schall in Nervenimpulse umwandeln.",
+    "typ": "anatomie"
+  },
+  {
+    "id": "organum-vestibulare",
+    "bereich": "ohr",
+    "terms": {
+      "de": "Gleichgewichtsorgan",
+      "la": "Organum vestibulare",
+      "en": ""
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Teil des Innenohrs für die Wahrnehmung von Lage und Bewegung.",
+    "typ": "anatomie"
+  },
+  {
+    "id": "ductus-semicirculares",
+    "bereich": "ohr",
+    "terms": {
+      "de": "Bogengänge",
+      "la": "Ductus semicirculares",
+      "en": ""
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Strukturen des Gleichgewichtsorgans zur Wahrnehmung von Drehbewegungen.",
+    "typ": "anatomie"
+  },
+  {
+    "id": "nervus-cochlearis",
+    "bereich": "ohr",
+    "terms": {
+      "de": "Hörnerv",
+      "la": "Nervus cochlearis",
+      "en": ""
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Leitet Höreindrücke zum Gehirn.",
+    "typ": "anatomie"
+  },
+  {
+    "id": "nervus-vestibulocochlearis",
+    "bereich": "ohr",
+    "terms": {
+      "de": "Hör-Gleichgewichtsnerv",
+      "la": "Nervus vestibulocochlearis",
+      "en": ""
+    },
+    "alternativen": {
+      "de": [
+        "VIII. Hirnnerv"
+      ],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Vereint Hör- und Gleichgewichtsnerv.",
+    "typ": "anatomie"
+  },
+  {
+    "id": "presbyakusis",
+    "bereich": "ohr",
+    "terms": {
+      "de": "Altersschwerhörigkeit",
+      "la": "Presbyakusis",
+      "en": ""
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Altersbedingter Hörverlust, besonders für hohe Frequenzen.",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "hypacusis-conductiva",
+    "bereich": "ohr",
+    "terms": {
+      "de": "Schallleitungsschwerhörigkeit",
+      "la": "Hypacusis conductiva",
+      "en": ""
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Hörstörung durch ein Problem im äußeren Ohr oder Mittelohr.",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "hypacusis-sensorineuralis",
+    "bereich": "ohr",
+    "terms": {
+      "de": "Schallempfindungsschwerhörigkeit",
+      "la": "Hypacusis sensorineuralis",
+      "en": ""
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Hörstörung durch eine Schädigung im Innenohr.",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "otitis-externa",
+    "bereich": "ohr",
+    "terms": {
+      "de": "äußere Ohrentzündung",
+      "la": "Otitis externa",
+      "en": ""
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Entzündung des äußeren Gehörgangs.",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "otitis-media",
+    "bereich": "ohr",
+    "terms": {
+      "de": "Mittelohrentzündung",
+      "la": "Otitis media",
+      "en": ""
+    },
+    "alternativen": {
+      "de": [],
+      "la": [
+        "Otitis media acuta",
+        "Otitis media chronica"
+      ],
+      "en": []
+    },
+    "erklaerung": "Entzündung der Schleimhaut im Mittelohr.",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "cerumen-obturans",
+    "bereich": "ohr",
+    "terms": {
+      "de": "Ohrenschmalzpfropf",
+      "la": "Cerumen obturans",
+      "en": ""
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Verlegung des Gehörgangs durch Ohrenschmalz.",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "mastoiditis",
+    "bereich": "ohr",
+    "terms": {
+      "de": "Warzenfortsatzentzündung",
+      "la": "Mastoiditis",
+      "en": ""
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Entzündung der lufthaltigen Zellen des Warzenfortsatzes.",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "tinnitus",
+    "bereich": "ohr",
+    "terms": {
+      "de": "Ohrgeräusch",
+      "la": "Tinnitus",
+      "en": ""
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Pfeifen oder Rauschen ohne äußere Schallquelle.",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "hoersturz",
+    "bereich": "ohr",
+    "terms": {
+      "de": "plötzlicher Hörverlust",
+      "la": "Hörsturz",
+      "en": ""
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Akuter, meist einseitiger Hörverlust unklarer Ursache.",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "benigner-paroxysmaler-lagerungsschwindel",
+    "bereich": "ohr",
+    "terms": {
+      "de": "gutartiger Lagerungsschwindel",
+      "la": "Benigner paroxysmaler Lagerungsschwindel",
+      "en": ""
+    },
+    "alternativen": {
+      "de": [
+        "BPLS"
+      ],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Schwindel durch verlagertes Otolithenmaterial in einem Bogengang.",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "morbus-meniere",
+    "bereich": "ohr",
+    "terms": {
+      "de": "Morbus Ménière",
+      "la": "Morbus Ménière",
+      "en": ""
+    },
+    "alternativen": {
+      "de": [
+        "Meniere-Krankheit"
+      ],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Anfallsartiger Schwindel mit Hörverlust und Tinnitus.",
+    "typ": "erkrankung"
+  }
+]

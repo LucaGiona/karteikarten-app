@@ -1,4 +1,11 @@
-import { state, weeklyState, persist, resetFreeProgress, resetWeeklyProgress } from "./state.js";
+import {
+    state,
+    weeklyState,
+    persist,
+    resetFreeProgress,
+    resetWeeklyProgress,
+    applyCardFilters,
+} from "./state.js";
 import * as dom from "./dom.js";
 import { renderCard, renderWeeklyCard } from "./render.js";
 import { showAnswer, nextCard, showWeeklyAnswer, nextWeeklyCard } from "./quiz.js";
@@ -76,6 +83,21 @@ dom.topicButtons.forEach(button => {
         dom.topicButtons.forEach(btn => {
             btn.classList.toggle("is-active", btn === button);
         });
+        applyCardFilters();
+        renderCard();
+        renderWeeklyCard();
+    });
+});
+
+dom.categoryButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        state.selectedCategory = button.dataset.category;
+        dom.categoryButtons.forEach(btn => {
+            btn.classList.toggle("is-active", btn === button);
+        });
+        applyCardFilters();
+        renderCard();
+        renderWeeklyCard();
     });
 });
 

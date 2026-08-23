@@ -317,7 +317,7 @@ body {
 }
 
 .answer-feedback {
-    min-height: 20px;
+    min-height: 3em;
     margin-bottom: 15px;
     font-size: 14px;
 }
@@ -331,9 +331,13 @@ body {
 }
 
 .answer {
-    display: none;
+    visibility: hidden;
     font-size: 28px;
     margin-bottom: 25px;
+}
+
+.answer.is-visible {
+    visibility: visible;
 }
 
 button {

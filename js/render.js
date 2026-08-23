@@ -37,7 +37,7 @@ export function renderCard() {
         "wrong-feedback"
     );
     state.answerWasChecked = false;
-    dom.answer.style.display = "none";
+    dom.answer.classList.remove("is-visible");
     dom.showAnswerBtn.style.display = "block";
     dom.showAnswerBtn.textContent = "Antwort prüfen";
     dom.status.textContent = statusText(card);
@@ -50,7 +50,7 @@ function renderFinished() {
     dom.direction.textContent = "";
     dom.question.textContent = "Alle Karten gelernt! 🎉";
     dom.answer.textContent = "";
-    dom.answer.style.display = "none";
+    dom.answer.classList.remove("is-visible");
     dom.answerInput.style.display = "none";
     dom.answerFeedback.textContent = "";
     dom.answerFeedback.classList.remove(
@@ -97,7 +97,7 @@ export function renderWeeklyCard() {
         "wrong-feedback"
     );
     weeklyState.answerWasChecked = false;
-    dom.weeklyAnswer.style.display = "none";
+    dom.weeklyAnswer.classList.remove("is-visible");
     dom.weeklyShowAnswerBtn.style.display = "block";
     dom.weeklyShowAnswerBtn.textContent = "Antwort prüfen";
     dom.weeklyStatus.textContent = weeklyStatusText(card);
@@ -109,7 +109,7 @@ function renderWeeklyFinished() {
     dom.weeklyDirection.textContent = "";
     dom.weeklyQuestion.textContent = "Für heute bist du fertig! 🎉";
     dom.weeklyAnswer.textContent = "";
-    dom.weeklyAnswer.style.display = "none";
+    dom.weeklyAnswer.classList.remove("is-visible");
     dom.weeklyAnswerInput.style.display = "none";
     dom.weeklyAnswerFeedback.textContent = "";
     dom.weeklyAnswerFeedback.classList.remove(

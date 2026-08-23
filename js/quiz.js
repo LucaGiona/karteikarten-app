@@ -47,7 +47,7 @@ export function showAnswer() {
 
     state.answerWasChecked = true;
     dom.answerInput.disabled = true;
-    dom.answer.style.display = "block";
+    dom.answer.classList.add("is-visible");
     dom.showAnswerBtn.textContent = "Nächste Karte";
     dom.status.textContent = statusText(card);
     renderBoxes();
@@ -103,7 +103,7 @@ export function showWeeklyAnswer() {
 
     weeklyState.answerWasChecked = true;
     dom.weeklyAnswerInput.disabled = true;
-    dom.weeklyAnswer.style.display = "block";
+    dom.weeklyAnswer.classList.add("is-visible");
     dom.weeklyShowAnswerBtn.textContent = "Nächste Karte";
     dom.weeklyStatus.textContent = weeklyStatusText(card);
     renderWeeklyGroups();
@@ -118,4 +118,8 @@ export function nextWeeklyCard() {
         weeklyState.currentIndex
     );
     renderWeeklyCard();
+
+    if (weeklyState.currentIndex !== -1) {
+        dom.weeklyAnswerInput.focus();
+    }
 }

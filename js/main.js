@@ -8,6 +8,33 @@ dom.directionOptions.forEach(option => {
     option.checked = option.value === state.selectedDirection;
 });
 
+function openMode(contentToShow, startBtnToHide, contentToHide, startBtnToShow) {
+    contentToShow.hidden = false;
+    startBtnToHide.hidden = true;
+    contentToHide.hidden = true;
+    startBtnToShow.hidden = false;
+}
+
+function goToLanding() {
+    dom.freeModeContent.hidden = true;
+    dom.freeModeStartBtn.hidden = false;
+    dom.weeklyModeContent.hidden = true;
+    dom.weeklyModeStartBtn.hidden = false;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+dom.freeModeBackBtn.addEventListener("click", goToLanding);
+dom.weeklyModeBackBtn.addEventListener("click", goToLanding);
+
+dom.freeModeStartBtn.addEventListener("click", () => {
+    openMode(
+        dom.freeModeContent,
+        dom.freeModeStartBtn,
+        dom.weeklyModeContent,
+        dom.weeklyModeStartBtn
+    );
+});
+
 dom.showAnswerBtn.addEventListener("click", showAnswer);
 dom.resetProgressBtn.addEventListener("click", () => {
     const shouldReset = window.confirm(
@@ -39,6 +66,15 @@ dom.directionOptions.forEach(option => {
         persist();
         renderCard();
     });
+});
+
+dom.weeklyModeStartBtn.addEventListener("click", () => {
+    openMode(
+        dom.weeklyModeContent,
+        dom.weeklyModeStartBtn,
+        dom.freeModeContent,
+        dom.freeModeStartBtn
+    );
 });
 
 dom.weeklyShowAnswerBtn.addEventListener("click", showWeeklyAnswer);

@@ -50,6 +50,12 @@
         </fieldset>
         <hr class="section-divider" />
         <div class="mode-heading">
+            <button
+                class="mode-back-btn"
+                id="freeModeBackBtn"
+                type="button"
+                aria-label="Zurück zur Startansicht"
+            >←</button>
             <h1 class="centered-heading">Freies Lernen</h1>
             <button
                 class="info-button"
@@ -64,34 +70,46 @@
             Anahnd von 5 Boxen
         </div>
 
-        <section class="card">
-            
-            <div class="direction" id="direction"></div>
-            <div class="question" id="question"></div>
-            <input
-                class="answer-input"
-                id="answerInput"
-                type="text"
-                placeholder="Antwort eingeben"
-                autocomplete="off"
-            />
-            <div class="answer-feedback" id="answerFeedback"></div>
-            <div class="answer" id="answer"></div>
-            <button id="showAnswerBtn">Antwort prüfen</button>
-        </section>
-        <div class="status" id="status"></div>
+        <button class="mode-start-btn" id="freeModeStartBtn" type="button">
+            Freies Lernen starten
+        </button>
 
-        <br>
-        <div class="boxes" id="boxes"></div>
-        <div class="reset-controls">
-            <button id="resetProgressBtn" class="reset-progress-btn" type="button">
-                Lernfortschritt zurücksetzen
-            </button>
+        <div class="mode-content" id="freeModeContent" hidden>
+            <section class="card">
+
+                <div class="direction" id="direction"></div>
+                <div class="question" id="question"></div>
+                <input
+                    class="answer-input"
+                    id="answerInput"
+                    type="text"
+                    placeholder="Antwort eingeben"
+                    autocomplete="off"
+                />
+                <div class="answer-feedback" id="answerFeedback"></div>
+                <div class="answer" id="answer"></div>
+                <button id="showAnswerBtn">Antwort prüfen</button>
+            </section>
+            <div class="status" id="status"></div>
+
+            <br>
+            <div class="boxes" id="boxes"></div>
+            <div class="reset-controls">
+                <button id="resetProgressBtn" class="reset-progress-btn" type="button">
+                    Lernfortschritt zurücksetzen
+                </button>
+            </div>
         </div>
 
         <hr class="section-divider" />
 
         <div class="mode-heading">
+            <button
+                class="mode-back-btn"
+                id="weeklyModeBackBtn"
+                type="button"
+                aria-label="Zurück zur Startansicht"
+            >←</button>
             <h1 class="centered-heading">Wochenmodus</h1>
             <button
                 class="info-button"
@@ -101,34 +119,40 @@
             >i</button>
         </div>
         <div class="info">
-            Fällige Karten nach Wochentag: 
+            Fällige Karten nach Wochentag:
             <br>
             täglich Box 1, Di/Do Box 1–4,
             am Wochenende Box 1 + 5
         </div>
 
-        <section class="card">
-            <div class="direction" id="weeklyDirection"></div>
-            <div class="question" id="weeklyQuestion"></div>
-            <input
-                class="answer-input"
-                id="weeklyAnswerInput"
-                type="text"
-                placeholder="Antwort eingeben"
-                autocomplete="off"
-            />
-            <div class="answer-feedback" id="weeklyAnswerFeedback"></div>
-            <div class="answer" id="weeklyAnswer"></div>
-            <button id="weeklyShowAnswerBtn">Antwort prüfen</button>
-        </section>
-        <div class="status" id="weeklyStatus"></div>
+        <button class="mode-start-btn" id="weeklyModeStartBtn" type="button">
+            Wochenmodus starten
+        </button>
 
-        <br>
-        <div class="group-tiles" id="weeklyGroups"></div>
-        <div class="reset-controls">
-            <button id="weeklyResetProgressBtn" class="reset-progress-btn" type="button">
-                Lernfortschritt zurücksetzen
-            </button>
+        <div class="mode-content" id="weeklyModeContent" hidden>
+            <section class="card">
+                <div class="direction" id="weeklyDirection"></div>
+                <div class="question" id="weeklyQuestion"></div>
+                <input
+                    class="answer-input"
+                    id="weeklyAnswerInput"
+                    type="text"
+                    placeholder="Antwort eingeben"
+                    autocomplete="off"
+                />
+                <div class="answer-feedback" id="weeklyAnswerFeedback"></div>
+                <div class="answer" id="weeklyAnswer"></div>
+                <button id="weeklyShowAnswerBtn">Antwort prüfen</button>
+            </section>
+            <div class="status" id="weeklyStatus"></div>
+
+            <br>
+            <div class="group-tiles" id="weeklyGroups"></div>
+            <div class="reset-controls">
+                <button id="weeklyResetProgressBtn" class="reset-progress-btn" type="button">
+                    Lernfortschritt zurücksetzen
+                </button>
+            </div>
         </div>
     </main>
     <dialog class="info-dialog" id="infoDialog" aria-labelledby="infoDialogTitle">

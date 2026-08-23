@@ -57,6 +57,28 @@ body {
     color: #fff;
 }
 
+.mode-back-btn {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 28px;
+    height: 28px;
+    border: 2px solid #555;
+    border-radius: 50%;
+    padding: 0;
+    background: transparent;
+    color: #555;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.mode-back-btn:hover,
+.mode-back-btn:focus-visible {
+    background: #555;
+    color: #fff;
+}
+
 .info-dialog {
     width: min(520px, calc(100% - 32px));
     border: 0;
@@ -352,6 +374,18 @@ button {
 #weeklyShowAnswerBtn {
     background: #333;
     color: white;
+}
+
+.mode-start-btn {
+    display: block;
+    margin: 0 auto 25px;
+    background: #333;
+    color: white;
+}
+
+.mode-start-btn:hover,
+.mode-start-btn:focus-visible {
+    background: #555;
 }
 
 .section-divider {

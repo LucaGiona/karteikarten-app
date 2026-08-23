@@ -28,10 +28,6 @@ export function showAnswer() {
         ? card.terms.de
         : card.terms.la;
     const enteredAnswer = dom.answerInput.value.trim();
-    if (enteredAnswer === "") {
-        dom.answerInput.focus();
-        return;
-    }
     const isLatinAnswer = state.resolvedDirection === "german-latin";
     const isCorrect = isLatinAnswer
         ? enteredAnswer.localeCompare(
@@ -81,10 +77,6 @@ export function showWeeklyAnswer() {
         ? card.terms.de
         : card.terms.la;
     const enteredAnswer = dom.weeklyAnswerInput.value.trim();
-    if (enteredAnswer === "") {
-        dom.weeklyAnswerInput.focus();
-        return;
-    }
     const isLatinAnswer = weeklyState.resolvedDirection === "german-latin";
     const isCorrect = isLatinAnswer
         ? enteredAnswer.localeCompare(

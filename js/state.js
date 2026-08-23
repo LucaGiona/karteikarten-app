@@ -1,23 +1,22 @@
-import { defaultCards } from "./cards.js";
+import { defaultCards, cardKey } from "./cards.js";
 import { loadProgress, saveProgress } from "./storage.js";
 import { pickCardIndex, pickDueCardIndex, getTodayGroup } from "./leitner.js";
 
 const progress = loadProgress();
-// Fallback für alte Speicherstände (vor der Trennung in freeBoxes/weeklyBoxes),
-// damit bestehender Fortschritt beim Umstellen nicht verloren geht.
-const legacyBoxes = progress?.boxes ?? null;
 
 // Freies Lernen und Wochenmodus sind zwei unabhängige Leitner-Systeme mit
 // eigenem Kartenfortschritt (card.box) und eigenem Reset – nur die
-// Karteninhalte (latin/german) stammen aus derselben Quelle.
+// Karteninhalte (id/terms) stammen aus derselben Quelle. Der Fortschritt
+// wird über bereich:id gekeyt, damit gleiche ids in verschiedenen
+// Bereichs-Dateien (anatomie.json, krankheiten.json, ...) nicht kollidieren.
 export const freeCards = defaultCards.map(card => ({
     ...card,
-    box: progress?.freeBoxes?.[card.latin] ?? legacyBoxes?.[card.latin] ?? card.box,
+    box: progress?.freeBoxes?.[cardKey(card)] ?? 1,
 }));
 
 export const weeklyCards = defaultCards.map(card => ({
     ...card,
-    box: progress?.weeklyBoxes?.[card.latin] ?? legacyBoxes?.[card.latin] ?? card.box,
+    box: progress?.weeklyBoxes?.[cardKey(card)] ?? 1,
 }));
 
 export const state = {
@@ -61,11 +60,11 @@ export function resolveWeeklyDirection() {
 export function persist() {
     const freeBoxes = {};
     freeCards.forEach(card => {
-        freeBoxes[card.latin] = card.box;
+        freeBoxes[cardKey(card)] = card.box;
     });
     const weeklyBoxes = {};
     weeklyCards.forEach(card => {
-        weeklyBoxes[card.latin] = card.box;
+        weeklyBoxes[cardKey(card)] = card.box;
     });
     saveProgress({ freeBoxes, weeklyBoxes, direction: state.selectedDirection });
 }

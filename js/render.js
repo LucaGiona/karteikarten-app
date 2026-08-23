@@ -1,6 +1,7 @@
 import { freeCards, weeklyCards, state, weeklyState, resolveDirection, resolveWeeklyDirection } from "./state.js";
 import * as dom from "./dom.js";
 import { MASTERED_BOX, DAY_GROUPS, isCardDueInGroup } from "./leitner.js";
+import { cardKey } from "./cards.js";
 
 const GROUP_TILES = [
     { key: DAY_GROUPS.DAILY, label: "Täglich" },
@@ -25,8 +26,8 @@ export function renderCard() {
     dom.direction.textContent = isLatinToGerman
         ? "Latein → Deutsch"
         : "Deutsch → Latein";
-    dom.question.textContent = isLatinToGerman ? card.latin : card.german;
-    dom.answer.textContent = isLatinToGerman ? card.german : card.latin;
+    dom.question.textContent = isLatinToGerman ? card.terms.la : card.terms.de;
+    dom.answer.textContent = isLatinToGerman ? card.terms.de : card.terms.la;
     dom.answerInput.style.display = "block";
     dom.answerInput.value = "";
     dom.answerInput.disabled = false;
@@ -68,7 +69,7 @@ export function weeklyStatusText(card) {
     const remaining = weeklyCards.filter(
         c =>
             isCardDueInGroup(c, weeklyState.todayGroup) &&
-            !weeklyState.completedThisSession.has(c.latin)
+            !weeklyState.completedThisSession.has(cardKey(c))
     ).length;
     return `Box ${card.box} · noch ${remaining} heute fällig`;
 }
@@ -85,8 +86,8 @@ export function renderWeeklyCard() {
     dom.weeklyDirection.textContent = isLatinToGerman
         ? "Latein → Deutsch"
         : "Deutsch → Latein";
-    dom.weeklyQuestion.textContent = isLatinToGerman ? card.latin : card.german;
-    dom.weeklyAnswer.textContent = isLatinToGerman ? card.german : card.latin;
+    dom.weeklyQuestion.textContent = isLatinToGerman ? card.terms.la : card.terms.de;
+    dom.weeklyAnswer.textContent = isLatinToGerman ? card.terms.de : card.terms.la;
     dom.weeklyAnswerInput.style.display = "block";
     dom.weeklyAnswerInput.value = "";
     dom.weeklyAnswerInput.disabled = false;
@@ -129,7 +130,7 @@ export function renderWeeklyGroups() {
         const count = weeklyCards.filter(
             card =>
                 isCardDueInGroup(card, key) &&
-                !weeklyState.completedThisSession.has(card.latin)
+                !weeklyState.completedThisSession.has(cardKey(card))
         ).length;
         const tileElement = document.createElement("div");
 

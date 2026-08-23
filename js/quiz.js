@@ -1,4 +1,5 @@
 import { freeCards, weeklyCards, state, weeklyState, persist } from "./state.js";
+import { cardKey } from "./cards.js";
 import * as dom from "./dom.js";
 import {
     renderCard,
@@ -18,8 +19,8 @@ export function showAnswer() {
 
     const card = freeCards[state.currentIndex];
     const expectedAnswer = state.resolvedDirection === "latin-german"
-        ? card.german
-        : card.latin;
+        ? card.terms.de
+        : card.terms.la;
     const enteredAnswer = dom.answerInput.value.trim();
     if (enteredAnswer === "") {
         dom.answerInput.focus();
@@ -71,8 +72,8 @@ export function showWeeklyAnswer() {
 
     const card = weeklyCards[weeklyState.currentIndex];
     const expectedAnswer = weeklyState.resolvedDirection === "latin-german"
-        ? card.german
-        : card.latin;
+        ? card.terms.de
+        : card.terms.la;
     const enteredAnswer = dom.weeklyAnswerInput.value.trim();
     if (enteredAnswer === "") {
         dom.weeklyAnswerInput.focus();
@@ -100,7 +101,7 @@ export function showWeeklyAnswer() {
         // sie (z.B. aus Box 5 am Wochenende) laut isCardDueInGroup weiterhin
         // "fällig" wäre – sonst könnte sie in derselben Sitzung endlos
         // wieder ausgewählt werden.
-        weeklyState.completedThisSession.add(card.latin);
+        weeklyState.completedThisSession.add(cardKey(card));
         if (card.box < 5) {
             card.box++;
         }

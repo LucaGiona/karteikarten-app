@@ -1,3 +1,5 @@
+import { cardKey } from "./cards.js";
+
 export const MASTERED_BOX = 5;
 
 export const DAY_GROUPS = {
@@ -38,7 +40,7 @@ export function pickDueCardIndex(cards, group, completedThisSession, excludeInde
         .map((card, index) => ({ card, index }))
         .filter(({ card }) =>
             isCardDueInGroup(card, group) &&
-            !completedThisSession.has(card.latin)
+            !completedThisSession.has(cardKey(card))
         );
 
     if (candidates.length === 0) {

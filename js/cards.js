@@ -10,6 +10,26 @@ export function cardKey(card) {
     return `${card.bereich}:${card.id}`;
 }
 
+// Anzeigenamen für bereich/typ. Neuer Bereich oder Typ ohne Eintrag hier
+// fällt einfach auf den rohen Datenwert zurück (siehe topicLabel/categoryLabel).
+const TOPIC_LABELS = {
+    organe: "Organe",
+    ohr: "Ohr",
+};
+
+const CATEGORY_LABELS = {
+    anatomie: "Anatomie",
+    erkrankung: "Erkrankungen",
+};
+
+export function topicLabel(bereich) {
+    return TOPIC_LABELS[bereich] ?? bereich;
+}
+
+export function categoryLabel(typ) {
+    return CATEGORY_LABELS[typ] ?? typ;
+}
+
 const seenKeys = new Set();
 defaultCards.forEach(card => {
     if (!/^[a-z0-9-]+$/.test(card.id)) {

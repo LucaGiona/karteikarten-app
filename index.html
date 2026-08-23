@@ -59,20 +59,9 @@
                     data-category="all"
                 >Alle</button>
             </div>
-            <div class="topic-row">
-                <button
-                    class="topic-btn"
-                    id="categoryAnatomieBtn"
-                    type="button"
-                    data-category="anatomie"
-                >Anatomie</button>
-                <button
-                    class="topic-btn"
-                    id="categoryErkrankungBtn"
-                    type="button"
-                    data-category="erkrankung"
-                >Erkrankungen</button>
-            </div>
+            <!-- Wird zur Laufzeit befüllt (renderCategoryButtons in js/render.js):
+                 nur Kategorien, die im gewählten Thema tatsächlich vorkommen. -->
+            <div class="topic-row" id="categoryButtonsRow"></div>
         </fieldset>
         <fieldset class="direction-selector topic-selector">
             <legend>Themen</legend>
@@ -128,6 +117,7 @@
         <div class="mode-content" id="freeModeContent" hidden>
             <section class="card">
 
+                <div class="context-badge" id="contextBadge"></div>
                 <div class="direction" id="direction"></div>
                 <div class="question" id="question"></div>
                 <input
@@ -182,6 +172,7 @@
 
         <div class="mode-content" id="weeklyModeContent" hidden>
             <section class="card">
+                <div class="context-badge" id="weeklyContextBadge"></div>
                 <div class="direction" id="weeklyDirection"></div>
                 <div class="question" id="weeklyQuestion"></div>
                 <input

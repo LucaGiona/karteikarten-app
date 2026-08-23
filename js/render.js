@@ -5,10 +5,11 @@ import {
     resolveWeeklyDirection,
     getVisibleFreeCards,
     getVisibleWeeklyCards,
+    getAvailableCategories,
 } from "./state.js";
 import * as dom from "./dom.js";
 import { MASTERED_BOX, DAY_GROUPS, isCardDueInGroup } from "./leitner.js";
-import { cardKey } from "./cards.js";
+import { cardKey, topicLabel, categoryLabel } from "./cards.js";
 
 const GROUP_TILES = [
     { key: DAY_GROUPS.DAILY, label: "Täglich" },
@@ -31,6 +32,8 @@ export function renderCard() {
     const card = getVisibleFreeCards()[state.currentIndex];
     const isLatinToGerman = resolveDirection() === "latin-german";
 
+    dom.contextBadge.textContent =
+        `${topicLabel(card.bereich)} · ${categoryLabel(card.typ)}`;
     dom.direction.textContent = isLatinToGerman
         ? "Latein → Deutsch"
         : "Deutsch → Latein";
@@ -56,6 +59,7 @@ export function renderCard() {
 }
 
 function renderFinished() {
+    dom.contextBadge.textContent = "";
     dom.direction.textContent = "";
     dom.question.textContent = "Alle Karten gelernt! 🎉";
     dom.answer.textContent = "";
@@ -92,6 +96,8 @@ export function renderWeeklyCard() {
     const card = getVisibleWeeklyCards()[weeklyState.currentIndex];
     const isLatinToGerman = resolveWeeklyDirection() === "latin-german";
 
+    dom.weeklyContextBadge.textContent =
+        `${topicLabel(card.bereich)} · ${categoryLabel(card.typ)}`;
     dom.weeklyDirection.textContent = isLatinToGerman
         ? "Latein → Deutsch"
         : "Deutsch → Latein";
@@ -116,6 +122,7 @@ export function renderWeeklyCard() {
 }
 
 function renderWeeklyFinished() {
+    dom.weeklyContextBadge.textContent = "";
     dom.weeklyDirection.textContent = "";
     dom.weeklyQuestion.textContent = "Für heute bist du fertig! 🎉";
     dom.weeklyAnswer.textContent = "";
@@ -155,6 +162,31 @@ export function renderWeeklyGroups() {
         tileElement.appendChild(countLabel);
 
         dom.weeklyGroups.appendChild(tileElement);
+    });
+}
+
+// Baut die Kategorie-Buttons anhand der Karten des aktuell gewählten
+// Themas neu auf. So taucht z.B. "Erkrankungen" nur auf, solange das
+// gewählte Thema tatsächlich Krankheits-Karten enthält.
+export function renderCategoryButtons() {
+    const availableCategories = getAvailableCategories();
+
+    dom.categoryAllBtn.classList.toggle(
+        "is-active",
+        state.selectedCategory === "all"
+    );
+
+    dom.categoryButtonsRow.innerHTML = "";
+    availableCategories.forEach(typ => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.classList.add("topic-btn");
+        button.dataset.category = typ;
+        button.textContent = categoryLabel(typ);
+        if (typ === state.selectedCategory) {
+            button.classList.add("is-active");
+        }
+        dom.categoryButtonsRow.appendChild(button);
     });
 }
 

@@ -11,6 +11,11 @@ zusammen.
    unten).
 2. Den Dateinamen in `DATA_FILES` in [js/cards.js](../js/cards.js)
    ergänzen.
+3. Optional: einen lesbaren Anzeigenamen für den neuen `bereich`-Wert in
+   `TOPIC_LABELS` in [js/cards.js](../js/cards.js) eintragen (sonst wird der
+   rohe `bereich`-Wert angezeigt, z.B. im Themen-Button und im Kontext-Badge
+   über der Karte). Ein neuer `typ`-Wert braucht analog einen Eintrag in
+   `CATEGORY_LABELS`.
 
 ## Kartenschema
 

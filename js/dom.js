@@ -3,11 +3,17 @@ export const answer = document.querySelector("#answer");
 export const answerInput = document.querySelector("#answerInput");
 export const answerFeedback = document.querySelector("#answerFeedback");
 export const direction = document.querySelector("#direction");
+export const contextBadge = document.querySelector("#contextBadge");
 export const directionOptions = document.querySelectorAll(
     'input[name="direction"]'
 );
 export const topicButtons = document.querySelectorAll(".topic-selector .topic-btn");
-export const categoryButtons = document.querySelectorAll(".category-selector .topic-btn");
+// Die Kategorie-Buttons werden je nach gewähltem Thema dynamisch neu erzeugt
+// (siehe renderCategoryButtons in render.js) – deshalb hier keine statische
+// NodeList, sondern der Container fürs Klick-Delegieren in main.js.
+export const categorySelector = document.querySelector(".category-selector");
+export const categoryAllBtn = document.querySelector("#categoryAllBtn");
+export const categoryButtonsRow = document.querySelector("#categoryButtonsRow");
 export const showAnswerBtn = document.querySelector("#showAnswerBtn");
 export const boxes = document.querySelector("#boxes");
 export const status = document.querySelector("#status");
@@ -19,6 +25,7 @@ export const freeModeContent = document.querySelector("#freeModeContent");
 export const freeModeBackBtn = document.querySelector("#freeModeBackBtn");
 
 export const weeklyDirection = document.querySelector("#weeklyDirection");
+export const weeklyContextBadge = document.querySelector("#weeklyContextBadge");
 export const weeklyQuestion = document.querySelector("#weeklyQuestion");
 export const weeklyAnswerInput = document.querySelector("#weeklyAnswerInput");
 export const weeklyAnswerFeedback = document.querySelector(

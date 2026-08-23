@@ -7,7 +7,7 @@ import {
     applyCardFilters,
 } from "./state.js";
 import * as dom from "./dom.js";
-import { renderCard, renderWeeklyCard } from "./render.js";
+import { renderCard, renderWeeklyCard, renderCategoryButtons } from "./render.js";
 import { showAnswer, nextCard, showWeeklyAnswer, nextWeeklyCard } from "./quiz.js";
 import { initializeInfoDialog } from "./info-dialog.js";
 
@@ -84,21 +84,28 @@ dom.topicButtons.forEach(button => {
             btn.classList.toggle("is-active", btn === button);
         });
         applyCardFilters();
+        // Themawechsel kann die verfügbaren Kategorien ändern (z.B. "Organe"
+        // hat aktuell keine Erkrankungen) – Kategorie-Buttons daher neu bauen.
+        renderCategoryButtons();
         renderCard();
         renderWeeklyCard();
     });
 });
 
-dom.categoryButtons.forEach(button => {
-    button.addEventListener("click", () => {
-        state.selectedCategory = button.dataset.category;
-        dom.categoryButtons.forEach(btn => {
-            btn.classList.toggle("is-active", btn === button);
-        });
-        applyCardFilters();
-        renderCard();
-        renderWeeklyCard();
-    });
+// Kategorie-Buttons werden je nach Thema dynamisch neu erzeugt (siehe
+// renderCategoryButtons in render.js), deshalb hier ein delegierter Klick-
+// Handler auf dem umschliessenden Fieldset statt einzelner Listener.
+dom.categorySelector.addEventListener("click", event => {
+    const button = event.target.closest(".topic-btn");
+    if (!button) {
+        return;
+    }
+
+    state.selectedCategory = button.dataset.category;
+    applyCardFilters();
+    renderCategoryButtons();
+    renderCard();
+    renderWeeklyCard();
 });
 
 dom.weeklyModeStartBtn.addEventListener("click", () => {
@@ -139,5 +146,6 @@ document.addEventListener("keydown", event => {
 
 initializeInfoDialog();
 
+renderCategoryButtons();
 renderCard();
 renderWeeklyCard();

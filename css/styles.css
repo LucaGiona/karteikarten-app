@@ -338,6 +338,23 @@ body {
     text-align: center;
 }
 
+.context-badge {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: #eee;
+    color: #555;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.context-badge:empty {
+    display: none;
+}
+
 .direction {
     color: #777;
     font-size: 14px;

@@ -47,9 +47,30 @@ export function getVisibleWeeklyCards() {
     return weeklyCards.filter(matchesFilters);
 }
 
+// Kategorien, die im aktuell gewählten Thema tatsächlich vorkommen. Damit
+// zeigt die Kategorie-Auswahl nie eine Kombination an, die zu null Karten
+// führen würde (z.B. "Organe" + "Erkrankungen", solange organe.json nur
+// anatomie-Karten enthält).
+export function getAvailableCategories() {
+    const relevantCards = state.selectedTopic === "all"
+        ? freeCards
+        : freeCards.filter(card => card.bereich === state.selectedTopic);
+    return [...new Set(relevantCards.map(card => card.typ))];
+}
+
 // Nach einem Wechsel von Themen-/Kategorie-Filter neu einsortieren: die alten
 // Indizes zeigen sonst auf Karten aus der vorherigen, ungefilterten Auswahl.
+// Ist die bisher gewählte Kategorie im neuen Thema nicht mehr vorhanden,
+// wird sie auf "Alle" zurückgesetzt statt eine leere Auswahl zu erzeugen.
 export function applyCardFilters() {
+    const availableCategories = getAvailableCategories();
+    if (
+        state.selectedCategory !== "all"
+        && !availableCategories.includes(state.selectedCategory)
+    ) {
+        state.selectedCategory = "all";
+    }
+
     state.currentIndex = pickCardIndex(getVisibleFreeCards());
     state.answerWasChecked = false;
     weeklyState.currentIndex = pickDueCardIndex(

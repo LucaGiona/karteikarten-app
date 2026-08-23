@@ -8,11 +8,12 @@ dom.directionOptions.forEach(option => {
     option.checked = option.value === state.selectedDirection;
 });
 
-function openMode(contentToShow, startBtnToHide, contentToHide, startBtnToShow) {
+function openMode(contentToShow, startBtnToHide, contentToHide, startBtnToShow, scrollTarget) {
     contentToShow.hidden = false;
     startBtnToHide.hidden = true;
     contentToHide.hidden = true;
     startBtnToShow.hidden = false;
+    scrollTarget.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 function goToLanding() {
@@ -31,7 +32,8 @@ dom.freeModeStartBtn.addEventListener("click", () => {
         dom.freeModeContent,
         dom.freeModeStartBtn,
         dom.weeklyModeContent,
-        dom.weeklyModeStartBtn
+        dom.weeklyModeStartBtn,
+        dom.freeModeBackBtn
     );
 });
 
@@ -82,7 +84,8 @@ dom.weeklyModeStartBtn.addEventListener("click", () => {
         dom.weeklyModeContent,
         dom.weeklyModeStartBtn,
         dom.freeModeContent,
-        dom.freeModeStartBtn
+        dom.freeModeStartBtn,
+        dom.weeklyModeBackBtn
     );
 });
 

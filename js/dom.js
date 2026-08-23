@@ -6,6 +6,7 @@ export const direction = document.querySelector("#direction");
 export const directionOptions = document.querySelectorAll(
     'input[name="direction"]'
 );
+export const topicButtons = document.querySelectorAll(".topic-btn");
 export const showAnswerBtn = document.querySelector("#showAnswerBtn");
 export const boxes = document.querySelector("#boxes");
 export const status = document.querySelector("#status");

@@ -5,7 +5,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f3f3f3;
+    background: #fcf6f6;
     color: #222;
 }
 
@@ -179,6 +179,37 @@ body {
     margin: 0;
     accent-color: #222;
     cursor: pointer;
+}
+
+.topic-btn {
+    border: 2px solid #222;
+    background: #d6d6d6;
+    color: #222;
+}
+
+.topic-btn:hover,
+.topic-btn:focus-visible {
+    background: #c2c2c2;
+}
+
+.topic-btn.is-active {
+    background: #333;
+    border-color: #333;
+    color: white;
+}
+
+.topic-btn.is-active:hover,
+.topic-btn.is-active:focus-visible {
+    background: #555;
+    border-color: #555;
+}
+
+.topic-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    width: 100%;
 }
 
 .boxes {

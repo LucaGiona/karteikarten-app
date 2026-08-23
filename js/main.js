@@ -68,6 +68,15 @@ dom.directionOptions.forEach(option => {
     });
 });
 
+dom.topicButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        state.selectedTopic = button.dataset.topic;
+        dom.topicButtons.forEach(btn => {
+            btn.classList.toggle("is-active", btn === button);
+        });
+    });
+});
+
 dom.weeklyModeStartBtn.addEventListener("click", () => {
     openMode(
         dom.weeklyModeContent,

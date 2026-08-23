@@ -23,6 +23,9 @@ export const state = {
     currentIndex: pickCardIndex(freeCards),
     selectedDirection: progress?.direction ?? "latin-german",
     resolvedDirection: progress?.direction ?? "latin-german",
+    // Themen-Filter wird bewusst nicht persistiert: "Alle" soll nach jedem
+    // Neuladen wieder aktiv sein, unabhängig von der zuletzt gewählten Karte.
+    selectedTopic: "all",
     answerWasChecked: false,
 };
 

@@ -8,11 +8,12 @@
 
 ## Deutsch
 
-Eine kleine, responsive Karteikarten-Anwendung zum Lernen anatomischer Begriffe auf Latein und Deutsch. Die Anwendung enthält zwei unabhängige Leitner-Systeme – **Freies Lernen** und **Wochenmodus** –, die sich zwar dieselben Karteninhalte teilen, aber jeweils ihren eigenen Lernfortschritt (Boxenzuordnung) und Reset besitzen.
+Eine kleine, responsive Karteikarten-Anwendung zum Lernen medizinischer Fachbegriffe (Anatomie und Erkrankungen) auf Latein und Deutsch. Die Anwendung enthält zwei unabhängige Leitner-Systeme – **Freies Lernen** und **Wochenmodus** –, die sich zwar dieselben Karteninhalte teilen, aber jeweils ihren eigenen Lernfortschritt (Boxenzuordnung) und Reset besitzen.
 
 ### Funktionen
 
 - Zwei unabhängige Leitner-Systeme: Freies Lernen und Wochenmodus, jeweils mit eigenem Fortschritt
+- Themen-Filter (z.B. „Organe“, „Ohr“) und Kategorie-Filter (Anatomie/Erkrankungen), frei kombinierbar
 - Drei Abfragemodi: Latein → Deutsch, Deutsch → Latein und Gemischt (zufällig)
 - Fünf Lernboxen nach dem Leitner-Prinzip je System
 - Richtige Antworten verschieben eine Karte in die nächste Box
@@ -55,13 +56,7 @@ Die Kacheln über dem Reset-Button zeigen die Anzahl der für die jeweilige Grup
 
 ### Eigene Karten hinzufügen
 
-Die Begriffe werden in [`js/cards.js`](js/cards.js) verwaltet. Neue Karten folgen diesem Format:
-
-```js
-{ latin: "Cerebrum", german: "Gehirn", box: 1 },
-```
-
-Jede neue Karte sollte in Box 1 beginnen. Lateinische Begriffe dienen zugleich als Schlüssel für den gespeicherten Fortschritt und sollten deshalb eindeutig sein.
+Die Kartendaten liegen als JSON-Dateien im Ordner [`db/`](db/), eine Datei pro Thema/Bereich (aktuell `organe.json` und `ohr.json`). Sie werden über `DATA_FILES` in [`js/cards.js`](js/cards.js) geladen und zu einem gemeinsamen Kartenpool zusammengeführt. Kartenschema, Validierungsregeln und Vorgehen für einen neuen Bereich sind in [`db/README.md`](db/README.md) beschrieben.
 
 ### Fortschritt zurücksetzen
 
@@ -80,14 +75,18 @@ Karteikarten_System/
 ├── index.html          # Benutzeroberfläche
 ├── css/
 │   └── styles.css     # Layout und Gestaltung der 3D-Boxen
+├── db/
+│   ├── organe.json    # Kartendaten Bereich "Organe"
+│   ├── ohr.json       # Kartendaten Bereich "Ohr"
+│   └── README.md      # Kartenschema und Validierungsregeln
 ├── js/
-│   ├── cards.js       # Kartendaten
+│   ├── cards.js       # Lädt und validiert die Kartendaten aus db/
 │   ├── dom.js         # Referenzen auf DOM-Elemente
 │   ├── leitner.js     # Auswahl nach dem Leitner-System
 │   ├── main.js        # Startpunkt und Ereignisbehandlung
 │   ├── quiz.js        # Antwortprüfung und Boxwechsel
 │   ├── render.js      # Darstellung von Karten und Lernstand
-│   ├── state.js       # Anwendungszustand
+│   ├── state.js       # Anwendungszustand, Themen-/Kategorie-Filter
 │   └── storage.js     # Speicherung im Browser
 ├── boxen-3d-design-problems-solution.md  # 3D-Boxen-Dokumentation (Deutsch)
 ├── boxes-3d-design-problems-solution.md  # 3D box documentation (Englisch)
@@ -104,11 +103,12 @@ Dieses Projekt wurde mit Unterstützung von **OpenAI Codex** entwickelt und doku
 
 ## English
 
-A small, responsive flashcard application for learning anatomical terms in Latin and German. The app contains two independent Leitner systems – **free learning** and **week mode** – which share the same card content but each keep their own progress (box assignment) and reset.
+A small, responsive flashcard application for learning medical terms (anatomy and diseases) in Latin and German. The app contains two independent Leitner systems – **free learning** and **week mode** – which share the same card content but each keep their own progress (box assignment) and reset.
 
 ### Features
 
 - Two independent Leitner systems: free learning and week mode, each with its own progress
+- Topic filter (e.g. "Organe", "Ohr") and category filter (Anatomie/Erkrankungen), freely combinable
 - Three quiz modes: Latin → German, German → Latin, and mixed random direction
 - Five learning boxes based on the Leitner method, per system
 - Correct answers move a card to the next box
@@ -151,13 +151,7 @@ The tiles above the reset button show how many cards are still due for each grou
 
 ### Add custom cards
 
-The vocabulary is stored in [`js/cards.js`](js/cards.js). Add new cards using this format:
-
-```js
-{ latin: "Cerebrum", german: "Gehirn", box: 1 },
-```
-
-Each new card should start in Box 1. Latin terms also act as keys for saved progress, so every Latin entry should be unique.
+Card data lives as JSON files in the [`db/`](db/) folder, one file per topic/bereich (currently `organe.json` and `ohr.json`). They are loaded via `DATA_FILES` in [`js/cards.js`](js/cards.js) and merged into a shared card pool. The card schema, validation rules, and steps for adding a new topic file are documented in [`db/README.md`](db/README.md).
 
 ### Reset progress
 
@@ -176,14 +170,18 @@ Karteikarten_System/
 ├── index.html          # User interface
 ├── css/
 │   └── styles.css     # Layout and 3D box styling
+├── db/
+│   ├── organe.json    # Card data for the "Organe" topic
+│   ├── ohr.json       # Card data for the "Ohr" topic
+│   └── README.md      # Card schema and validation rules
 ├── js/
-│   ├── cards.js       # Flashcard data
+│   ├── cards.js       # Loads and validates card data from db/
 │   ├── dom.js         # DOM element references
 │   ├── leitner.js     # Leitner-based card selection
 │   ├── main.js        # Entry point and event handling
 │   ├── quiz.js        # Answer checking and box movement
 │   ├── render.js      # Card and progress rendering
-│   ├── state.js       # Application state
+│   ├── state.js       # Application state, topic/category filters
 │   └── storage.js     # Browser persistence
 ├── boxen-3d-design-problems-solution.md  # 3D box documentation (German)
 ├── boxes-3d-design-problems-solution.md  # 3D box documentation (English)

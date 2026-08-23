@@ -19,6 +19,7 @@ zusammen.
     "id": "cor",
     "bereich": "organe",
     "kategorie": "herz-kreislauf",
+    "typ": "anatomie",
     "terms": { "de": "Herz", "la": "Cor", "en": "Heart" },
     "alternativen": { "de": [], "la": [], "en": [] },
     "erklaerung": "Muskuläres Hohlorgan, das das Blut durch den Kreislauf pumpt."
@@ -29,10 +30,13 @@ zusammen.
   `vesica-biliaris`. Muss nur **innerhalb der eigenen Bereichs-Datei**
   eindeutig sein, nicht global – siehe unten.
 - **`bereich`**: sollte dem Dateinamen entsprechen (`organe.json` →
-  `"organe"`). Das ist Konvention, wird aber nicht automatisch geprüft.
+  `"organe"`). Das ist Konvention, wird aber nicht automatisch geprüft. Wird
+  vom Themen-Filter ("Alle"/"Organe"/"Ohr"/...) in der Oberfläche genutzt.
 - **`kategorie`**: freie Gruppierung innerhalb eines Bereichs (z.B.
   `verdauung`, `nervensystem`), Kleinschreibung, Bindestrich statt
-  Leerzeichen. Wird für die geplanten Kategorie-Buttons genutzt.
+  Leerzeichen. Reines Datenfeld ohne UI-Anzeige.
+- **`typ`**: `"anatomie"` oder `"erkrankung"`. Wird vom Kategorie-Filter
+  ("Alle"/"Anatomie"/"Erkrankungen") in der Oberfläche genutzt.
 - **`terms`**: die drei Sprachvarianten. Aktuell fragt die App nur
   Latein↔Deutsch ab (`en` ist reines Datenfeld, noch ohne Wirkung).
 - **`alternativen`**: immer ein Array je Sprache, auch wenn leer – nie

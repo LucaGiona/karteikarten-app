@@ -31,6 +31,10 @@ body {
     position: relative;
 }
 
+.info-row .info {
+    padding: 0 36px;
+}
+
 .info-button {
     position: absolute;
     top: 4px;
@@ -370,8 +374,7 @@ button {
     cursor: pointer;
 }
 
-#showAnswerBtn,
-#weeklyShowAnswerBtn {
+.check-answer-btn {
     background: #333;
     color: white;
 }
@@ -381,6 +384,10 @@ button {
     margin: 0 auto 25px;
     background: #333;
     color: white;
+}
+
+.mode-start-btn[hidden] {
+    display: none;
 }
 
 .mode-start-btn:hover,

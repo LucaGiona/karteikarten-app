@@ -21,6 +21,10 @@ export function showAnswer() {
         ? card.german
         : card.latin;
     const enteredAnswer = dom.answerInput.value.trim();
+    if (enteredAnswer === "") {
+        dom.answerInput.focus();
+        return;
+    }
     const isLatinAnswer = state.resolvedDirection === "german-latin";
     const isCorrect = isLatinAnswer
         ? enteredAnswer.localeCompare(
@@ -70,6 +74,10 @@ export function showWeeklyAnswer() {
         ? card.german
         : card.latin;
     const enteredAnswer = dom.weeklyAnswerInput.value.trim();
+    if (enteredAnswer === "") {
+        dom.weeklyAnswerInput.focus();
+        return;
+    }
     const isLatinAnswer = weeklyState.resolvedDirection === "german-latin";
     const isCorrect = isLatinAnswer
         ? enteredAnswer.localeCompare(

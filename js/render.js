@@ -24,12 +24,17 @@ export function statusText(card) {
 }
 
 export function renderCard() {
+    const visibleCards = getVisibleFreeCards();
+    if (visibleCards.length === 0) {
+        renderNoCardsForFilter();
+        return;
+    }
     if (state.currentIndex === -1) {
         renderFinished();
         return;
     }
 
-    const card = getVisibleFreeCards()[state.currentIndex];
+    const card = visibleCards[state.currentIndex];
     const isLatinToGerman = resolveDirection() === "latin-german";
 
     dom.contextBadge.textContent =
@@ -78,6 +83,29 @@ function renderFinished() {
     renderBoxes();
 }
 
+// Leerer Filter (0 sichtbare Karten für Thema/Kategorie) ist kein
+// abgeschlossener Lerndurchgang – ohne diese eigene Meldung würde
+// renderFinished() fälschlich "Alle Karten gelernt!" zeigen, da
+// pickCardIndex() für ein leeres Array denselben Index (-1) liefert wie für
+// "alle gemeistert".
+function renderNoCardsForFilter() {
+    dom.contextBadge.textContent = "";
+    dom.direction.textContent = "";
+    dom.question.textContent = "Keine Karten für diese Auswahl.";
+    dom.answer.textContent = "";
+    dom.answer.classList.remove("is-visible");
+    dom.answerInput.style.display = "none";
+    dom.answerFeedback.textContent = "";
+    dom.answerFeedback.classList.remove(
+        "correct-feedback",
+        "wrong-feedback"
+    );
+    dom.showAnswerBtn.style.display = "none";
+    dom.status.textContent = "Bitte Thema oder Kategorie ändern.";
+
+    renderBoxes();
+}
+
 export function weeklyStatusText(card) {
     const remaining = getVisibleWeeklyCards().filter(
         c =>
@@ -88,12 +116,17 @@ export function weeklyStatusText(card) {
 }
 
 export function renderWeeklyCard() {
+    const visibleWeeklyCards = getVisibleWeeklyCards();
+    if (visibleWeeklyCards.length === 0) {
+        renderNoWeeklyCardsForFilter();
+        return;
+    }
     if (weeklyState.currentIndex === -1) {
         renderWeeklyFinished();
         return;
     }
 
-    const card = getVisibleWeeklyCards()[weeklyState.currentIndex];
+    const card = visibleWeeklyCards[weeklyState.currentIndex];
     const isLatinToGerman = resolveWeeklyDirection() === "latin-german";
 
     dom.weeklyContextBadge.textContent =
@@ -135,6 +168,26 @@ function renderWeeklyFinished() {
     );
     dom.weeklyShowAnswerBtn.style.display = "none";
     dom.weeklyStatus.textContent = "Alle heute fälligen Karten geschafft.";
+
+    renderWeeklyGroups();
+}
+
+// Gleicher Grund wie renderNoCardsForFilter(): 0 sichtbare Karten für
+// Thema/Kategorie darf nicht als "für heute fertig" durchgehen.
+function renderNoWeeklyCardsForFilter() {
+    dom.weeklyContextBadge.textContent = "";
+    dom.weeklyDirection.textContent = "";
+    dom.weeklyQuestion.textContent = "Keine Karten für diese Auswahl.";
+    dom.weeklyAnswer.textContent = "";
+    dom.weeklyAnswer.classList.remove("is-visible");
+    dom.weeklyAnswerInput.style.display = "none";
+    dom.weeklyAnswerFeedback.textContent = "";
+    dom.weeklyAnswerFeedback.classList.remove(
+        "correct-feedback",
+        "wrong-feedback"
+    );
+    dom.weeklyShowAnswerBtn.style.display = "none";
+    dom.weeklyStatus.textContent = "Bitte Thema oder Kategorie ändern.";
 
     renderWeeklyGroups();
 }

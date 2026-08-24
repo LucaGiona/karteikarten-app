@@ -17,6 +17,16 @@ const GROUP_TILES = [
     { key: DAY_GROUPS.WEEKEND, label: "Wochenende" },
 ];
 
+// Zeigt die tatsächlich gewählte Einstellung ("Gemischt") statt der pro
+// Karte zufällig aufgelösten Richtung – sonst wirkt es bei "Gemischt", als
+// würde ständig die Einstellung selbst wechseln.
+function directionLabel(isLatinToGerman) {
+    if (state.selectedDirection === "random") {
+        return "Gemischt (zufällig)";
+    }
+    return isLatinToGerman ? "Latein → Deutsch" : "Deutsch → Latein";
+}
+
 export function statusText(card) {
     const visibleCards = getVisibleFreeCards();
     const masteredCount = visibleCards.filter(c => c.box === MASTERED_BOX).length;
@@ -39,9 +49,7 @@ export function renderCard() {
 
     dom.contextBadge.textContent =
         `${topicLabel(card.bereich)} · ${categoryLabel(card.typ)}`;
-    dom.direction.textContent = isLatinToGerman
-        ? "Latein → Deutsch"
-        : "Deutsch → Latein";
+    dom.direction.textContent = directionLabel(isLatinToGerman);
     dom.question.textContent = isLatinToGerman ? card.terms.la : card.terms.de;
     dom.answer.textContent = isLatinToGerman ? card.terms.de : card.terms.la;
     dom.answerInput.style.display = "block";
@@ -131,9 +139,7 @@ export function renderWeeklyCard() {
 
     dom.weeklyContextBadge.textContent =
         `${topicLabel(card.bereich)} · ${categoryLabel(card.typ)}`;
-    dom.weeklyDirection.textContent = isLatinToGerman
-        ? "Latein → Deutsch"
-        : "Deutsch → Latein";
+    dom.weeklyDirection.textContent = directionLabel(isLatinToGerman);
     dom.weeklyQuestion.textContent = isLatinToGerman ? card.terms.la : card.terms.de;
     dom.weeklyAnswer.textContent = isLatinToGerman ? card.terms.de : card.terms.la;
     dom.weeklyAnswerInput.style.display = "block";

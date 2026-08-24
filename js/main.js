@@ -74,6 +74,7 @@ dom.directionOptions.forEach(option => {
         state.selectedDirection = event.target.value;
         persist();
         renderCard();
+        renderWeeklyCard();
     });
 });
 

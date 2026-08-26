@@ -6,26 +6,18 @@ import {
     getVisibleFreeCards,
     getVisibleWeeklyCards,
     getAvailableCategories,
+    DIRECTION_KEYS,
+    DIRECTION_LABELS,
 } from "./state.js";
 import * as dom from "./dom.js";
 import { MASTERED_BOX, DAY_GROUPS, isCardDueInGroup } from "./leitner.js";
-import { cardKey, topicLabel, categoryLabel } from "./cards.js";
+import { cardKey, topicLabel, subtopicLabel, categoryLabel } from "./cards.js";
 
 const GROUP_TILES = [
     { key: DAY_GROUPS.DAILY, label: "Täglich" },
     { key: DAY_GROUPS.MIDWEEK, label: "Di + Do" },
     { key: DAY_GROUPS.WEEKEND, label: "Wochenende" },
 ];
-
-// Zeigt die tatsächlich gewählte Einstellung ("Gemischt") statt der pro
-// Karte zufällig aufgelösten Richtung – sonst wirkt es bei "Gemischt", als
-// würde ständig die Einstellung selbst wechseln.
-function directionLabel(isLatinToGerman) {
-    if (state.selectedDirection === "random") {
-        return "Gemischt (zufällig)";
-    }
-    return isLatinToGerman ? "Latein → Deutsch" : "Deutsch → Latein";
-}
 
 export function statusText(card) {
     const visibleCards = getVisibleFreeCards();
@@ -45,13 +37,15 @@ export function renderCard() {
     }
 
     const card = visibleCards[state.currentIndex];
-    const isLatinToGerman = resolveDirection() === "latin-german";
+    const direction = resolveDirection();
+    const { front, back } = DIRECTION_KEYS[direction];
 
     dom.contextBadge.textContent =
-        `${topicLabel(card.bereich)} · ${categoryLabel(card.typ)}`;
-    dom.direction.textContent = directionLabel(isLatinToGerman);
-    dom.question.textContent = isLatinToGerman ? card.terms.la : card.terms.de;
-    dom.answer.textContent = isLatinToGerman ? card.terms.de : card.terms.la;
+        `${topicLabel(card.fach)}${card.unterbereich ? ` · ${subtopicLabel(card.unterbereich)}` : ""} · ${categoryLabel(card.typ)}`;
+    dom.direction.textContent = DIRECTION_LABELS[direction];
+    dom.question.textContent = card.terms[front];
+    dom.answer.textContent = card.terms[back];
+    dom.explanation.textContent = card.erklaerung ?? "";
     dom.answerInput.style.display = "block";
     dom.answerInput.value = "";
     dom.answerInput.disabled = false;
@@ -63,6 +57,7 @@ export function renderCard() {
     );
     state.answerWasChecked = false;
     dom.answer.classList.remove("is-visible");
+    dom.explanation.classList.remove("is-visible");
     dom.showAnswerBtn.style.display = "block";
     dom.showAnswerBtn.textContent = "Antwort prüfen";
     dom.status.textContent = statusText(card);
@@ -77,6 +72,8 @@ function renderFinished() {
     dom.question.textContent = "Alle Karten gelernt! 🎉";
     dom.answer.textContent = "";
     dom.answer.classList.remove("is-visible");
+    dom.explanation.textContent = "";
+    dom.explanation.classList.remove("is-visible");
     dom.answerInput.style.display = "none";
     dom.answerFeedback.textContent = "";
     dom.answerFeedback.classList.remove(
@@ -102,6 +99,8 @@ function renderNoCardsForFilter() {
     dom.question.textContent = "Keine Karten für diese Auswahl.";
     dom.answer.textContent = "";
     dom.answer.classList.remove("is-visible");
+    dom.explanation.textContent = "";
+    dom.explanation.classList.remove("is-visible");
     dom.answerInput.style.display = "none";
     dom.answerFeedback.textContent = "";
     dom.answerFeedback.classList.remove(
@@ -109,7 +108,7 @@ function renderNoCardsForFilter() {
         "wrong-feedback"
     );
     dom.showAnswerBtn.style.display = "none";
-    dom.status.textContent = "Bitte Thema oder Kategorie ändern.";
+    dom.status.textContent = "Bitte Filter oder Abfragerichtung ändern.";
 
     renderBoxes();
 }
@@ -135,13 +134,15 @@ export function renderWeeklyCard() {
     }
 
     const card = visibleWeeklyCards[weeklyState.currentIndex];
-    const isLatinToGerman = resolveWeeklyDirection() === "latin-german";
+    const direction = resolveWeeklyDirection();
+    const { front, back } = DIRECTION_KEYS[direction];
 
     dom.weeklyContextBadge.textContent =
-        `${topicLabel(card.bereich)} · ${categoryLabel(card.typ)}`;
-    dom.weeklyDirection.textContent = directionLabel(isLatinToGerman);
-    dom.weeklyQuestion.textContent = isLatinToGerman ? card.terms.la : card.terms.de;
-    dom.weeklyAnswer.textContent = isLatinToGerman ? card.terms.de : card.terms.la;
+        `${topicLabel(card.fach)}${card.unterbereich ? ` · ${subtopicLabel(card.unterbereich)}` : ""} · ${categoryLabel(card.typ)}`;
+    dom.weeklyDirection.textContent = DIRECTION_LABELS[direction];
+    dom.weeklyQuestion.textContent = card.terms[front];
+    dom.weeklyAnswer.textContent = card.terms[back];
+    dom.weeklyExplanation.textContent = card.erklaerung ?? "";
     dom.weeklyAnswerInput.style.display = "block";
     dom.weeklyAnswerInput.value = "";
     dom.weeklyAnswerInput.disabled = false;
@@ -153,6 +154,7 @@ export function renderWeeklyCard() {
     );
     weeklyState.answerWasChecked = false;
     dom.weeklyAnswer.classList.remove("is-visible");
+    dom.weeklyExplanation.classList.remove("is-visible");
     dom.weeklyShowAnswerBtn.style.display = "block";
     dom.weeklyShowAnswerBtn.textContent = "Antwort prüfen";
     dom.weeklyStatus.textContent = weeklyStatusText(card);
@@ -166,6 +168,8 @@ function renderWeeklyFinished() {
     dom.weeklyQuestion.textContent = "Für heute bist du fertig! 🎉";
     dom.weeklyAnswer.textContent = "";
     dom.weeklyAnswer.classList.remove("is-visible");
+    dom.weeklyExplanation.textContent = "";
+    dom.weeklyExplanation.classList.remove("is-visible");
     dom.weeklyAnswerInput.style.display = "none";
     dom.weeklyAnswerFeedback.textContent = "";
     dom.weeklyAnswerFeedback.classList.remove(
@@ -186,6 +190,8 @@ function renderNoWeeklyCardsForFilter() {
     dom.weeklyQuestion.textContent = "Keine Karten für diese Auswahl.";
     dom.weeklyAnswer.textContent = "";
     dom.weeklyAnswer.classList.remove("is-visible");
+    dom.weeklyExplanation.textContent = "";
+    dom.weeklyExplanation.classList.remove("is-visible");
     dom.weeklyAnswerInput.style.display = "none";
     dom.weeklyAnswerFeedback.textContent = "";
     dom.weeklyAnswerFeedback.classList.remove(
@@ -193,7 +199,7 @@ function renderNoWeeklyCardsForFilter() {
         "wrong-feedback"
     );
     dom.weeklyShowAnswerBtn.style.display = "none";
-    dom.weeklyStatus.textContent = "Bitte Thema oder Kategorie ändern.";
+    dom.weeklyStatus.textContent = "Bitte Filter oder Abfragerichtung ändern.";
 
     renderWeeklyGroups();
 }
@@ -247,6 +253,25 @@ export function renderCategoryButtons() {
         }
         dom.categoryButtonsRow.appendChild(button);
     });
+}
+
+export function renderSubtopicButtons() {
+    const subtopics = ["ohr", "nase", "rachen", "kehlkopf", "allgemein"];
+    dom.subtopicSelector.hidden = state.selectedTopic !== "hno";
+    dom.subtopicButtonsRow.innerHTML = "";
+
+    subtopics.forEach(subtopic => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.classList.add("topic-btn");
+        button.dataset.subtopic = subtopic;
+        button.textContent = subtopicLabel(subtopic);
+        button.classList.toggle("is-active", subtopic === state.selectedSubtopic);
+        dom.subtopicButtonsRow.appendChild(button);
+    });
+
+    const allButton = dom.subtopicSelector.querySelector('[data-subtopic="all"]');
+    allButton.classList.toggle("is-active", state.selectedSubtopic === "all");
 }
 
 export function renderBoxes() {

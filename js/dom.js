@@ -1,5 +1,6 @@
 export const question = document.querySelector("#question");
 export const answer = document.querySelector("#answer");
+export const explanation = document.querySelector("#explanation");
 export const answerInput = document.querySelector("#answerInput");
 export const answerFeedback = document.querySelector("#answerFeedback");
 export const direction = document.querySelector("#direction");
@@ -8,6 +9,8 @@ export const directionOptions = document.querySelectorAll(
     'input[name="direction"]'
 );
 export const topicButtons = document.querySelectorAll(".topic-selector .topic-btn");
+export const subtopicSelector = document.querySelector(".subtopic-selector");
+export const subtopicButtonsRow = document.querySelector("#subtopicButtonsRow");
 // Die Kategorie-Buttons werden je nach gewähltem Thema dynamisch neu erzeugt
 // (siehe renderCategoryButtons in render.js) – deshalb hier keine statische
 // NodeList, sondern der Container fürs Klick-Delegieren in main.js.
@@ -32,6 +35,7 @@ export const weeklyAnswerFeedback = document.querySelector(
     "#weeklyAnswerFeedback"
 );
 export const weeklyAnswer = document.querySelector("#weeklyAnswer");
+export const weeklyExplanation = document.querySelector("#weeklyExplanation");
 export const weeklyShowAnswerBtn = document.querySelector(
     "#weeklyShowAnswerBtn"
 );

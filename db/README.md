@@ -35,20 +35,20 @@ zusammen.
   `vesica-biliaris`. Muss nur **innerhalb der eigenen Bereichs-Datei**
   eindeutig sein, nicht global – siehe unten.
 - **`bereich`**: sollte dem Dateinamen entsprechen (`organe.json` →
-  `"organe"`). Das ist Konvention, wird aber nicht automatisch geprüft. Wird
-  vom Themen-Filter ("Alle"/"Organe"/"Ohr"/...) in der Oberfläche genutzt.
+  `"organe"`). Das ist Konvention, wird aber nicht automatisch geprüft. Die
+  Oberfläche fasst `ohr.json` und `hno.json` im Fach HNO zusammen.
 - **`kategorie`**: freie Gruppierung innerhalb eines Bereichs (z.B.
   `verdauung`, `nervensystem`), Kleinschreibung, Bindestrich statt
   Leerzeichen. Reines Datenfeld ohne UI-Anzeige.
-- **`typ`**: `"anatomie"` oder `"erkrankung"`. Wird vom Kategorie-Filter
-  ("Alle"/"Anatomie"/"Erkrankungen") in der Oberfläche genutzt.
-- **`terms`**: die drei Sprachvarianten. Aktuell fragt die App nur
-  Latein↔Deutsch ab (`en` ist reines Datenfeld, noch ohne Wirkung).
+- **`typ`**: z.B. `"anatomie"`, `"erkrankung"`, `"eingriff"`, `"diagnostik"`,
+  `"symptom"` oder `"instrument"`. Wird vom Kategorie-Filter genutzt.
+- **`terms`**: die drei Sprachvarianten. Die App unterstützt Latein↔Deutsch
+  und Deutsch↔Englisch. Karten ohne englischen Begriff werden bei einer
+  Englisch-Abfragerichtung automatisch ausgeblendet.
 - **`alternativen`**: immer ein Array je Sprache, auch wenn leer – nie
   `null` oder weggelassen. Für akzeptierte Schreibvarianten/Synonyme
-  gedacht, wird aber von der Antwortprüfung in
-  [js/quiz.js](../js/quiz.js) noch **nicht** ausgewertet.
-- **`erklaerung`**: kurzer Fließtext, aktuell nur Datenfeld ohne UI-Anzeige.
+  gedacht und wird von der Antwortprüfung ausgewertet.
+- **`erklaerung`**: kurzer Fließtext, der nach der Antwortprüfung angezeigt wird.
 
 ## Warum `id` nicht global eindeutig sein muss
 

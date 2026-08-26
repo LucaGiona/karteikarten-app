@@ -8,13 +8,13 @@
 
 ## Deutsch
 
-Eine kleine, responsive Karteikarten-Anwendung zum Lernen medizinischer Fachbegriffe (Anatomie und Erkrankungen) auf Latein und Deutsch. Die Anwendung enthält zwei unabhängige Leitner-Systeme – **Freies Lernen** und **Wochenmodus** –, die sich zwar dieselben Karteninhalte teilen, aber jeweils ihren eigenen Lernfortschritt (Boxenzuordnung) und Reset besitzen.
+Eine kleine, responsive Karteikarten-Anwendung zum Lernen medizinischer Fachbegriffe auf Latein, Deutsch und Englisch. Die Anwendung enthält zwei unabhängige Leitner-Systeme – **Freies Lernen** und **Wochenmodus** –, die sich zwar dieselben Karteninhalte teilen, aber jeweils ihren eigenen Lernfortschritt (Boxenzuordnung) und Reset besitzen.
 
 ### Funktionen
 
 - Zwei unabhängige Leitner-Systeme: Freies Lernen und Wochenmodus, jeweils mit eigenem Fortschritt
-- Themen-Filter (z.B. „Organe“, „Ohr“) und Kategorie-Filter (Anatomie/Erkrankungen), frei kombinierbar
-- Drei Abfragemodi: Latein → Deutsch, Deutsch → Latein und Gemischt (zufällig)
+- Fach-, HNO-Unterbereichs- und Kategorie-Filter, frei kombinierbar
+- Abfragerichtungen für Latein↔Deutsch und Deutsch↔Englisch, jeweils auch gemischt
 - Fünf Lernboxen nach dem Leitner-Prinzip je System
 - Richtige Antworten verschieben eine Karte in die nächste Box
 - Falsche Antworten setzen eine Karte zurück in Box 1
@@ -38,7 +38,7 @@ Da das Projekt JavaScript-Module verwendet, sollte es über einen lokalen Webser
 4. Nach der Auswertung mit **Nächste Karte** oder erneut mit der Eingabetaste fortfahren.
 5. Sobald alle Karten Box 5 erreicht haben, ist der Lerndurchgang abgeschlossen.
 
-Die Auswertung berücksichtigt bei lateinischen Antworten Groß- und Kleinschreibung nicht, unterscheidet aber Akzente. Deutschsprachige Antworten müssen dem hinterlegten Text entsprechen.
+Die Auswertung ignoriert Groß- und Kleinschreibung, unterscheidet aber Akzente. Hinterlegte Synonyme und Abkürzungen werden als Alternativantworten akzeptiert.
 
 ### Leitner-System
 
@@ -103,13 +103,13 @@ Dieses Projekt wurde mit Unterstützung von **OpenAI Codex** entwickelt und doku
 
 ## English
 
-A small, responsive flashcard application for learning medical terms (anatomy and diseases) in Latin and German. The app contains two independent Leitner systems – **free learning** and **week mode** – which share the same card content but each keep their own progress (box assignment) and reset.
+A small, responsive flashcard application for learning medical terms in Latin, German, and English. The app contains two independent Leitner systems – **free learning** and **week mode** – which share the same card content but each keep their own progress (box assignment) and reset.
 
 ### Features
 
 - Two independent Leitner systems: free learning and week mode, each with its own progress
-- Topic filter (e.g. "Organe", "Ohr") and category filter (Anatomie/Erkrankungen), freely combinable
-- Three quiz modes: Latin → German, German → Latin, and mixed random direction
+- Combinable subject, ENT subtopic, and category filters
+- Quiz directions for Latin↔German and German↔English, each with a mixed mode
 - Five learning boxes based on the Leitner method, per system
 - Correct answers move a card to the next box
 - Incorrect answers return a card to Box 1
@@ -133,7 +133,7 @@ Because the project uses JavaScript modules, it should be served through a local
 4. After checking the answer, continue with **Nächste Karte** or press Enter again.
 5. The learning session is complete when every card has reached Box 5.
 
-Latin answers are checked without case sensitivity but with accent sensitivity. German answers must match the stored text.
+Answers are checked without case sensitivity but with accent sensitivity. Stored synonyms and abbreviations are accepted as alternatives.
 
 ### Leitner system
 

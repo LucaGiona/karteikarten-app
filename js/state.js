@@ -2,7 +2,41 @@ import { defaultCards, cardKey } from "./cards.js";
 import { loadProgress, saveProgress } from "./storage.js";
 import { pickCardIndex, pickDueCardIndex, getTodayGroup } from "./leitner.js";
 
+function normalizeDirection(direction) {
+    return direction === "random" ? "random-la-de" : direction;
+}
+
 const progress = loadProgress();
+
+export const DIRECTION_KEYS = {
+    "latin-german": { front: "la", back: "de" },
+    "german-latin": { front: "de", back: "la" },
+    "german-english": { front: "de", back: "en" },
+    "english-german": { front: "en", back: "de" },
+};
+
+export const DIRECTION_LABELS = {
+    "latin-german": "Latein → Deutsch",
+    "german-latin": "Deutsch → Latein",
+    "german-english": "Deutsch → Englisch",
+    "english-german": "Englisch → Deutsch",
+};
+
+const DIRECTION_PAIRS = {
+    "random-la-de": ["latin-german", "german-latin"],
+    "random-de-en": ["german-english", "english-german"],
+};
+
+const ENGLISH_DIRECTIONS = new Set([
+    "german-english",
+    "english-german",
+    "random-de-en",
+]);
+
+function pickRandomDirection(selectedDirection) {
+    const pool = DIRECTION_PAIRS[selectedDirection];
+    return pool[Math.floor(Math.random() * pool.length)];
+}
 
 // Freies Lernen und Wochenmodus sind zwei unabhängige Leitner-Systeme mit
 // eigenem Kartenfortschritt (card.box) und eigenem Reset – nur die
@@ -21,22 +55,27 @@ export const weeklyCards = defaultCards.map(card => ({
 
 export const state = {
     currentIndex: pickCardIndex(freeCards),
-    selectedDirection: progress?.direction ?? "latin-german",
-    resolvedDirection: progress?.direction ?? "latin-german",
+    selectedDirection: normalizeDirection(progress?.direction ?? "latin-german"),
+    resolvedDirection: normalizeDirection(progress?.direction ?? "latin-german"),
     // Themen-/Kategorie-Filter werden bewusst nicht persistiert: "Alle" soll
     // nach jedem Neuladen wieder aktiv sein, unabhängig von der zuletzt
     // gewählten Karte.
     selectedTopic: "all",
+    selectedSubtopic: "all",
     selectedCategory: "all",
     answerWasChecked: false,
 };
 
 function matchesFilters(card) {
     const topicMatches = state.selectedTopic === "all"
-        || card.bereich === state.selectedTopic;
+        || card.fach === state.selectedTopic;
+    const subtopicMatches = state.selectedSubtopic === "all"
+        || card.unterbereich === state.selectedSubtopic;
     const categoryMatches = state.selectedCategory === "all"
         || card.typ === state.selectedCategory;
-    return topicMatches && categoryMatches;
+    const languageMatches = !ENGLISH_DIRECTIONS.has(state.selectedDirection)
+        || Boolean(card.terms.en);
+    return topicMatches && subtopicMatches && categoryMatches && languageMatches;
 }
 
 export function getVisibleFreeCards() {
@@ -52,9 +91,15 @@ export function getVisibleWeeklyCards() {
 // führen würde (z.B. "Organe" + "Erkrankungen", solange organe.json nur
 // anatomie-Karten enthält).
 export function getAvailableCategories() {
-    const relevantCards = state.selectedTopic === "all"
-        ? freeCards
-        : freeCards.filter(card => card.bereich === state.selectedTopic);
+    const relevantCards = freeCards.filter(card => {
+        const topicMatches = state.selectedTopic === "all"
+            || card.fach === state.selectedTopic;
+        const subtopicMatches = state.selectedSubtopic === "all"
+            || card.unterbereich === state.selectedSubtopic;
+        const languageMatches = !ENGLISH_DIRECTIONS.has(state.selectedDirection)
+            || Boolean(card.terms.en);
+        return topicMatches && subtopicMatches && languageMatches;
+    });
     return [...new Set(relevantCards.map(card => card.typ))];
 }
 
@@ -63,6 +108,9 @@ export function getAvailableCategories() {
 // Ist die bisher gewählte Kategorie im neuen Thema nicht mehr vorhanden,
 // wird sie auf "Alle" zurückgesetzt statt eine leere Auswahl zu erzeugen.
 export function applyCardFilters() {
+    if (state.selectedTopic !== "hno") {
+        state.selectedSubtopic = "all";
+    }
     const availableCategories = getAvailableCategories();
     if (
         state.selectedCategory !== "all"
@@ -82,8 +130,8 @@ export function applyCardFilters() {
 }
 
 export function resolveDirection() {
-    state.resolvedDirection = state.selectedDirection === "random"
-        ? (Math.random() < 0.5 ? "latin-german" : "german-latin")
+    state.resolvedDirection = state.selectedDirection.startsWith("random")
+        ? pickRandomDirection(state.selectedDirection)
         : state.selectedDirection;
     return state.resolvedDirection;
 }
@@ -95,7 +143,7 @@ export function resolveDirection() {
 export const weeklyState = {
     todayGroup: getTodayGroup(),
     currentIndex: -1,
-    resolvedDirection: progress?.direction ?? "latin-german",
+    resolvedDirection: normalizeDirection(progress?.direction ?? "latin-german"),
     answerWasChecked: false,
     completedThisSession: new Set(),
 };
@@ -106,8 +154,8 @@ weeklyState.currentIndex = pickDueCardIndex(
 );
 
 export function resolveWeeklyDirection() {
-    weeklyState.resolvedDirection = state.selectedDirection === "random"
-        ? (Math.random() < 0.5 ? "latin-german" : "german-latin")
+    weeklyState.resolvedDirection = state.selectedDirection.startsWith("random")
+        ? pickRandomDirection(state.selectedDirection)
         : state.selectedDirection;
     return weeklyState.resolvedDirection;
 }

@@ -1,0 +1,1468 @@
+[
+  {
+    "id": "adenoide-vegetationen",
+    "bereich": "hno",
+    "terms": {
+      "de": "Rachenmandelvergrößerung",
+      "la": "Adenoide Vegetationen",
+      "en": "Adenoid hypertrophy"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Rachenmandelvergrößerung",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "adenotomie",
+    "bereich": "hno",
+    "terms": {
+      "de": "Abtragung der Rachenmandel",
+      "la": "Adenotomie",
+      "en": "Adenoidectomy"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Abtragung der Rachenmandel",
+    "typ": "eingriff"
+  },
+  {
+    "id": "adhaesivprozess",
+    "bereich": "hno",
+    "terms": {
+      "de": "Verklebung von Trommelfell und Gehörknöchelchen",
+      "la": "Adhäsivprozess",
+      "en": "Adhesive otitis"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Narbige Verwachsungen an Trommelfell und Gehörknöchelchen",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "anosmie",
+    "bereich": "hno",
+    "terms": {
+      "de": "Geruchsverlust",
+      "la": "Anosmie",
+      "en": "Anosmia"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Geruchsverlust",
+    "typ": "symptom"
+  },
+  {
+    "id": "antrotomie",
+    "bereich": "hno",
+    "terms": {
+      "de": "Eröffnung der Warzenfortsatzhöhle",
+      "la": "Antrotomie",
+      "en": "Antrotomy"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Operative Eröffnung des größten Hohlraums im Warzenfortsatz hinter dem Ohr",
+    "typ": "eingriff"
+  },
+  {
+    "id": "aspiration",
+    "bereich": "hno",
+    "terms": {
+      "de": "Verschlucken (Eindringen in die Atemwege)",
+      "la": "Aspiration",
+      "en": "Aspiration"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Eindringen von Fremdstoffen (Flüssigkeit, Nahrung, Fremdkörper) in Luftröhre und Bronchien",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "balbuties",
+    "bereich": "hno",
+    "terms": {
+      "de": "Stottern",
+      "la": "Balbuties",
+      "en": "Stuttering"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Stottern",
+    "typ": "symptom"
+  },
+  {
+    "id": "bellocq-tamponade",
+    "bereich": "hno",
+    "terms": {
+      "de": "Nasenrachen-Tamponade bei Blutung",
+      "la": "Bellocq-Tamponade",
+      "en": "Posterior nasal packing"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Abdichtung des Nasenrachens bei Blutung",
+    "typ": "eingriff"
+  },
+  {
+    "id": "biopsie",
+    "bereich": "hno",
+    "terms": {
+      "de": "Gewebeentnahme",
+      "la": "Biopsie",
+      "en": "Biopsy"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Gewebeentnahme",
+    "typ": "eingriff"
+  },
+  {
+    "id": "bougierung",
+    "bereich": "hno",
+    "terms": {
+      "de": "Aufdehnung",
+      "la": "Bougierung",
+      "en": "Bougienage"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Aufdehnung (z. B. Speiseröhre)",
+    "typ": "eingriff"
+  },
+  {
+    "id": "cholesteatom",
+    "bereich": "hno",
+    "terms": {
+      "de": "Perlgeschwulst im Mittelohr",
+      "la": "Cholesteatom",
+      "en": "Cholesteatoma"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Aus Hautschüppchen zusammengesetzte „Perlgeschwulst“ im Mittelohr",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "chordektomie",
+    "bereich": "hno",
+    "terms": {
+      "de": "Abtragung einer Stimmlippe",
+      "la": "Chordektomie",
+      "en": "Chordectomy"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Abtragung einer Stimmlippe bei Kehlkopfkrebs",
+    "typ": "eingriff"
+  },
+  {
+    "id": "dekanuelement",
+    "bereich": "hno",
+    "terms": {
+      "de": "Entfernung einer Luftröhrenkanüle",
+      "la": "Dekanülement",
+      "en": "Decannulation"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Entfernung einer Luftröhrenkanüle",
+    "typ": "eingriff"
+  },
+  {
+    "id": "diskriminationsfaehigkeit",
+    "bereich": "hno",
+    "terms": {
+      "de": "Unterscheidungsfähigkeit für Sprachlaute",
+      "la": "Diskriminationsfähigkeit",
+      "en": "Speech discrimination"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Unterscheidungsfähigkeit für einzelne Sprachlaute",
+    "typ": "diagnostik"
+  },
+  {
+    "id": "divertikel",
+    "bereich": "hno",
+    "terms": {
+      "de": "Aussackung der Speiseröhre",
+      "la": "Divertikel",
+      "en": "Diverticulum"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Aussackung (Speiseröhre)",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "dysphonie",
+    "bereich": "hno",
+    "terms": {
+      "de": "Gestörte Tongebung, Heiserkeit",
+      "la": "Dysphonie",
+      "en": "Dysphonia"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Gestörte Tongebung, Heiserkeit",
+    "typ": "symptom"
+  },
+  {
+    "id": "elektrogustometrie",
+    "bereich": "hno",
+    "terms": {
+      "de": "Geschmacksnerv-Prüfung mit Strom",
+      "la": "Elektrogustometrie",
+      "en": "Electrogustometry"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [
+        "EGM"
+      ],
+      "en": []
+    },
+    "erklaerung": "Bestimmung der Erregbarkeit der Geschmacksnerven durch elektrischen Strom",
+    "typ": "diagnostik"
+  },
+  {
+    "id": "elektronystagmographie",
+    "bereich": "hno",
+    "terms": {
+      "de": "Registrierung von Augenbewegungen (Nystagmus)",
+      "la": "Elektronystagmographie",
+      "en": "Electronystagmography"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [
+        "ENG"
+      ],
+      "en": []
+    },
+    "erklaerung": "Registrierung der Augenbewegungen (Nystagmus) bei Reizung und krankhaften Veränderungen des Gleichgewichtssystems",
+    "typ": "diagnostik"
+  },
+  {
+    "id": "emphysem",
+    "bereich": "hno",
+    "terms": {
+      "de": "Luftansammlung im Gewebe",
+      "la": "Emphysem",
+      "en": "Emphysema"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Luftansammlung im Gewebe",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "empyem",
+    "bereich": "hno",
+    "terms": {
+      "de": "Eiteransammlung in einer Körperhöhle",
+      "la": "Empyem",
+      "en": "Empyema"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Eiteransammlung in einer Körperhöhle (z. B. Kieferhöhle)",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "epistaxis",
+    "bereich": "hno",
+    "terms": {
+      "de": "Nasenbluten",
+      "la": "Epistaxis",
+      "en": "Epistaxis"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Nasenbluten",
+    "typ": "symptom"
+  },
+  {
+    "id": "elektrische-reaktionsaudiometrie",
+    "bereich": "hno",
+    "terms": {
+      "de": "Hörmessung über Hirnströme",
+      "la": "Elektrische Reaktionsaudiometrie",
+      "en": "Electric response audiometry"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [
+        "ERA"
+      ],
+      "en": []
+    },
+    "erklaerung": "Hörmessung durch die Registrierung von Hirnströmen bei der Schallaufnahme",
+    "typ": "diagnostik"
+  },
+  {
+    "id": "fazialisdekompression",
+    "bereich": "hno",
+    "terms": {
+      "de": "Freilegung des Gesichtsnervs im Knochenkanal",
+      "la": "Fazialisdekompression",
+      "en": "Facial nerve decompression"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Freilegung des Gesichtsnervs in seinem Knochenkanal",
+    "typ": "eingriff"
+  },
+  {
+    "id": "fazialisparese",
+    "bereich": "hno",
+    "terms": {
+      "de": "Lähmung der Gesichtsmuskeln",
+      "la": "Fazialisparese",
+      "en": "Facial nerve palsy"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Bewegungsstörung der Gesichtsmuskeln bei Gesichtsnervenschädigung",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "foetor-ex-ore",
+    "bereich": "hno",
+    "terms": {
+      "de": "Übler Mundgeruch",
+      "la": "Foetor ex ore",
+      "en": "Halitosis"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Übeler Mundgeruch",
+    "typ": "symptom"
+  },
+  {
+    "id": "frontobasale-verletzung",
+    "bereich": "hno",
+    "terms": {
+      "de": "Bruch an Stirn und vorderer Schädelbasis",
+      "la": "Frontobasale Verletzung",
+      "en": "Frontobasal injury"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Knochenbruch an Stirn und vorderer Schädelbasis, oft mit Zerreißung der Hirnhaut verbunden",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "globusgefuehle",
+    "bereich": "hno",
+    "terms": {
+      "de": "Kloßgefühl beim Schlucken",
+      "la": "Globusgefühle",
+      "en": "Globus sensation"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Kloß- oder Kugelempfindung beim Schlucken",
+    "typ": "symptom"
+  },
+  {
+    "id": "glossitis",
+    "bereich": "hno",
+    "terms": {
+      "de": "Zungenentzündung",
+      "la": "Glossitis",
+      "en": "Glossitis"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Zungenentzündung",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "glottis",
+    "bereich": "hno",
+    "terms": {
+      "de": "Stimmritze",
+      "la": "Glottis",
+      "en": "Glottis"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Spalt zwischen den Stimmlippen",
+    "typ": "anatomie"
+  },
+  {
+    "id": "gustometrie",
+    "bereich": "hno",
+    "terms": {
+      "de": "Geschmacksprüfung",
+      "la": "Gustometrie",
+      "en": "Gustometry"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Geschmacksprüfung",
+    "typ": "diagnostik"
+  },
+  {
+    "id": "haematympanon",
+    "bereich": "hno",
+    "terms": {
+      "de": "Blutansammlung in der Paukenhöhle",
+      "la": "Hämatympanon",
+      "en": "Hemotympanum"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Blutansammlung in der Paukenhöhle",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "hyperkeratose",
+    "bereich": "hno",
+    "terms": {
+      "de": "Verhornung der Schleimhaut",
+      "la": "Hyperkeratose",
+      "en": "Hyperkeratosis"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Verhornung der Schleimhaut",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "hyperplasie",
+    "bereich": "hno",
+    "terms": {
+      "de": "Organvergrößerung",
+      "la": "Hyperplasie",
+      "en": "Hyperplasia"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Vergrößerung eines Organs oder Organbezirks (Mandeln, Nasenmuscheln)",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "idiopathisch",
+    "bereich": "hno",
+    "terms": {
+      "de": "Ohne erkennbare Ursache",
+      "la": "Idiopathisch",
+      "en": "Idiopathic"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Ohne erkennbare Ursache entstandene Krankheit oder Funktionsstörung",
+    "typ": "symptom"
+  },
+  {
+    "id": "impedanzmessung",
+    "bereich": "hno",
+    "terms": {
+      "de": "Trommelfellwiderstand messen",
+      "la": "Impedanzmessung",
+      "en": "Impedance audiometry"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Bestimmung des Widerstandes, den das Trommelfell dem Schall entgegensetzt",
+    "typ": "diagnostik"
+  },
+  {
+    "id": "kalorische-pruefung",
+    "bereich": "hno",
+    "terms": {
+      "de": "Gleichgewichtsprüfung mit Wasserspülung",
+      "la": "Kalorische Prüfung",
+      "en": "Caloric testing"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Reizung des Gleichgewichtsorgans durch Spülung des Gehörgangs mit warmem oder kaltem Wasser",
+    "typ": "diagnostik"
+  },
+  {
+    "id": "kaustik",
+    "bereich": "hno",
+    "terms": {
+      "de": "Gewebezerstörung durch Strom",
+      "la": "Kaustik",
+      "en": "Cauterization"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Zerstörung von Gewebe durch elektrischen Strom oder Glühschlinge",
+    "typ": "eingriff"
+  },
+  {
+    "id": "konchotom",
+    "bereich": "hno",
+    "terms": {
+      "de": "Instrument zur Nasenmuschelabtragung",
+      "la": "Konchotom",
+      "en": "Conchotome"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Instrument zur Abtragung eines Teils der Nasenschleimhaut oder der Nasenmuschel",
+    "typ": "instrument"
+  },
+  {
+    "id": "koniotomie",
+    "bereich": "hno",
+    "terms": {
+      "de": "Notfall-Kehlkopferöffnung",
+      "la": "Koniotomie",
+      "en": "Cricothyrotomy"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Eröffnung des Kehlkopfes als Notfalleingriff bei Luftnot",
+    "typ": "eingriff"
+  },
+  {
+    "id": "laryngektomie",
+    "bereich": "hno",
+    "terms": {
+      "de": "Kehlkopfentfernung",
+      "la": "Laryngektomie",
+      "en": "Laryngectomy"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Kehlkopfentfernung",
+    "typ": "eingriff"
+  },
+  {
+    "id": "laryngitis",
+    "bereich": "hno",
+    "terms": {
+      "de": "Kehlkopfentzündung",
+      "la": "Laryngitis",
+      "en": "Laryngitis"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Kehlkopfentzündung",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "laryngoskopie",
+    "bereich": "hno",
+    "terms": {
+      "de": "Kehlkopfspiegelung",
+      "la": "Laryngoskopie",
+      "en": "Laryngoscopy"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Untersuchung des Kehlkopfes",
+    "typ": "diagnostik"
+  },
+  {
+    "id": "leukoplakie",
+    "bereich": "hno",
+    "terms": {
+      "de": "Weißliche Schleimhautverdickung",
+      "la": "Leukoplakie",
+      "en": "Leukoplakia"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Weißliche Verdickung der Schleimhaut",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "mastoidektomie",
+    "bereich": "hno",
+    "terms": {
+      "de": "Operative Ausräumung des Warzenfortsatzes",
+      "la": "Mastoidektomie",
+      "en": "Mastoidectomy"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Operative Eröffnung und Beseitigung eines Krankheitsherdes im Warzenfortsatz",
+    "typ": "eingriff"
+  },
+  {
+    "id": "m-ni-re-erkrankung",
+    "bereich": "hno",
+    "terms": {
+      "de": "Anfallsschwindel mit Hörstörung",
+      "la": "Ménière-Erkrankung",
+      "en": "Ménière's disease"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [
+        "Morbus Ménière"
+      ],
+      "en": []
+    },
+    "erklaerung": "Mit Schwindel und einseitiger Hörstörung einhergehende Innenohrerkrankung",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "metastase",
+    "bereich": "hno",
+    "terms": {
+      "de": "Tochtergeschwulst",
+      "la": "Metastase",
+      "en": "Metastasis"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Absiedlung einer Krebsgeschwulst",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "neck-dissection",
+    "bereich": "hno",
+    "terms": {
+      "de": "Ausräumung der Halslymphknoten",
+      "la": "Neck-Dissection",
+      "en": "Neck dissection"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Umfassende Entfernung aller Lymphknoten einer Halsseite mit den dazwischen liegenden Geweben",
+    "typ": "eingriff"
+  },
+  {
+    "id": "neuralgie",
+    "bereich": "hno",
+    "terms": {
+      "de": "Nervenschmerz",
+      "la": "Neuralgie",
+      "en": "Neuralgia"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Nervenschmerz",
+    "typ": "symptom"
+  },
+  {
+    "id": "neuritis",
+    "bereich": "hno",
+    "terms": {
+      "de": "Nervenentzündung",
+      "la": "Neuritis",
+      "en": "Neuritis"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Nervenentzündung",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "nystagmus",
+    "bereich": "hno",
+    "terms": {
+      "de": "Unwillkürliches Augenzucken",
+      "la": "Nystagmus",
+      "en": "Nystagmus"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Gleichsinnige, ungewollte Zuckungen beider Augen",
+    "typ": "symptom"
+  },
+  {
+    "id": "olfaktometrie",
+    "bereich": "hno",
+    "terms": {
+      "de": "Geruchsprüfung",
+      "la": "Olfaktometrie",
+      "en": "Olfactometry"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Geruchsprüfung",
+    "typ": "diagnostik"
+  },
+  {
+    "id": "otosklerose",
+    "bereich": "hno",
+    "terms": {
+      "de": "Knochenerkrankung des Innenohrs",
+      "la": "Otosklerose",
+      "en": "Otosclerosis"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Zur Schwerhörigkeit führende Knochenerkrankung am Innenohr",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "pachydermie",
+    "bereich": "hno",
+    "terms": {
+      "de": "Verdickung der Schleimhautoberfläche",
+      "la": "Pachydermie",
+      "en": "Pachydermia"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Verdickung der Schleimhautoberfläche",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "papillom",
+    "bereich": "hno",
+    "terms": {
+      "de": "Warzenartige Geschwulst",
+      "la": "Papillom",
+      "en": "Papilloma"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Warzenartige Geschwulst",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "parazentese",
+    "bereich": "hno",
+    "terms": {
+      "de": "Trommelfellschnitt",
+      "la": "Parazentese",
+      "en": "Paracentesis"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Trommelfellschnitt",
+    "typ": "eingriff"
+  },
+  {
+    "id": "parotidektomie",
+    "bereich": "hno",
+    "terms": {
+      "de": "Entfernung der Ohrspeicheldrüse",
+      "la": "Parotidektomie",
+      "en": "Parotidectomy"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Entfernung der Ohrspeicheldrüse",
+    "typ": "eingriff"
+  },
+  {
+    "id": "peritonsillarabszess",
+    "bereich": "hno",
+    "terms": {
+      "de": "Eiterherd hinter der Gaumenmandel",
+      "la": "Peritonsillarabszess",
+      "en": "Peritonsillar abscess"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Eiterbildung hinter der Gaumenmandel",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "pharyngitis",
+    "bereich": "hno",
+    "terms": {
+      "de": "Rachenentzündung",
+      "la": "Pharyngitis",
+      "en": "Pharyngitis"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Rachenentzündung",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "polyp",
+    "bereich": "hno",
+    "terms": {
+      "de": "Traubige Schleimhautwucherung",
+      "la": "Polyp",
+      "en": "Polyp"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Traubige Gewebsverdickung an den Schleimhäuten",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "praekanzerose",
+    "bereich": "hno",
+    "terms": {
+      "de": "Krebsvorstufe",
+      "la": "Präkanzerose",
+      "en": "Precancerous lesion"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Gewebeveränderungen, aus denen eine Krebsgeschwulst hervorgehen kann",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "probetympanotomie",
+    "bereich": "hno",
+    "terms": {
+      "de": "Diagnostische Paukenhöhleneröffnung",
+      "la": "Probetympanotomie",
+      "en": "Exploratory tympanotomy"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Eröffnung der Paukenhöhle zur Abklärung dortiger Krankheitsprozesse",
+    "typ": "eingriff"
+  },
+  {
+    "id": "pseudokrupp",
+    "bereich": "hno",
+    "terms": {
+      "de": "Entzündliche Luftröhrenverengung mit Atemnot",
+      "la": "Pseudokrupp",
+      "en": "Pseudocroup"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Entzündliche Verengung der Luftröhre mit Atemnot und bellendem Husten",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "ranula",
+    "bereich": "hno",
+    "terms": {
+      "de": "Speichelzyste am Mundboden",
+      "la": "Ranula",
+      "en": "Ranula"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Speichelzyste am Mundboden",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "refluxoesophagitis",
+    "bereich": "hno",
+    "terms": {
+      "de": "Speiseröhrenentzündung durch Magensaft",
+      "la": "Refluxösophagitis",
+      "en": "Reflux esophagitis"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Speiseröhrenentzündung durch Aufsteigen von Magensaft",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "reinke-oedem",
+    "bereich": "hno",
+    "terms": {
+      "de": "Stimmlippenverdickung durch Wassereinlagerung",
+      "la": "Reinke-Ödem",
+      "en": "Reinke's edema"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Durch Wassereinlagerung entstandene Verdickung der Stimmlippen",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "rekurrensparese",
+    "bereich": "hno",
+    "terms": {
+      "de": "Stimmlippenlähmung",
+      "la": "Rekurrensparese",
+      "en": "Recurrent laryngeal nerve palsy"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Lähmung der Stimmlippen durch Schädigung des unteren Kehlkopfnervs",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "rhinitis",
+    "bereich": "hno",
+    "terms": {
+      "de": "Schnupfen",
+      "la": "Rhinitis",
+      "en": "Rhinitis"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Schnupfen",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "rhinolith",
+    "bereich": "hno",
+    "terms": {
+      "de": "Nasenstein",
+      "la": "Rhinolith",
+      "en": "Rhinolith"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Nasenstein",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "rhinophym",
+    "bereich": "hno",
+    "terms": {
+      "de": "Knollennase",
+      "la": "Rhinophym",
+      "en": "Rhinophyma"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Knollige Verdickung der Nasenhaut",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "sialadenitis",
+    "bereich": "hno",
+    "terms": {
+      "de": "Speicheldrüsenentzündung",
+      "la": "Sialadenitis",
+      "en": "Sialadenitis"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Speicheldrüsenentzündung",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "sialographie",
+    "bereich": "hno",
+    "terms": {
+      "de": "Röntgenkontrastdarstellung der Speichelgänge",
+      "la": "Sialographie",
+      "en": "Sialography"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Kontrastdarstellung der Speichelgänge im Röntgen",
+    "typ": "diagnostik"
+  },
+  {
+    "id": "sigmatismus",
+    "bereich": "hno",
+    "terms": {
+      "de": "Lispeln",
+      "la": "Sigmatismus",
+      "en": "Sigmatism"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Lispeln",
+    "typ": "symptom"
+  },
+  {
+    "id": "sinusitis",
+    "bereich": "hno",
+    "terms": {
+      "de": "Nebenhöhlenentzündung",
+      "la": "Sinusitis",
+      "en": "Sinusitis"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Nebenhöhlenentzündung",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "stomatitis",
+    "bereich": "hno",
+    "terms": {
+      "de": "Mundschleimhautentzündung",
+      "la": "Stomatitis",
+      "en": "Stomatitis"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Mundschleimhautentzündung",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "stridor",
+    "bereich": "hno",
+    "terms": {
+      "de": "Ziehendes Atemgeräusch",
+      "la": "Stridor",
+      "en": "Stridor"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Ziehendes Geräusch bei Einengung der Atemwege und Atemnot",
+    "typ": "symptom"
+  },
+  {
+    "id": "surditas",
+    "bereich": "hno",
+    "terms": {
+      "de": "Taubheit",
+      "la": "Surditas",
+      "en": "Deafness"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Taubheit",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "synechie",
+    "bereich": "hno",
+    "terms": {
+      "de": "Narbige Verwachsung an Nase oder Kehlkopf",
+      "la": "Synechie",
+      "en": "Synechia"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Narbige Verwachsung an der Nase oder am Kehlkopf",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "tonsillektomie",
+    "bereich": "hno",
+    "terms": {
+      "de": "Mandelausschälung",
+      "la": "Tonsillektomie",
+      "en": "Tonsillectomy"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Mandelausschälung",
+    "typ": "eingriff"
+  },
+  {
+    "id": "tracheostoma",
+    "bereich": "hno",
+    "terms": {
+      "de": "Luftröhrenöffnung in der Haut",
+      "la": "Tracheostoma",
+      "en": "Tracheostoma"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Luftröhrenöffnung in der Haut",
+    "typ": "anatomie"
+  },
+  {
+    "id": "tracheotomie",
+    "bereich": "hno",
+    "terms": {
+      "de": "Luftröhrenschnitt",
+      "la": "Tracheotomie",
+      "en": "Tracheotomy"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Einschnitt in die Luftröhre",
+    "typ": "eingriff"
+  },
+  {
+    "id": "tympanogramm",
+    "bereich": "hno",
+    "terms": {
+      "de": "Druckkurve des Trommelfells",
+      "la": "Tympanogramm",
+      "en": "Tympanogram"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Druckkurve des Trommelfells",
+    "typ": "diagnostik"
+  },
+  {
+    "id": "tympanometrie",
+    "bereich": "hno",
+    "terms": {
+      "de": "Messung der Trommelfellbeweglichkeit",
+      "la": "Tympanometrie",
+      "en": "Tympanometry"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Messung der Beweglichkeit von Trommelfell und Gehörknöchelchen",
+    "typ": "diagnostik"
+  },
+  {
+    "id": "ulcus-rodens",
+    "bereich": "hno",
+    "terms": {
+      "de": "Nagendes Hautkrebsgeschwür",
+      "la": "Ulcus rodens",
+      "en": "Rodent ulcer"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Krebsgeschwür der Haut",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "uvula",
+    "bereich": "hno",
+    "terms": {
+      "de": "Zäpfchen",
+      "la": "Uvula",
+      "en": "Uvula"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Zäpfchen",
+    "typ": "anatomie"
+  },
+  {
+    "id": "valsalva-versuch",
+    "bereich": "hno",
+    "terms": {
+      "de": "Druckausgleichs-Manöver bei zugehaltener Nase",
+      "la": "Valsalva-Versuch",
+      "en": "Valsalva maneuver"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Überdruckerzeugung im Rachen bei zugehaltener Nase und forcierter Atmung",
+    "typ": "diagnostik"
+  },
+  {
+    "id": "vestibularapparat",
+    "bereich": "hno",
+    "terms": {
+      "de": "Gleichgewichtsapparat",
+      "la": "Vestibularapparat",
+      "en": "Vestibular apparatus"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Gleichgewichtsapparat in den Hohlräumen des Labyrinths",
+    "typ": "anatomie"
+  },
+  {
+    "id": "waldeyerscher-rachenring",
+    "bereich": "hno",
+    "terms": {
+      "de": "Lymphatischer Rachenring",
+      "la": "Waldeyerscher Rachenring",
+      "en": "Waldeyer's tonsillar ring"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Lymphatisches Gewebe des Rachens mit Rachenmandel, Gaumenmandel und Zungenmandel",
+    "typ": "anatomie"
+  },
+  {
+    "id": "zele",
+    "bereich": "hno",
+    "terms": {
+      "de": "Schleimgefüllte Hohlraumerweiterung",
+      "la": "Zele",
+      "en": "Mucocele"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [
+        "Mukozele"
+      ],
+      "en": []
+    },
+    "erklaerung": "Erweiterung einer Höhle (meist der Stirnhöhle bei gleichzeitiger Füllung mit Schleim)",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "zenkersches-divertikel",
+    "bereich": "hno",
+    "terms": {
+      "de": "Aussackung im oberen Speiseröhrenabschnitt",
+      "la": "Zenkersches Divertikel",
+      "en": "Zenker's diverticulum"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Aussackung im oberen Abschnitt der Speiseröhre",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "zerumen",
+    "bereich": "hno",
+    "terms": {
+      "de": "Ohrschmalz",
+      "la": "Zerumen",
+      "en": "Cerumen"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Ohrschmalz",
+    "typ": "anatomie"
+  },
+  {
+    "id": "zervikalsyndrom",
+    "bereich": "hno",
+    "terms": {
+      "de": "Beschwerden durch Halswirbel-Verlagerung",
+      "la": "Zervikalsyndrom",
+      "en": "Cervical syndrome"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Störungen durch Verlagerungen der Halswirbel",
+    "typ": "erkrankung"
+  }
+]

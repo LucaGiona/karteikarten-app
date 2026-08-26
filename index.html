@@ -43,9 +43,21 @@
                 <input
                     type="radio"
                     name="direction"
-                    value="random"
+                    value="random-la-de"
                 />
-                Gemischt (zufällig)
+                Gemischt (Latein/Deutsch)
+            </label>
+            <label>
+                <input type="radio" name="direction" value="english-german" />
+                Englisch → Deutsch
+            </label>
+            <label>
+                <input type="radio" name="direction" value="german-english" />
+                Deutsch → Englisch
+            </label>
+            <label>
+                <input type="radio" name="direction" value="random-de-en" />
+                Gemischt (Deutsch/Englisch)
             </label>
         </fieldset>
         <hr class="section-divider" />
@@ -82,11 +94,18 @@
                 >Organe</button>
                 <button
                     class="topic-btn"
-                    id="topicOhrBtn"
+                    id="topicHnoBtn"
                     type="button"
-                    data-topic="ohr"
-                >Ohr</button>
+                    data-topic="hno"
+                >HNO</button>
             </div>
+        </fieldset>
+        <fieldset class="direction-selector subtopic-selector" hidden>
+            <legend>HNO-Unterbereich</legend>
+            <div class="topic-row">
+                <button class="topic-btn is-active" type="button" data-subtopic="all">Alle</button>
+            </div>
+            <div class="topic-row" id="subtopicButtonsRow"></div>
         </fieldset>
         <hr class="section-divider" />
         <div class="mode-heading">
@@ -129,6 +148,7 @@
                 />
                 <div class="answer-feedback" id="answerFeedback"></div>
                 <div class="answer" id="answer"></div>
+                <div class="explanation" id="explanation"></div>
                 <button id="showAnswerBtn" class="check-answer-btn">Antwort prüfen</button>
             </section>
             <div class="status" id="status"></div>
@@ -184,6 +204,7 @@
                 />
                 <div class="answer-feedback" id="weeklyAnswerFeedback"></div>
                 <div class="answer" id="weeklyAnswer"></div>
+                <div class="explanation" id="weeklyExplanation"></div>
                 <button id="weeklyShowAnswerBtn" class="check-answer-btn">Antwort prüfen</button>
             </section>
             <div class="status" id="weeklyStatus"></div>

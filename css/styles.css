@@ -156,6 +156,10 @@ body {
     border: 0;
 }
 
+.direction-selector[hidden] {
+    display: none;
+}
+
 .direction-selector legend {
     width: 100%;
     margin-bottom: 10px;
@@ -416,6 +420,37 @@ body {
 
 .answer.is-visible {
     visibility: visible;
+}
+
+.explanation {
+    visibility: hidden;
+    max-width: 420px;
+    margin: -10px 0 25px;
+    border-left: 3px solid #d8d8d8;
+    padding-left: 12px;
+    color: #666;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.explanation:not(:empty)::before {
+    content: "Erklärung";
+    display: block;
+    margin-bottom: 4px;
+    color: #444;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.explanation.is-visible {
+    visibility: visible;
+}
+
+.explanation:empty {
+    display: none;
 }
 
 button {

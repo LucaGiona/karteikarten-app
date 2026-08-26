@@ -7,7 +7,12 @@ import {
     applyCardFilters,
 } from "./state.js";
 import * as dom from "./dom.js";
-import { renderCard, renderWeeklyCard, renderCategoryButtons } from "./render.js";
+import {
+    renderCard,
+    renderWeeklyCard,
+    renderCategoryButtons,
+    renderSubtopicButtons,
+} from "./render.js";
 import { showAnswer, nextCard, showWeeklyAnswer, nextWeeklyCard } from "./quiz.js";
 import { initializeInfoDialog } from "./info-dialog.js";
 
@@ -72,7 +77,9 @@ document.addEventListener("keydown", event => {
 dom.directionOptions.forEach(option => {
     option.addEventListener("change", event => {
         state.selectedDirection = event.target.value;
+        applyCardFilters();
         persist();
+        renderCategoryButtons();
         renderCard();
         renderWeeklyCard();
     });
@@ -88,9 +95,24 @@ dom.topicButtons.forEach(button => {
         // Themawechsel kann die verfügbaren Kategorien ändern (z.B. "Organe"
         // hat aktuell keine Erkrankungen) – Kategorie-Buttons daher neu bauen.
         renderCategoryButtons();
+        renderSubtopicButtons();
         renderCard();
         renderWeeklyCard();
     });
+});
+
+dom.subtopicSelector.addEventListener("click", event => {
+    const button = event.target.closest(".topic-btn");
+    if (!button) {
+        return;
+    }
+
+    state.selectedSubtopic = button.dataset.subtopic;
+    applyCardFilters();
+    renderSubtopicButtons();
+    renderCategoryButtons();
+    renderCard();
+    renderWeeklyCard();
 });
 
 // Kategorie-Buttons werden je nach Thema dynamisch neu erzeugt (siehe
@@ -148,5 +170,6 @@ document.addEventListener("keydown", event => {
 initializeInfoDialog();
 
 renderCategoryButtons();
+renderSubtopicButtons();
 renderCard();
 renderWeeklyCard();

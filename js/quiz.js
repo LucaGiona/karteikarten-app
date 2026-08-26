@@ -4,6 +4,7 @@ import {
     persist,
     getVisibleFreeCards,
     getVisibleWeeklyCards,
+    DIRECTION_KEYS,
 } from "./state.js";
 import { cardKey } from "./cards.js";
 import * as dom from "./dom.js";
@@ -17,6 +18,19 @@ import {
 } from "./render.js";
 import { pickCardIndex, pickDueCardIndex } from "./leitner.js";
 
+function isAcceptedAnswer(enteredAnswer, card, targetLanguage) {
+    const acceptedAnswers = [
+        card.terms[targetLanguage],
+        ...(card.alternativen?.[targetLanguage] ?? []),
+    ];
+    const locale = targetLanguage === "en" ? "en" : "de";
+    return acceptedAnswers.some(answer => enteredAnswer.localeCompare(
+        answer,
+        locale,
+        { sensitivity: "accent" }
+    ) === 0);
+}
+
 export function showAnswer() {
     if (state.answerWasChecked) {
         nextCard();
@@ -24,18 +38,9 @@ export function showAnswer() {
     }
 
     const card = getVisibleFreeCards()[state.currentIndex];
-    const expectedAnswer = state.resolvedDirection === "latin-german"
-        ? card.terms.de
-        : card.terms.la;
+    const { back } = DIRECTION_KEYS[state.resolvedDirection];
     const enteredAnswer = dom.answerInput.value.trim();
-    const isLatinAnswer = state.resolvedDirection === "german-latin";
-    const isCorrect = isLatinAnswer
-        ? enteredAnswer.localeCompare(
-            expectedAnswer,
-            "de",
-            { sensitivity: "accent" }
-        ) === 0
-        : enteredAnswer === expectedAnswer;
+    const isCorrect = isAcceptedAnswer(enteredAnswer, card, back);
 
     dom.answerInput.classList.add(isCorrect ? "is-correct" : "is-wrong");
     dom.answerFeedback.classList.add(
@@ -55,6 +60,7 @@ export function showAnswer() {
     state.answerWasChecked = true;
     dom.answerInput.disabled = true;
     dom.answer.classList.add("is-visible");
+    dom.explanation.classList.add("is-visible");
     dom.showAnswerBtn.textContent = "Nächste Karte";
     dom.status.textContent = statusText(card);
     renderBoxes();
@@ -73,18 +79,9 @@ export function showWeeklyAnswer() {
     }
 
     const card = getVisibleWeeklyCards()[weeklyState.currentIndex];
-    const expectedAnswer = weeklyState.resolvedDirection === "latin-german"
-        ? card.terms.de
-        : card.terms.la;
+    const { back } = DIRECTION_KEYS[weeklyState.resolvedDirection];
     const enteredAnswer = dom.weeklyAnswerInput.value.trim();
-    const isLatinAnswer = weeklyState.resolvedDirection === "german-latin";
-    const isCorrect = isLatinAnswer
-        ? enteredAnswer.localeCompare(
-            expectedAnswer,
-            "de",
-            { sensitivity: "accent" }
-        ) === 0
-        : enteredAnswer === expectedAnswer;
+    const isCorrect = isAcceptedAnswer(enteredAnswer, card, back);
 
     dom.weeklyAnswerInput.classList.add(isCorrect ? "is-correct" : "is-wrong");
     dom.weeklyAnswerFeedback.classList.add(
@@ -111,6 +108,7 @@ export function showWeeklyAnswer() {
     weeklyState.answerWasChecked = true;
     dom.weeklyAnswerInput.disabled = true;
     dom.weeklyAnswer.classList.add("is-visible");
+    dom.weeklyExplanation.classList.add("is-visible");
     dom.weeklyShowAnswerBtn.textContent = "Nächste Karte";
     dom.weeklyStatus.textContent = weeklyStatusText(card);
     renderWeeklyGroups();

@@ -12,6 +12,7 @@ import {
     renderWeeklyCard,
     renderCategoryButtons,
     renderSubtopicButtons,
+    renderFilterCount,
 } from "./render.js";
 import { showAnswer, nextCard, showWeeklyAnswer, nextWeeklyCard } from "./quiz.js";
 import { initializeInfoDialog } from "./info-dialog.js";
@@ -80,6 +81,7 @@ dom.directionOptions.forEach(option => {
         applyCardFilters();
         persist();
         renderCategoryButtons();
+        renderFilterCount();
         renderCard();
         renderWeeklyCard();
     });
@@ -96,6 +98,7 @@ dom.topicButtons.forEach(button => {
         // hat aktuell keine Erkrankungen) – Kategorie-Buttons daher neu bauen.
         renderCategoryButtons();
         renderSubtopicButtons();
+        renderFilterCount();
         renderCard();
         renderWeeklyCard();
     });
@@ -111,6 +114,7 @@ dom.subtopicSelector.addEventListener("click", event => {
     applyCardFilters();
     renderSubtopicButtons();
     renderCategoryButtons();
+    renderFilterCount();
     renderCard();
     renderWeeklyCard();
 });
@@ -127,6 +131,7 @@ dom.categorySelector.addEventListener("click", event => {
     state.selectedCategory = button.dataset.category;
     applyCardFilters();
     renderCategoryButtons();
+    renderFilterCount();
     renderCard();
     renderWeeklyCard();
 });
@@ -171,5 +176,6 @@ initializeInfoDialog();
 
 renderCategoryButtons();
 renderSubtopicButtons();
+renderFilterCount();
 renderCard();
 renderWeeklyCard();

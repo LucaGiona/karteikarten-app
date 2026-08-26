@@ -274,6 +274,15 @@ export function renderSubtopicButtons() {
     allButton.classList.toggle("is-active", state.selectedSubtopic === "all");
 }
 
+// Freies Lernen und Wochenmodus teilen sich Thema-/Kategorie-Filter, daher
+// ist die Trefferzahl für beide Modi identisch – getVisibleFreeCards()
+// reicht als gemeinsame Quelle.
+export function renderFilterCount() {
+    const count = getVisibleFreeCards().length;
+    dom.filterCount.textContent =
+        `${count} Karte${count === 1 ? "" : "n"} in dieser Auswahl`;
+}
+
 export function renderBoxes() {
     dom.boxes.innerHTML = "";
 

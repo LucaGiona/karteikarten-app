@@ -14,6 +14,7 @@ Eine kleine, responsive Karteikarten-Anwendung zum Lernen medizinischer Fachbegr
 
 - Zwei unabhängige Leitner-Systeme: Freies Lernen und Wochenmodus, jeweils mit eigenem Fortschritt
 - Fach-, HNO-Unterbereichs- und Kategorie-Filter, frei kombinierbar
+- Anzeige der Kartenanzahl für die jeweils aktuelle Filterauswahl
 - Abfragerichtungen für Latein↔Deutsch und Deutsch↔Englisch, jeweils auch gemischt
 - Fünf Lernboxen nach dem Leitner-Prinzip je System
 - Richtige Antworten verschieben eine Karte in die nächste Box
@@ -109,6 +110,7 @@ A small, responsive flashcard application for learning medical terms in Latin, G
 
 - Two independent Leitner systems: free learning and week mode, each with its own progress
 - Combinable subject, ENT subtopic, and category filters
+- Live card count for the currently selected filter combination
 - Quiz directions for Latin↔German and German↔English, each with a mixed mode
 - Five learning boxes based on the Leitner method, per system
 - Correct answers move a card to the next box

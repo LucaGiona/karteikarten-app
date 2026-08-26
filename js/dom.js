@@ -11,6 +11,7 @@ export const directionOptions = document.querySelectorAll(
 export const topicButtons = document.querySelectorAll(".topic-selector .topic-btn");
 export const subtopicSelector = document.querySelector(".subtopic-selector");
 export const subtopicButtonsRow = document.querySelector("#subtopicButtonsRow");
+export const filterCount = document.querySelector("#filterCount");
 // Die Kategorie-Buttons werden je nach gewähltem Thema dynamisch neu erzeugt
 // (siehe renderCategoryButtons in render.js) – deshalb hier keine statische
 // NodeList, sondern der Container fürs Klick-Delegieren in main.js.

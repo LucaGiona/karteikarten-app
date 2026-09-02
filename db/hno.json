@@ -96,6 +96,24 @@
     "typ": "erkrankung"
   },
   {
+    "id": "baha",
+    "bereich": "hno",
+    "terms": {
+      "de": "Knochenverankertes Hörgerät",
+      "la": "Bone-Anchored Hearing Aid",
+      "en": "Bone-anchored hearing aid"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [
+        "BAHA"
+      ],
+      "en": []
+    },
+    "erklaerung": "Hörgerät, das den Schall über einen im Schädelknochen verankerten Implantatanteil direkt ans Innenohr weiterleitet",
+    "typ": "instrument"
+  },
+  {
     "id": "balbuties",
     "bereich": "hno",
     "terms": {
@@ -160,6 +178,86 @@
     "typ": "eingriff"
   },
   {
+    "id": "cartilago-arytenoidea",
+    "bereich": "hno",
+    "terms": {
+      "de": "Stellknorpel",
+      "la": "Cartilago arytenoidea",
+      "en": "Arytenoid cartilage"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Paariger Kehlkopfknorpel, an dem die Stimmbänder befestigt sind",
+    "typ": "anatomie"
+  },
+  {
+    "id": "cartilago-cricoidea",
+    "bereich": "hno",
+    "terms": {
+      "de": "Ringknorpel",
+      "la": "Cartilago cricoidea",
+      "en": "Cricoid cartilage"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Siegelringförmiger Kehlkopfknorpel unterhalb des Schildknorpels",
+    "typ": "anatomie"
+  },
+  {
+    "id": "cartilago-thyroidea",
+    "bereich": "hno",
+    "terms": {
+      "de": "Schildknorpel",
+      "la": "Cartilago thyroidea",
+      "en": "Thyroid cartilage"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Größter Kehlkopfknorpel, bildet den Adamsapfel",
+    "typ": "anatomie"
+  },
+  {
+    "id": "cavitas-nasi",
+    "bereich": "hno",
+    "terms": {
+      "de": "Nasenhöhle",
+      "la": "Cavitas nasi",
+      "en": "Nasal cavity"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Innerer, von Schädelknochen umschlossener Hohlraum der Nase",
+    "typ": "anatomie"
+  },
+  {
+    "id": "choane",
+    "bereich": "hno",
+    "terms": {
+      "de": "Nasen-Rachen-Öffnung",
+      "la": "Choana",
+      "en": "Choana"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Paarige hintere Öffnung der Nasenhöhle, Verbindung zum Rachenraum",
+    "typ": "anatomie"
+  },
+  {
     "id": "cholesteatom",
     "bereich": "hno",
     "terms": {
@@ -190,6 +288,40 @@
     },
     "erklaerung": "Abtragung einer Stimmlippe bei Kehlkopfkrebs",
     "typ": "eingriff"
+  },
+  {
+    "id": "cochlea-implantat",
+    "bereich": "hno",
+    "terms": {
+      "de": "Elektronisches Innenohr-Hörimplantat",
+      "la": "Cochlea-Implantat",
+      "en": "Cochlear implant"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [
+        "CI"
+      ],
+      "en": []
+    },
+    "erklaerung": "Elektronische Innenohrprothese, die den Hörnerv direkt elektrisch stimuliert",
+    "typ": "instrument"
+  },
+  {
+    "id": "concha-nasalis",
+    "bereich": "hno",
+    "terms": {
+      "de": "Nasenmuschel",
+      "la": "Concha nasalis",
+      "en": "Nasal concha"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Knöcherne, mit Schleimhaut überzogene Struktur an der Nasenhöhlen-Seitenwand",
+    "typ": "anatomie"
   },
   {
     "id": "dekanuelement",
@@ -324,6 +456,38 @@
     "typ": "erkrankung"
   },
   {
+    "id": "epiglottis",
+    "bereich": "hno",
+    "terms": {
+      "de": "Kehldeckel",
+      "la": "Epiglottis",
+      "en": "Epiglottis"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Löffelförmiger Knorpel, der den Kehlkopf beim Schluckvorgang verschließt",
+    "typ": "anatomie"
+  },
+  {
+    "id": "epiglottitis",
+    "bereich": "hno",
+    "terms": {
+      "de": "Kehlkopfdeckelentzündung",
+      "la": "Epiglottitis",
+      "en": "Epiglottitis"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Akute, potenziell lebensbedrohliche bakterielle Entzündung der Epiglottis, v. a. bei Kindern",
+    "typ": "erkrankung"
+  },
+  {
     "id": "epistaxis",
     "bereich": "hno",
     "terms": {
@@ -388,6 +552,22 @@
     },
     "erklaerung": "Bewegungsstörung der Gesichtsmuskeln bei Gesichtsnervenschädigung",
     "typ": "erkrankung"
+  },
+  {
+    "id": "fess",
+    "bereich": "hno",
+    "terms": {
+      "de": "Endoskopische Nasennebenhöhlen-Operation",
+      "la": "FESS",
+      "en": "Functional Endoscopic Sinus Surgery"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Endoskopischer Eingriff zur Sanierung erkrankter Nasennebenhöhlen",
+    "typ": "eingriff"
   },
   {
     "id": "foetor-ex-ore",
@@ -468,6 +648,22 @@
     },
     "erklaerung": "Spalt zwischen den Stimmlippen",
     "typ": "anatomie"
+  },
+  {
+    "id": "glottisoedem",
+    "bereich": "hno",
+    "terms": {
+      "de": "Schwellung der Stimmritzenschleimhaut",
+      "la": "Glottisödem",
+      "en": "Glottic edema"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Akute Schwellung der Glottisschleimhaut mit Gefahr lebensbedrohlicher Atemnot",
+    "typ": "erkrankung"
   },
   {
     "id": "gustometrie",
@@ -598,6 +794,22 @@
     "typ": "eingriff"
   },
   {
+    "id": "kiesselbach-plexus",
+    "bereich": "hno",
+    "terms": {
+      "de": "Gefäßgeflecht am Nasenseptum",
+      "la": "Kiesselbach-Plexus",
+      "en": "Kiesselbach's plexus"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Kapillarnetz am Übergang von Nasenvorhof und Nasenhöhle, häufigste Blutungsquelle bei Nasenbluten",
+    "typ": "anatomie"
+  },
+  {
     "id": "konchotom",
     "bereich": "hno",
     "terms": {
@@ -662,6 +874,24 @@
     "typ": "erkrankung"
   },
   {
+    "id": "laryngopharynx",
+    "bereich": "hno",
+    "terms": {
+      "de": "Kehlkopfrachen",
+      "la": "Laryngopharynx",
+      "en": "Laryngopharynx"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [
+        "Hypopharynx"
+      ],
+      "en": []
+    },
+    "erklaerung": "Unterer Rachenabschnitt, grenzt an Kehlkopf und Speiseröhreneingang, auch Hypopharynx genannt",
+    "typ": "anatomie"
+  },
+  {
     "id": "laryngoskopie",
     "bereich": "hno",
     "terms": {
@@ -676,6 +906,22 @@
     },
     "erklaerung": "Untersuchung des Kehlkopfes",
     "typ": "diagnostik"
+  },
+  {
+    "id": "larynx",
+    "bereich": "hno",
+    "terms": {
+      "de": "Kehlkopf",
+      "la": "Larynx",
+      "en": "Larynx"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Organ zwischen Rachen und Luftröhre, zuständig für Stimmbildung und Atemwegsschutz",
+    "typ": "anatomie"
   },
   {
     "id": "leukoplakie",
@@ -728,6 +974,38 @@
     "typ": "erkrankung"
   },
   {
+    "id": "meatus-nasi",
+    "bereich": "hno",
+    "terms": {
+      "de": "Nasengang",
+      "la": "Meatus nasi",
+      "en": "Nasal meatus"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Luftraum zwischen zwei Nasenmuscheln bzw. zwischen Nasenmuschel und Nasenboden",
+    "typ": "anatomie"
+  },
+  {
+    "id": "mesopharynx",
+    "bereich": "hno",
+    "terms": {
+      "de": "Anderer Name für Mundrachen",
+      "la": "Mesopharynx",
+      "en": "Mesopharynx"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Mittlerer Rachenabschnitt zwischen Gaumensegel und Kehldeckelspitze, anderer Name für Oropharynx",
+    "typ": "anatomie"
+  },
+  {
     "id": "metastase",
     "bereich": "hno",
     "terms": {
@@ -744,6 +1022,56 @@
     "typ": "erkrankung"
   },
   {
+    "id": "mikrolaryngoskopie",
+    "bereich": "hno",
+    "terms": {
+      "de": "Mikroskopische Kehlkopfuntersuchung",
+      "la": "Mikrolaryngoskopie",
+      "en": "Microlaryngoscopy"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Untersuchung bzw. Operation des Kehlkopfs unter dem Operationsmikroskop",
+    "typ": "diagnostik"
+  },
+  {
+    "id": "nasopharynx",
+    "bereich": "hno",
+    "terms": {
+      "de": "Nasenrachen",
+      "la": "Nasopharynx",
+      "en": "Nasopharynx"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [
+        "Epipharynx"
+      ],
+      "en": []
+    },
+    "erklaerung": "Oberer Rachenabschnitt, über die Choanen mit der Nasenhöhle verbunden, auch Epipharynx genannt",
+    "typ": "anatomie"
+  },
+  {
+    "id": "nasus-externus",
+    "bereich": "hno",
+    "terms": {
+      "de": "Äußere Nase",
+      "la": "Nasus externus",
+      "en": "External nose"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Aus dem Gesicht herausragender, knorpelig-knöcherner Teil der Nase",
+    "typ": "anatomie"
+  },
+  {
     "id": "neck-dissection",
     "bereich": "hno",
     "terms": {
@@ -758,6 +1086,38 @@
     },
     "erklaerung": "Umfassende Entfernung aller Lymphknoten einer Halsseite mit den dazwischen liegenden Geweben",
     "typ": "eingriff"
+  },
+  {
+    "id": "nervus-laryngeus-recurrens",
+    "bereich": "hno",
+    "terms": {
+      "de": "Rückläufiger Kehlkopfnerv, Stimmnerv",
+      "la": "Nervus laryngeus recurrens",
+      "en": "Recurrent laryngeal nerve"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Ast des N. vagus, versorgt fast alle inneren Kehlkopfmuskeln; sein Ausfall führt zur Rekurrensparese",
+    "typ": "anatomie"
+  },
+  {
+    "id": "nervus-laryngeus-superior",
+    "bereich": "hno",
+    "terms": {
+      "de": "Oberer Kehlkopfnerv",
+      "la": "Nervus laryngeus superior",
+      "en": "Superior laryngeal nerve"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Ast des N. vagus, versorgt die Schleimhaut oberhalb der Stimmritze und den einzigen äußeren Kehlkopfmuskel",
+    "typ": "anatomie"
   },
   {
     "id": "neuralgie",
@@ -824,6 +1184,22 @@
     "typ": "diagnostik"
   },
   {
+    "id": "oropharynx",
+    "bereich": "hno",
+    "terms": {
+      "de": "Mundrachen",
+      "la": "Oropharynx",
+      "en": "Oropharynx"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Mittlerer Rachenabschnitt, steht mit der Mundhöhle in Verbindung; hier kreuzen sich Luft- und Speiseweg",
+    "typ": "anatomie"
+  },
+  {
     "id": "otosklerose",
     "bereich": "hno",
     "terms": {
@@ -854,6 +1230,24 @@
     },
     "erklaerung": "Verdickung der Schleimhautoberfläche",
     "typ": "erkrankung"
+  },
+  {
+    "id": "paukenhoehlenroehrchen",
+    "bereich": "hno",
+    "terms": {
+      "de": "Trommelfellröhrchen zur Mittelohrbelüftung",
+      "la": "Paukenhöhlenröhrchen",
+      "en": "Tympanostomy tube"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [
+        "PHR"
+      ],
+      "en": []
+    },
+    "erklaerung": "Kleines Röhrchen im Trommelfell zur Belüftung des Mittelohrs bei chronischem Paukenerguss",
+    "typ": "instrument"
   },
   {
     "id": "papillom",
@@ -934,6 +1328,54 @@
     },
     "erklaerung": "Rachenentzündung",
     "typ": "erkrankung"
+  },
+  {
+    "id": "pharynx",
+    "bereich": "hno",
+    "terms": {
+      "de": "Rachen, Schlund",
+      "la": "Pharynx",
+      "en": "Pharynx"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "12–15 cm langer Muskelschlauch zwischen Schädelbasis und den Eingängen von Kehlkopf und Speiseröhre",
+    "typ": "anatomie"
+  },
+  {
+    "id": "plica-vestibularis",
+    "bereich": "hno",
+    "terms": {
+      "de": "Taschenfalte, „falsche Stimmbänder“",
+      "la": "Plica vestibularis",
+      "en": "Vestibular fold"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Obere Schleimhautfalte des Kehlkopfs, oberhalb der Stimmfalte",
+    "typ": "anatomie"
+  },
+  {
+    "id": "plica-vocalis",
+    "bereich": "hno",
+    "terms": {
+      "de": "Stimmfalte",
+      "la": "Plica vocalis",
+      "en": "Vocal fold"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Untere Schleimhautfalte des Kehlkopfs, enthält Stimmband und Stimmmuskel",
+    "typ": "anatomie"
   },
   {
     "id": "polyp",
@@ -1032,6 +1474,38 @@
     "typ": "erkrankung"
   },
   {
+    "id": "regio-olfactoria",
+    "bereich": "hno",
+    "terms": {
+      "de": "Riechregion",
+      "la": "Regio olfactoria",
+      "en": "Olfactory region"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Bereich der oberen Nasenmuschel mit Riechschleimhaut und Riechzellen",
+    "typ": "anatomie"
+  },
+  {
+    "id": "regio-respiratoria",
+    "bereich": "hno",
+    "terms": {
+      "de": "Atemregion",
+      "la": "Regio respiratoria",
+      "en": "Respiratory region"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Mit Flimmerepithel ausgekleideter Hauptteil der Nasenhöhlenschleimhaut",
+    "typ": "anatomie"
+  },
+  {
     "id": "reinke-oedem",
     "bereich": "hno",
     "terms": {
@@ -1112,6 +1586,72 @@
     "typ": "erkrankung"
   },
   {
+    "id": "rima-glottidis",
+    "bereich": "hno",
+    "terms": {
+      "de": "Stimmritze",
+      "la": "Rima glottidis",
+      "en": "Rima glottidis"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Spalt zwischen den beiden Stimmfalten",
+    "typ": "anatomie"
+  },
+  {
+    "id": "rima-vestibuli",
+    "bereich": "hno",
+    "terms": {
+      "de": "Taschenritze",
+      "la": "Rima vestibuli",
+      "en": "Rima vestibuli"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Spalt zwischen den beiden Taschenfalten",
+    "typ": "anatomie"
+  },
+  {
+    "id": "septumdeviation",
+    "bereich": "hno",
+    "terms": {
+      "de": "Nasenscheidewandkrümmung",
+      "la": "Septumdeviation",
+      "en": "Septal deviation"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Seitliche Abweichung der Nasenscheidewand, kann die Nasenatmung behindern",
+    "typ": "erkrankung"
+  },
+  {
+    "id": "septumplastik",
+    "bereich": "hno",
+    "terms": {
+      "de": "Operative Begradigung der Nasenscheidewand",
+      "la": "Septumplastik",
+      "en": "Septoplasty"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [
+        "SPL"
+      ],
+      "en": []
+    },
+    "erklaerung": "Operative Korrektur einer verkrümmten Nasenscheidewand",
+    "typ": "eingriff"
+  },
+  {
     "id": "sialadenitis",
     "bereich": "hno",
     "terms": {
@@ -1158,6 +1698,22 @@
     },
     "erklaerung": "Lispeln",
     "typ": "symptom"
+  },
+  {
+    "id": "sinus-paranasales",
+    "bereich": "hno",
+    "terms": {
+      "de": "Nasennebenhöhlen",
+      "la": "Sinus paranasales",
+      "en": "Paranasal sinuses"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Luftgefüllte Hohlräume in Oberkiefer-, Stirn-, Sieb- und Keilbein",
+    "typ": "anatomie"
   },
   {
     "id": "sinusitis",
@@ -1240,6 +1796,22 @@
     "typ": "erkrankung"
   },
   {
+    "id": "tonsilla",
+    "bereich": "hno",
+    "terms": {
+      "de": "Mandel",
+      "la": "Tonsilla",
+      "en": "Tonsil"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Lymphatisches Gewebe im Rachen (Rachen-, Tuben- und Gaumenmandeln), Teil der Immunabwehr",
+    "typ": "anatomie"
+  },
+  {
     "id": "tonsillektomie",
     "bereich": "hno",
     "terms": {
@@ -1320,6 +1892,22 @@
     "typ": "diagnostik"
   },
   {
+    "id": "tympanoplastik",
+    "bereich": "hno",
+    "terms": {
+      "de": "Operative Rekonstruktion von Trommelfell und Gehörknöchelchenkette",
+      "la": "Tympanoplastik",
+      "en": "Tympanoplasty"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Wiederherstellung des Trommelfells und/oder der knöchernen Hörkette (Ohrsanierung)",
+    "typ": "eingriff"
+  },
+  {
     "id": "ulcus-rodens",
     "bereich": "hno",
     "terms": {
@@ -1382,6 +1970,40 @@
     },
     "erklaerung": "Gleichgewichtsapparat in den Hohlräumen des Labyrinths",
     "typ": "anatomie"
+  },
+  {
+    "id": "vestibulum-nasi",
+    "bereich": "hno",
+    "terms": {
+      "de": "Nasenvorhof",
+      "la": "Vestibulum nasi",
+      "en": "Nasal vestibule"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [],
+      "en": []
+    },
+    "erklaerung": "Vorderster, mit Haaren ausgestatteter Abschnitt der Nasenhöhle",
+    "typ": "anatomie"
+  },
+  {
+    "id": "vibrant-soundbridge",
+    "bereich": "hno",
+    "terms": {
+      "de": "Aktives Mittelohr-Hörimplantat",
+      "la": "Vibrant Soundbridge",
+      "en": "Vibrant Soundbridge"
+    },
+    "alternativen": {
+      "de": [],
+      "la": [
+        "VSB"
+      ],
+      "en": []
+    },
+    "erklaerung": "Implantierbares Hörsystem, das die Gehörknöchelchen oder das Innenohr direkt mechanisch antreibt",
+    "typ": "instrument"
   },
   {
     "id": "waldeyerscher-rachenring",
